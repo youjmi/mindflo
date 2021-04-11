@@ -1,0 +1,10 @@
+section.hero {
+    /* background-image: url(./portartbackground.png); */
+    width: auto;
+    height: 32rem;
+    background-size: cover;
+    animation-duration: 4s;
+    background-repeat: no-repeat;
+    margin:0;
+  
+  }
