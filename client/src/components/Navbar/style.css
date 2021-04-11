@@ -1,0 +1,87 @@
+.navbar {
+    background-color: #2b3942;
+    color: #fff;
+    position: sticky;
+    /* position: fixed;
+        width: 100%;
+        top: 0; */
+  }
+  
+  /* .mr-auto{
+      color: white;
+     } */
+  
+  button .navbar-toggler {
+    color: white;
+  }
+  
+  /* .navbar-light.brand {
+      color: white;
+      font-family: 'Rock Salt', cursive;
+    } */
+  
+  .navbar-light .navbar-brand {
+    color: white;
+    font-family: 'Alegreya', serif;
+  }
+  
+  #basic-navbar-nav {
+    color: white;
+  }
+  
+  .navbar-toggler {
+    color: white;
+  }
+  
+  nav.navbar.navbar-expand-lg.navbar-brand {
+    color: white;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .sticky + .sectionSpacing {
+    padding-top: 60px;
+    height: 50%;
+  }
+  
+  /* a{
+      background-color: #0D2E5B;
+      color: white;
+      text-align: center;
+  } */
+  
+  .nav-item .nav-link {
+    background-color: #2b3942;
+    color: white;
+    text-align: center;
+  }
+  
+  a.nav-link.active{
+    color: lightblue
+  }
+  
+  .navbar-nav {
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    float: right;
+    position: absolute;
+    right: 0px;
+    /* width: 300px; */
+  }
+  
+  .nav-item .nav-link {
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .navbar-light .navbar-nav .nav-link {
+    color: white;
+  }
+
+  .brand {
+    font-family: 'Alegreya', serif;
+  }
