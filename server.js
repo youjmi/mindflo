@@ -9,11 +9,13 @@ const session = require("express-session");
 const bodyParser = require("body-parser");
 
 const mongoose = require("mongoose");
-const routes = require("./routes");
+const routes = require("./routes/apiroutes");
 const app = express();
 
 
 const User = require("./models/User");
+
+
 
 const PORT = process.env.PORT || 3001;
 
