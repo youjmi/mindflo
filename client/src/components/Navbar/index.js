@@ -19,7 +19,7 @@ class Navigation extends React.Component {
     return (
       <Navbar expand="lg" sticky="top" >
         <Navbar.Brand className="brand" to="/">
-          mindflo
+          mindflō
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
