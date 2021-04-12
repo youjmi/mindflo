@@ -14,7 +14,7 @@ class Navigation extends React.Component {
   render() {
     return (
       <Navbar expand="lg" sticky="top">
-        <Navbar.Brand className="brand" to="/">
+        <Navbar.Brand className="brand" href="/home">
           mindflō
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
