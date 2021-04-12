@@ -1,4 +1,4 @@
-
+import { Router, Route } from "react-router";
 import './App.css';
 
 import Hero from './components/Hero';
@@ -9,7 +9,13 @@ function App() {
     <div >
       <Hero />
       <Navigation />  
-    
+      {/* <Router>
+        <Route path="/" component={Home}/>
+        <Route path="/meditation" component={Meditation} />
+        <Route path="/dashboard" component={Dashboard} />
+        <Route path="/blog" component={Blog} />
+        <Route path="/signup" component={Signup} />
+      </Router> */}
     </div>
   );
 }
