@@ -1,0 +1,33 @@
+img {
+    max-width: 500px;
+    max-height: 500px;
+    overflow: "hidden"
+}
+
+.about, .blog {
+    text-align: right;
+    margin-right: 4%;
+    font-family: "Montserrat", sans-serif;
+}
+
+.meditation, .dashboard {
+    text-align: left;
+    margin-left: 2%;
+    margin-right: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+p{
+    font-family: "Montserrat", sans-serif;
+    font-size: larger;
+}
+
+.homeTitle2 {
+    text-align: left;
+}
+
+.homeTitle1{
+    text-align: right;
+}
+

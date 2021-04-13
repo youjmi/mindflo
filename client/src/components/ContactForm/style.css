@@ -1,0 +1,16 @@
+button.button{
+    background-color: #0d2e5b;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  input#formBasicEmail.form-control {
+    border-color: #0d2e5b;
+  }
+  
+  input#formBasicSubject.form-control {
+    border-color: #0d2e5b;
+  }
+  
+  textarea#exampleForm\.ControlTextarea1.form-control {
+    border-color: #0d2e5b;
+  }

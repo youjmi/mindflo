@@ -1,0 +1,5 @@
+div.row{
+    width: 1200px;
+    
+    object-fit: contain;
+}

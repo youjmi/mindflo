@@ -1,10 +1,10 @@
 import { BrowserRouter, Route } from "react-router-dom";
 import './App.css';
-
+import Home from "./pages/Home"
 import Hero from './components/Hero';
 import Navigation from './components/Navbar';
 import Footer from './components/Footer/footer';
-import Home from "../src/pages/Home"
+import Wrapper from './components/Wrapper'
 import Meditation from "../src/pages/Meditation"
 import Dashboard from "../src/pages/Dashboard"
 import Blog from "../src/pages/Blog"
@@ -14,7 +14,8 @@ import Signup from "../src/pages/Signup"
 
 function App() {
   return (
-    <div >
+    <div>
+      <Wrapper>
       <Hero />
       <Navigation />  
       <BrowserRouter>
@@ -25,8 +26,9 @@ function App() {
         <Route path="/signup" component={Signup} />
       </BrowserRouter>
       <Footer/>
+      </Wrapper>
     </div>
   );
 }
 
-export default App;
+export default App
