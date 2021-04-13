@@ -30,7 +30,7 @@ console.log(pathname)
           <MobileIcon>
             <FaBars/>
           </MobileIcon>
-          { pathname === "/signin" || pathname === "/dashboard"  ?   <>  </> : 
+          { pathname === "/signin" || pathname === "/dashboard" || pathname === "/blog"  ?   <>  </> : 
           <NavMenu>
             <NavItem> 
               <NavLinks to ="meditation">Meditation</NavLinks>  

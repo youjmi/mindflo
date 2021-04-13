@@ -58,6 +58,8 @@ function Home() {
           <Col size="lg-8">
           <h1 className="homeTitle1">Blog</h1>
             <p>Stuff about the blog</p>
+            <br></br>
+            <Link to="/blog">Post a new Blog Here!</Link>
 
             
           </Col>
@@ -70,7 +72,8 @@ function Home() {
           <Col size="lg-8">
           <h1 className="homeTitle2">Dashboard</h1>
             <p>Stuff about dashboard!</p>
-            <Link to="/dashboard">Dashboard</Link>
+            <br></br>
+            <Link to="/dashboard">View Dashboard Progress</Link>
           </Col>
           <Col size="lg-4">
            
