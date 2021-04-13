@@ -33,19 +33,19 @@ console.log(pathname)
           { pathname === "/signin" || pathname === "/dashboard" || pathname === "/blog"  ?   <>  </> : 
           <NavMenu>
             <NavItem> 
-              <NavLinks to ="meditation">Meditation</NavLinks>  
+              <NavLinks to ="meditation" smooth ={true} duration ={500} >Meditation</NavLinks>  
               </NavItem>
               <NavItem>
-              <NavLinks to ="dashboard">Dashboard</NavLinks>
+              <NavLinks to ="dashboard" smooth ={true} duration ={500}>Dashboard</NavLinks>
             </NavItem>
               <NavItem>
-              <NavLinks to ="blog">Blog</NavLinks>
+              <NavLinks to ="blog"smooth ={true} duration ={500}>Blog</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to ="signup">Sign Up</NavLinks>
+              <NavLinks to ="signup"smooth ={true} duration ={500}>Sign Up</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to ="contact">Contact Us</NavLinks>
+              <NavLinks to ="contact"smooth ={true} duration ={500}>Contact Us</NavLinks>
             </NavItem>
             
           </NavMenu>
