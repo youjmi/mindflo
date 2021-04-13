@@ -7,7 +7,7 @@ import styled from 'styled-components';
 
 export const Navdiv = styled.nav`
 
-background: #000;
+background: #2b3942;
 // height: 80px;
 // margin-top : -80px;
 display: flex;
@@ -25,6 +25,7 @@ z-index: 1;
 width : 100%;
 padding : 0 24px;
 max-width: 1100px;
+color: #2b3942;
 `;
 
 export const NavLogo = styled(LinkR)`
@@ -38,6 +39,7 @@ align-items: center;
 margin-left: 24px;
 font-weight:bold;
 text-decoration: none;
+font-family: 'Alegreya', serif;
 
 
 `;
@@ -104,7 +106,7 @@ color: #fff;
     padding :0 1rem;
     height: 100%
     cursor: pointer;
-
+    font-family: "Montserrat", sans-serif;
     $:active {
       border-bottom: 3px solid #01bf71
     }
@@ -132,7 +134,7 @@ border: none;
 cursor: pointer;
 transition: all 0.2s ease-in-out;
 text-decoration: none;
-
+font-family: "Montserrat", sans-serif;
 &:hover {
   transition: all 0.2s ease-in-out;
   background: #fff;

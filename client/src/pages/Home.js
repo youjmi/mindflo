@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 import ContactForm from "../components/ContactForm";
 import drop from "./images/dripdrop.png";
 import stones from "./images/stonestacked.png";
@@ -27,8 +27,13 @@ function Home() {
             {/* </Container> */}
           </Col>
           <Col size="sm-8">
+        
           <h1 className="homeTitle1">About Us</h1>
-            <p className="homeTitle1">Stuff about this applicaton!</p>
+          <br />
+            <p className="homeTitle1">Stuff about this applicaton!
+            </p>
+
+       
           </Col>
         </Row>
       </Container>
@@ -47,7 +52,7 @@ function Home() {
           </Col>
         </Row>
       </Container>
-      <section id="blog" className="blog">
+      <Container id="blog" className="blog">
       
         <Row>
           
@@ -59,14 +64,14 @@ function Home() {
           <Col size="lg-8">
           <h1 className="homeTitle1">Blog</h1>
             <p className="homeTitle1">Stuff about the blog</p>
-            <br></br>
+            <br />
             <Link to="/blog">Post a new Blog Here!</Link>
 
             
           </Col>
         </Row>
-      </section>
-      <section id="dashboard" className="dashboard">
+      </Container>
+      <Container id="dashboard" className="dashboard">
       
         <Row>
           
@@ -82,9 +87,9 @@ function Home() {
           
           </Col>
         </Row>
-      </section>
+      </Container>
 
-      <section id="signup" className="signup">
+      {/* <Container id="signup" className="signup">
       
         <Row>
           
@@ -98,12 +103,12 @@ function Home() {
             <p className="homeTitle1">Stuff about SIGNINGUP</p>
           </Col>
         </Row>
-      </section>
+      </Container> */}
 
 
       
       
-      <section id="about" className="contact">
+      {/* <Container id="about" className="contact">
       
         <Row>
           
@@ -115,7 +120,7 @@ function Home() {
             <ContactForm />
           </Col>
         </Row>
-      </section>
+      </Container> */}
       </Wrapper>
   );
 }
