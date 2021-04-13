@@ -1,5 +1,7 @@
 import React from "react";
 import Cards from "../components/Cards/Cards"
+import "./css/blog.css"
+
 function Blog() {
     return (
 

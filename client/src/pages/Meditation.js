@@ -5,7 +5,7 @@ import React from "react";
 // import Col from "../components/Col";
 // import Cards from "../components/Cards/Cards"
 // import { Card } from "reactstrap";
-
+import "./css/meditation.css"
 
 //MEDITATION page info..//
 function Meditation() {

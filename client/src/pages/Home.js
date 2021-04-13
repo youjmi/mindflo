@@ -25,7 +25,7 @@ function Home() {
             {/* </Container> */}
           </Col>
           <Col size="lg-8">
-          <h1>About Us</h1>
+          <h1 className="homeTitle1">About Us</h1>
             <p>Stuff about this applicaton!</p>
           </Col>
         </Row>
@@ -35,7 +35,7 @@ function Home() {
         <Row>
           
           <Col size="lg-8">
-          <h1>Meditation</h1>
+          <h1 className="homeTitle2">Meditation</h1>
             <p>Stuff about meditation!</p>
           </Col>
           <Col size="lg-4">
@@ -55,7 +55,7 @@ function Home() {
             
           </Col>
           <Col size="lg-8">
-          <h1>Blog</h1>
+          <h1 className="homeTitle1">Blog</h1>
             <p>Stuff about the blog</p>
           </Col>
         </Row>
@@ -65,7 +65,7 @@ function Home() {
         <Row>
           
           <Col size="lg-8">
-          <h1>Dashboard</h1>
+          <h1 className="homeTitle2">Dashboard</h1>
             <p>Stuff about dashboard!</p>
           </Col>
           <Col size="lg-4">
@@ -80,7 +80,7 @@ function Home() {
         <Row>
           
           <Col size="lg-6">
-          <h1>Contact Us</h1>
+          <h1 className="homeTitle2">Contact Us</h1>
             <p>Type some text here</p>
           </Col>
           <Col size="lg-6">
