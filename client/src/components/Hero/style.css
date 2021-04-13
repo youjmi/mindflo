@@ -18,3 +18,11 @@ button.btn.btn-primary {
   font-family: "Montserrat", sans-serif;
   position: fixed;
 }
+
+
+
+/*this ensures the logo is completely centered */
+.minfloLogo { 
+  margin: 0 auto;
+  display: block;
+}
