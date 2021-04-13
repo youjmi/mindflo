@@ -1,0 +1,21 @@
+img {
+    max-width: 500px;
+    max-height: 500px;
+    overflow: "hidden"
+}
+
+.about, .blog {
+    text-align: right;
+    margin-right: 4%;
+}
+
+.meditation, .dashboard {
+    text-align: left;
+    margin-left: 2%;
+    margin-right: 0;
+}
+
+h1{
+  
+}
+
