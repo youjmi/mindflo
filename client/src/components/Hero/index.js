@@ -7,7 +7,7 @@ import logo from "./images/MindFlofinal.png"
 function Hero() {
   return (
     <section className="hero d-flex flex-column align-items-center justify-content-center" style={{ backgroundImage: `url(${background})` }}>
-       <a href ="/home"> <img src={logo}/>  </a>
+       <a href ="/"> <img src={logo} className="minfloLogo" />  </a>
     </section>
   );
 }

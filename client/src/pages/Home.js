@@ -9,6 +9,7 @@ import Row from "../components/Row";
 import Col from "../components/Col";
 import "./css/home.css"
 import Wrapper from "../components/Wrapper";
+import {Link} from "react-router-dom"
 //import Container from "../components/ImageContainer";
 
 
@@ -57,6 +58,10 @@ function Home() {
           <Col size="lg-8">
           <h1 className="homeTitle1">Blog</h1>
             <p>Stuff about the blog</p>
+            <br></br>
+            <Link to="/blog">Post a new Blog Here!</Link>
+
+            
           </Col>
         </Row>
       </section>
@@ -67,6 +72,8 @@ function Home() {
           <Col size="lg-8">
           <h1 className="homeTitle2">Dashboard</h1>
             <p>Stuff about dashboard!</p>
+            <br></br>
+            <Link to="/dashboard">View Dashboard Progress</Link>
           </Col>
           <Col size="lg-4">
            
@@ -75,6 +82,26 @@ function Home() {
           </Col>
         </Row>
       </section>
+
+      <section id="signup" className="signup">
+      
+        <Row>
+          
+          <Col size="lg-4">
+            
+            <img src={succulent} />
+            
+          </Col>
+          <Col size="lg-8">
+          <h1 className="homeTitle1">SIGN UP!!!</h1>
+            <p>Stuff about SIGNINGUP</p>
+          </Col>
+        </Row>
+      </section>
+
+
+      
+      
       <section id="about" className="contact">
       
         <Row>

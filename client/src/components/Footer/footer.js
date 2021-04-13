@@ -4,7 +4,7 @@ import "./style.css"
 const Footer = () => {
     return (
         <div className="footer" style={{textAlign: "center"}}>
-            <h1>FOOTER</h1>
+            <p>FOOTER</p>
         </div>
     )
 }
