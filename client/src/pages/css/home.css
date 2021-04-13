@@ -4,30 +4,35 @@ img {
     overflow: "hidden"
 }
 
-.about, .blog {
+/* .rightimage{
     text-align: right;
     margin-right: 4%;
     font-family: "Montserrat", sans-serif;
+    display: inline;
 }
 
-.meditation, .dashboard {
+.leftimage {
     text-align: left;
     margin-left: 2%;
     margin-right: 0;
     font-family: "Montserrat", sans-serif;
-}
+    display: inline;
+} */
 
 
 p{
     font-family: "Montserrat", sans-serif;
     font-size: larger;
+    display: inline;
 }
 
-.homeTitle2 {
+/* .homeTitle2 {
     text-align: left;
+    display: inline-block;
 }
 
 .homeTitle1{
     text-align: right;
-}
+    display: inline-block;
+} */
 

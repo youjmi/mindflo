@@ -1,6 +1,6 @@
 
 import React from 'react';
-import "./Cards.css";
+import "./style.css";
 import Container from "../Container"
 
 

@@ -1,6 +1,8 @@
-button.button{
+button.contactBtn.btn.btn-primary{
     background-color: #0d2e5b;
     font-family: "Montserrat", sans-serif;
+    margin: 0;
+    position: relative;
   }
   
   input#formBasicEmail.form-control {
@@ -13,4 +15,28 @@ button.button{
   
   textarea#exampleForm\.ControlTextarea1.form-control {
     border-color: #0d2e5b;
+    width: 20%;
+   
   }
+
+  /* form{
+      display:-webkit-flexblock;
+      align-content:center;
+      
+  } */
+
+  div.form-group{
+      display: inline-flexbox;
+      align-content: inherit;
+      
+  }
+
+  div {
+      display: inline-flexbox;
+  }
+
+  /* .formGroup {
+    border-color: #0d2e5b;
+    background-color: #0d2e5b;
+    font-family: "Montserrat", sans-serif;
+  } */

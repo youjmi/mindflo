@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 import ContactForm from "../components/ContactForm";
 import drop from "./images/dripdrop.png";
 import stones from "./images/stonestacked.png";
@@ -9,6 +9,7 @@ import Row from "../components/Row";
 import Col from "../components/Col";
 import "./css/home.css"
 import Wrapper from "../components/Wrapper";
+//import Container from "../components/Container";
 import {Link} from "react-router-dom"
 //import Container from "../components/ImageContainer";
 
@@ -17,61 +18,66 @@ import {Link} from "react-router-dom"
 function Home() {
   return (
     <Wrapper>
-      <section id="about" className="about">
+      <Container id="about" className="about">
      
         <Row>
-          <Col size="lg-4">
+          <Col size="sm-4">
             {/* <Container> */}
-            <img src={stones} />
+            <img src={stones} className="leftimage"/>
             {/* </Container> */}
           </Col>
-          <Col size="lg-8">
+          <Col size="sm-8">
+        
           <h1 className="homeTitle1">About Us</h1>
-            <p>Stuff about this applicaton!</p>
+          <br />
+            <p className="homeTitle1">Stuff about this applicaton!
+            </p>
+
+       
           </Col>
         </Row>
-      </section>
-      <section id="meditation" className="medidtation">
+      </Container>
+      <Container id="meditation" className="medidtation">
       
         <Row>
           
-          <Col size="lg-8">
+          <Col size="sm-8">
           <h1 className="homeTitle2">Meditation</h1>
-            <p>Stuff about meditation!</p>
+            <p className="homeTitle2">Stuff about meditation!</p>
           </Col>
-          <Col size="lg-4">
+          <Col size="sm-4">
             
-              <img src={drop} />
+              <img src={drop} className="rightimage"/>
          
           </Col>
         </Row>
-      </section>
-      <section id="blog" className="blog">
+      </Container>
+      <Container id="blog" className="blog">
       
         <Row>
           
           <Col size="lg-4">
             
-            <img src={succulent} />
+            <img src={succulent} className="leftimage"/>
             
           </Col>
           <Col size="lg-8">
           <h1 className="homeTitle1">Blog</h1>
-            <p>Stuff about the blog</p>
-            <br></br>
+            <p className="homeTitle1">Stuff about the blog</p>
+            <br />
             <Link to="/blog">Post a new Blog Here!</Link>
 
             
           </Col>
         </Row>
-      </section>
-      <section id="dashboard" className="dashboard">
+      </Container>
+      <Container id="dashboard" className="dashboard">
       
         <Row>
           
           <Col size="lg-8">
           <h1 className="homeTitle2">Dashboard</h1>
-            <p>Stuff about dashboard!</p>
+            <p className="homeTitle2">Stuff about dashboard!</p>
             <br></br>
             <Link to="/dashboard">View Dashboard Progress</Link>
           </Col>
@@ -81,28 +87,28 @@ function Home() {
           
           </Col>
         </Row>
-      </section>
+      </Container>
 
-      <section id="signup" className="signup">
+      {/* <Container id="signup" className="signup">
       
         <Row>
           
           <Col size="lg-4">
             
-            <img src={succulent} />
+            <img src={succulent} className="leftimage"/>
             
           </Col>
           <Col size="lg-8">
           <h1 className="homeTitle1">SIGN UP!!!</h1>
-            <p>Stuff about SIGNINGUP</p>
+            <p className="homeTitle1">Stuff about SIGNINGUP</p>
           </Col>
         </Row>
-      </section>
+      </Container> */}
 
 
       
       
-      <section id="about" className="contact">
+      {/* <Container id="about" className="contact">
       
         <Row>
           
@@ -114,7 +120,7 @@ function Home() {
             <ContactForm />
           </Col>
         </Row>
-      </section>
+      </Container> */}
       </Wrapper>
   );
 }

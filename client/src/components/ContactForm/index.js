@@ -31,9 +31,13 @@ function ContactForm() {
 
   return (
 
-    <Form onSubmit={handleSubmit}>
-      <Form.Group controlId="formBasicEmail">
+
+
+
+    <Form onSubmit={handleSubmit} className="form">
+      <Form.Group controlId="formBasicEmail" className="formGroup">
         <Form.Label>Name:</Form.Label>
+        <br/>
         <Form.Control type="name" placeholder="Enter Name"
         className="form-control"
         name="name"
@@ -41,6 +45,7 @@ function ContactForm() {
       </Form.Group>
       <Form.Group controlId="formBasicEmail">
         <Form.Label>Email:</Form.Label>
+        <br/>
         <Form.Control type="email" placeholder="Enter email"
          className="form-control"
          name="email"
@@ -48,6 +53,7 @@ function ContactForm() {
       </Form.Group>
       <Form.Group controlId="formBasicSubject">
         <Form.Label>Subject:</Form.Label>
+        <br/>
         <Form.Control type="subject" placeholder="Enter subject"
          className="form-control"
          name="subject"
@@ -55,13 +61,14 @@ function ContactForm() {
       </Form.Group>
       <Form.Group controlId="exampleForm.ControlTextarea1">
         <Form.Label>Message:</Form.Label>
+        <br/>
         <Form.Control as="textarea" rows={3}
          className="form-control"
          name="message"
           />
       </Form.Group>
 
-      <Button className="button" variant="primary" type="submit" value="Send">Submit
+      <Button className="contactBtn" type="submit" value="Send">Submit
       </Button>
     </Form>
   );

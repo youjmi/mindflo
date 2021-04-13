@@ -1,11 +1,11 @@
 import React from "react";
-import Cards from "../components/Cards/Cards"
+import NewPost from "../components/NewPostCard"
 import "./css/blog.css"
 
 function Blog() {
     return (
 
-            <Cards/> 
+            <NewPost/> 
             /*Add another Component that pushes Posted Blogs HERE */
             
     );
