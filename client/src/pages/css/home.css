@@ -4,13 +4,13 @@ img {
     overflow: "hidden"
 }
 
-.about, .blog {
+.rightimage{
     text-align: right;
     margin-right: 4%;
     font-family: "Montserrat", sans-serif;
 }
 
-.meditation, .dashboard {
+.leftimage {
     text-align: left;
     margin-left: 2%;
     margin-right: 0;
