@@ -24,9 +24,9 @@ console.log(pathname)
 
   return (
     <>
-      <Navdiv>
-        <NavbarContainer>
-          <NavLogo to = "/">MINDFLOOOOOO</NavLogo>
+      <Navdiv >
+        <NavbarContainer sticky = "top">
+          <NavLogo to = "/">mindflō</NavLogo>
           <MobileIcon>
             <FaBars/>
           </MobileIcon>
