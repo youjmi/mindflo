@@ -13,7 +13,8 @@ const routes = require("./routes");
 const app = express();
 
 
-const User = require("./models/User");
+// const User = require("./models/User");
+const db = require("./models")
 
 
 
