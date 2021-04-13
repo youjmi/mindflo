@@ -1,17 +1,17 @@
 import React from 'react';
 // import { NavItem } from 'react-bootstrap';
-import { FaBars} from 'react-icons/fa'
+
 import {useLocation} from "react-router-dom"
 import {
   Navdiv,
   NavbarContainer,
   NavLogo,
-  MobileIcon,
   NavMenu,
   NavItem,
   NavLinks,
   NavBtn,
-  NavBtnLink
+  NavBtnLink,
+  Bars
 } from './NavbarElements';
 
 const Navigation = () => {
@@ -27,9 +27,7 @@ console.log(pathname)
       <Navdiv >
         <NavbarContainer sticky = "top">
           <NavLogo to = "/">mindflō</NavLogo>
-          <MobileIcon>
-            <FaBars/>
-          </MobileIcon>
+          <Bars/>
           { pathname === "/signin" || pathname === "/dashboard" || pathname === "/blog"  ?   <>  </> : 
           <NavMenu>
             <NavItem> 

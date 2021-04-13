@@ -1,5 +1,6 @@
 import { Link as LinkR } from 'react-router-dom';
 import { Link as LinkS } from 'react-scroll';
+import { FaBars} from 'react-icons/fa'
 import styled from 'styled-components';
 
 
@@ -42,19 +43,37 @@ text-decoration: none;
 `;
 
 
-export const MobileIcon = styled.div`
-display: none;
-@media screen and (max-width: 768px){
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translate (-100%,60%);
-  font-size: 1.8rem;
-  cursor: pointer;
-  color : #fff
-}
-`
+export const Bars = styled(FaBars)`
+  display: none;
+  color: #fff;
+  
+  @media screen and (max-width: 768px) {
+    display: block;
+    position: sticky;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 75%);
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top:-16px
+
+  }
+`;
+
+
+// export const MobileIcon = styled.div`
+// display: none;
+// @media screen and (max-width: 768px){
+//   display: block;
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   transform: translate (-100%,60%);
+//   font-size: 1.8rem;
+//   cursor: pointer;
+//   color : #fff
+// }
+// `
 
 export const NavMenu = styled.ul`
 display: flex;
