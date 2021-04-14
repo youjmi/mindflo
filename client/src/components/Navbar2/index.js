@@ -43,7 +43,7 @@ console.log(pathname)
               <NavLinks to ="signup"smooth ={true} duration ={500}>Sign Up</NavLinks>
             </NavItem> */}
             <NavItem>
-              <NavLinks to ="contact"smooth ={true} duration ={500}>Contact Us</NavLinks>
+              <NavLinks to ="footer"smooth ={true} duration ={500}>Contact Us</NavLinks>
             </NavItem>
             
           </NavMenu>

@@ -16,11 +16,17 @@
     
 }
 
+
+
+
 .footerCol1{
    float:left;
    background-color : #2b3942;
-   width: 100%;
-
+   margin-right: 4%;
+   margin-left: 10%;
+   font-family: "Montserrat", sans-serif;
+   /* display: inline; */
+   float:right
 
 }
 

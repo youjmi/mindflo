@@ -69,3 +69,23 @@ display: grid;
     margin-top: 15vh;
 }
 
+.homeTitle2Button{
+    margin-right: 4%;
+    text-align: left;
+    display: grid;
+    background-color: #2b3942;
+    width: 10%;
+    justify-content: center;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 18px;
+
+    
+}
+.homeTitle2Button:hover{
+    transition: all 0.2s ease-in-out;
+    color: #b6d5db;
+    border-radius : 50px;
+    font-size: 18px;
+}
