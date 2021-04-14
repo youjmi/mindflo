@@ -10,11 +10,22 @@ import Dashboard from "../src/pages/Dashboard"
 import Blog from "../src/pages/Blog"
 import Signup from "../src/pages/Signup"
 import Signin from "../src/pages/Signin"
-
+import React, { useState, useEffect } from 'react'
+import apiBlog from "../src/utils/blog"
 
 
 
 function App() {
+
+  // useEffect(async ()=>{
+  //   console.log("hi")
+
+  //   apiBlog.getBlogs()
+  
+  
+
+  // }, [])
+
   return (
     <div>
       <BrowserRouter>

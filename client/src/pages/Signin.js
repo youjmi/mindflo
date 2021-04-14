@@ -5,7 +5,9 @@ import React from "react";
 // import Col from "../components/Col";
 // import Cards from "../components/Cards/Cards"
 // import { Card } from "reactstrap";
-import "./css/meditation.css"
+import {Link} from "react-router-dom"
+
+import "./css/meditation.css";
 
 //MEDITATION page info..//
 function Signin() {
@@ -34,6 +36,9 @@ Cum ex homero dignissim, per eu causae latine fastidii. Et verear temporibus dis
 Qui hinc liberavisse ad, pro in atqui labores maiestatis. In omnes integre menandri eos, vim animal platonem te. Ut simul ocurreret has, menandri electram complectitur has cu, no dico quando usu. Ex vel feugait delectus persecuti, mucius commodo vis no.</p></h6>
 
 <br></br>
+
+
+    <Link to="/signup">If you do not have an account yet, Sign up here </Link>
 
        </div>
 
