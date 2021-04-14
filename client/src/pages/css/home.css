@@ -47,6 +47,7 @@ h1{
 margin-left: 4%;
 text-align: right;
 display: grid;
+font-family: "Montserrat", sans-serif;
 /* grid-template-columns: (2, 1fr) */
 
 
@@ -56,6 +57,8 @@ display: grid;
     margin-right: 4%;
     text-align: left;
     display: grid;
+    font-family: "Montserrat", sans-serif;
+
     /* grid-template-columns: repeat(2, 1fr) */
     
 }
@@ -65,27 +68,54 @@ display: grid;
     margin-bottom: 10px;
     margin-top: 10px;
 }
-.colHome {
+/* .colHome {
     margin-top: 15vh;
-}
+} */
 
 .homeTitle2Button{
     margin-right: 4%;
     text-align: left;
     display: grid;
     background-color: #2b3942;
-    width: 10%;
+    width: 18%;
     justify-content: center;
     color: white;
     border-radius: 50px;
     text-decoration: none;
     font-size: 18px;
-
-    
+    font-family: "Montserrat", sans-serif;    
 }
+
 .homeTitle2Button:hover{
     transition: all 0.2s ease-in-out;
+    font-family: "Montserrat", sans-serif;
     color: #b6d5db;
     border-radius : 50px;
     font-size: 18px;
 }
+.homeTitle1Button{
+    margin-left: 4%;
+    text-align: right;
+    display: grid;
+    font-family: "Montserrat", sans-serif;  
+    background-color: #2b3942;
+    border-radius: 50px;
+    justify-content: right;
+    width: 18%;
+    color: white;
+
+    justify-content: center;
+
+    text-decoration: none;
+
+
+}
+
+.homeTitle1Button:hover{
+    transition: all 0.2s ease-in-out;
+    font-family: "Montserrat", sans-serif;
+    color: #b6d5db;
+    border-radius : 50px;
+    font-size: 18px;
+} 
+

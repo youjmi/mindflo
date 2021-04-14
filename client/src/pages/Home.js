@@ -52,7 +52,7 @@ function Home() {
           <Col size="sm-8">
           <h1 className="homeTitle2">Meditation</h1>
             <h2 className="homeTitle2">Stuff about meditation!</h2>            
-            <Link className = "homeTitle2 "to="/meditation">Experience it Here!</Link>
+            <Link className = "homeTitle2Button "to="/meditation">Experience it Here!</Link>
 
           </Col>
         </Row>
@@ -71,7 +71,7 @@ function Home() {
           <Col size="sm-8">
           <h1 className="homeTitle1">Blog</h1>
             <h2 className="homeTitle1">Stuff about the blog</h2>
-            <Link className = "homeTitle1 "to="/blog">Post a new Blog Here!</Link>
+            <Link className = "homeTitle1Button "to="/blog">Post </Link>
 
 
             
@@ -93,7 +93,7 @@ function Home() {
           <h1 className="homeTitle2">Dashboard</h1>
             <h2 className="homeTitle2">Stuff about dashboard!</h2>
          
-            <Link to="/dashboard" className= "homeTitle2Button">View Dashboard</Link>
+            <Link to="/dashboard" className= "homeTitle2Button">View </Link>
             
           </Col>
 
