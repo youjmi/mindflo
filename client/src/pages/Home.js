@@ -21,20 +21,21 @@ function Home() {
       <Container id="about" className="about">
      
         <Row>
-          <Col size="sm-4">
+          <Col size="sm-8">
             {/* <Container> */}
             <img src={stones} className="leftimage"/>
             {/* </Container> */}
           </Col>
-          <Col size="sm-8">
-        
+
+
+          <Col size="sm-4">
           <h1 className="homeTitle1">About Us</h1>
           <br />
-            <p className="homeTitle1">Stuff about this applicaton!
-            </p>
-
-       
+          <p className="homeTitle1">Stuff about this applicaton!
+          </p>
           </Col>
+
+          
         </Row>
       </Container>
       <Container id="meditation" className="medidtation">
