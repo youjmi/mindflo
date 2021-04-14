@@ -1,38 +1,62 @@
 img {
     max-width: 500px;
     max-height: 500px;
-    overflow: "hidden"
+    overflow:auto
 }
 
-/* .rightimage{
-    text-align: right;
+.rightimage{
     margin-right: 4%;
     font-family: "Montserrat", sans-serif;
-    display: inline;
+    /* display: inline; */
+    float: right;
 }
 
 .leftimage {
-    text-align: left;
-    margin-left: 2%;
-    margin-right: 0;
+    margin-left: 4%;
     font-family: "Montserrat", sans-serif;
-    display: inline;
-} */
+    /* display: inline; */
+    float:left;
+}
 
 
 p{
     font-family: "Montserrat", sans-serif;
     font-size: larger;
-    display: inline;
 }
 
-/* .homeTitle2 {
-    text-align: left;
-    display: inline-block;
+/*  {
+    text-align: left  !important ;
+    
 }
 
-.homeTitle1{
+.{
     text-align: right;
     display: inline-block;
 } */
+
+.meditation ,.dashboard, .homeTitle1 {
+margin-left: 4%;
+text-align: right;
+display: grid;
+/* grid-template-columns: (2, 1fr) */
+
+
+}
+
+.about, .blog,.homeTitle2   {
+    margin-right: 4%;
+    text-align: left;
+    display: grid;
+    /* grid-template-columns: repeat(2, 1fr) */
+    
+}
+
+.divider{
+    border: solid #2b3942;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.colHome {
+    margin-top: 15vh;
+}
 

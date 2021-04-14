@@ -23,69 +23,74 @@ function Home() {
         <Row>
           <Col size="sm-4">
             {/* <Container> */}
-            <img src={stones} className="leftimage"/>
+            <img  src={stones} className="leftimage"/>
             {/* </Container> */}
           </Col>
           <Col size="sm-8">
         
           <h1 className="homeTitle1">About Us</h1>
-          <br />
-            <p className="homeTitle1">Stuff about this applicaton!
-            </p>
-
-       
+            <h2 className="homeTitle1">Stuff about this applicaton!
+            </h2>
           </Col>
         </Row>
       </Container>
-      <Container id="meditation" className="medidtation">
+      <div className ="divider"></div>
+      
+      <Container id="meditation" className="meditation">
       
         <Row>
-          
-          <Col size="sm-8">
-          <h1 className="homeTitle2">Meditation</h1>
-            <p className="homeTitle2">Stuff about meditation!</p>
-          </Col>
+        
           <Col size="sm-4">
             
               <img src={drop} className="rightimage"/>
          
           </Col>
+          <Col size="sm-8">
+          <h1 className="homeTitle2">Meditation</h1>
+            <h2 className="homeTitle2">Stuff about meditation!</h2>            
+            <Link className = "homeTitle2 "to="/meditation">Experience Meditation Here!</Link>
+
+          </Col>
         </Row>
       </Container>
+      <div className ="divider"></div>
+
       <Container id="blog" className="blog">
       
         <Row>
           
-          <Col size="lg-4">
+          <Col size="sm-4">
             
             <img src={succulent} className="leftimage"/>
             
           </Col>
-          <Col size="lg-8">
+          <Col size="sm-8">
           <h1 className="homeTitle1">Blog</h1>
-            <p className="homeTitle1">Stuff about the blog</p>
-            <br />
-            <Link to="/blog">Post a new Blog Here!</Link>
+            <h2 className="homeTitle1">Stuff about the blog</h2>
+            <Link className = "homeTitle1 "to="/blog">Post a new Blog Here!</Link>
+
 
             
           </Col>
         </Row>
       </Container>
+      <div className ="divider"></div>
+
       <Container id="dashboard" className="dashboard">
       
-        <Row>
-          
-          <Col size="lg-8">
-          <h1 className="homeTitle2">Dashboard</h1>
-            <p className="homeTitle2">Stuff about dashboard!</p>
-            <br></br>
-            <Link to="/dashboard">View Dashboard Progress</Link>
-          </Col>
-          <Col size="lg-4">
+        <Row >
+        <Col size="sm-4">
            
-            <img src={hay} />
-          
+           <img src={hay} className="rightimage"/>
+         
+         </Col>
+
+          <Col size="sm-8" className ="colHome">
+          <h1 className="homeTitle2">Dashboard</h1>
+            <h2 className="homeTitle2">Stuff about dashboard!</h2>
+            <Link className = "homeTitle2" to="/dashboard">View Dashboard Progress and YOGAAAA</Link>
           </Col>
+
         </Row>
       </Container>
 
