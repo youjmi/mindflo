@@ -1,11 +1,11 @@
 import React from "react";
-import { Button, Container } from "react-bootstrap";
-import ContactForm from "../components/ContactForm";
+import { Button, Container, Row } from "react-bootstrap";
+//import ContactForm from "../components/ContactForm";
 import drop from "./images/dripdrop.png";
 import stones from "./images/stonestacked.png";
 import succulent from "./images/succlentpineapple.png";
 import hay from "./images/hay.png";
-import Row from "../components/Row";
+//import Row from "../components/Row";
 import Col from "../components/Col";
 import "./css/home.css"
 import Wrapper from "../components/Wrapper";
@@ -18,41 +18,46 @@ import {Link} from "react-router-dom"
 function Home() {
   return (
     <Wrapper>
-      <Container id="about" className="about">
+      <section id="about" className="about">
      
         <Row>
-          <Col size="sm-4">
+        <Container>
+          <Col size="lg-4">
             {/* <Container> */}
             <img src={stones} className="leftimage"/>
             {/* </Container> */}
           </Col>
-          <Col size="sm-8">
+          
+          <Col size="lg-8">
         
           <h1 className="homeTitle1">About Us</h1>
-          <br />
-            <p className="homeTitle1">Stuff about this applicaton!
+          {/* <br /> */}
+          <div className="text">
+            <p className="p1">Stuff about this applicaton!
             </p>
-
+            </div>
        
           </Col>
+
+        </Container>
         </Row>
-      </Container>
-      <Container id="meditation" className="medidtation">
+      </section>
+      <section id="meditation" className="medidtation">
       
         <Row>
           
-          <Col size="sm-8">
+          <Col size="lg-8">
           <h1 className="homeTitle2">Meditation</h1>
-            <p className="homeTitle2">Stuff about meditation!</p>
+            <p className="p2">Stuff about meditation!</p>
           </Col>
-          <Col size="sm-4">
+          <Col size="lg-4">
             
               <img src={drop} className="rightimage"/>
          
           </Col>
         </Row>
-      </Container>
-      <Container id="blog" className="blog">
+      </section>
+      <section id="blog" className="blog">
       
         <Row>
           
@@ -63,21 +68,21 @@ function Home() {
           </Col>
           <Col size="lg-8">
           <h1 className="homeTitle1">Blog</h1>
-            <p className="homeTitle1">Stuff about the blog</p>
+            <p className="p1">Stuff about the blog</p>
             <br />
             <Link to="/blog">Post a new Blog Here!</Link>
 
             
           </Col>
         </Row>
-      </Container>
-      <Container id="dashboard" className="dashboard">
+      </section>
+      <section id="dashboard" className="dashboard">
       
         <Row>
           
           <Col size="lg-8">
           <h1 className="homeTitle2">Dashboard</h1>
-            <p className="homeTitle2">Stuff about dashboard!</p>
+            <p className="p2">Stuff about dashboard!</p>
             <br></br>
             <Link to="/dashboard">View Dashboard Progress</Link>
           </Col>
@@ -87,7 +92,7 @@ function Home() {
           
           </Col>
         </Row>
-      </Container>
+      </section>
 
       {/* <Container id="signup" className="signup">
       
