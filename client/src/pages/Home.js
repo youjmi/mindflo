@@ -1,11 +1,11 @@
 import React from "react";
-import { Button, Container } from "react-bootstrap";
-import ContactForm from "../components/ContactForm";
+import { Button, Container, Row } from "react-bootstrap";
+//import ContactForm from "../components/ContactForm";
 import drop from "./images/dripdrop.png";
 import stones from "./images/stonestacked.png";
 import succulent from "./images/succlentpineapple.png";
 import hay from "./images/hay.png";
-import Row from "../components/Row";
+//import Row from "../components/Row";
 import Col from "../components/Col";
 import "./css/home.css"
 import Wrapper from "../components/Wrapper";
@@ -21,17 +21,21 @@ function Home() {
       <Container id="about" className="about">
      
         <Row>
-          <Col size="sm-4">
+        <Container>
+          <Col size="lg-4">
             {/* <Container> */}
             <img  src={stones} className="leftimage"/>
             {/* </Container> */}
           </Col>
-          <Col size="sm-8">
+          
+          <Col size="lg-8">
         
           <h1 className="homeTitle1">About Us</h1>
             <h2 className="homeTitle1">Stuff about this applicaton!
             </h2>
           </Col>
+
+        </Container>
         </Row>
       </Container>
       <div className ="divider"></div>

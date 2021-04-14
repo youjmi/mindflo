@@ -9,7 +9,7 @@ const Cards = () => {
   return (
     <Container style ={{}}>
     <form className="contact-form contact-holdbox" > 
-    <h1 className ="pageTitle pt-5"> Post Blog here</h1>
+    <h1 className="pageTitle pt-5"> Post Blog here</h1>
         <div className ="row pt-2 mx-auto">
             <div className ="col-8 form-group mx-auto">
                 <input type ="text" className="form-control" placeholder="Subject" name="subject"  />

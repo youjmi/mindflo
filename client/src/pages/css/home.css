@@ -31,7 +31,16 @@ p{
 
 .{
     text-align: right;
+    display: inline-flexbox;
+}
+
+h1{
+    font-family: 'Alegreya', serif;
+}
+
+/* div.row{
     display: inline-block;
+    width: 1200px;
 } */
 
 .meditation ,.dashboard, .homeTitle1 {
