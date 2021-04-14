@@ -8,7 +8,7 @@ import styled from 'styled-components';
 export const Navdiv = styled.nav`
 
 background: #2b3942;
-// height: 80px;
+ height: 50px;
 // margin-top : -80px;
 display: flex;
 justify-content: center;
@@ -40,6 +40,14 @@ margin-left: 24px;
 font-weight:bold;
 text-decoration: none;
 font-family: 'Alegreya', serif;
+&:hover {
+  transition: all 0.2s ease-in-out;
+  color: #b6d5db;
+  border-radius : 50px;
+  font-size: 1.6rem;
+
+
+}
 
 
 `;
@@ -48,6 +56,8 @@ font-family: 'Alegreya', serif;
 export const Bars = styled(FaBars)`
   display: none;
   color: #fff;
+  cursor: pointer;
+
   
   @media screen and (max-width: 768px) {
     display: block;
@@ -85,6 +95,7 @@ text-align: center;
 margin-right: -22px;
 margin-top: 0;
 margin-bottom:0;
+cursor: pointer;
 @media screen and (max-width: 768px){
   display: none;
 }
@@ -109,6 +120,14 @@ color: #fff;
     font-family: "Montserrat", sans-serif;
     $:active {
       border-bottom: 3px solid #01bf71
+    }
+    &:hover {
+      transition: all 0.2s ease-in-out;
+      color: #b6d5db;
+      border-radius : 50px;
+      font-size: 18px;
+    
+    
     }
 
 `
@@ -137,8 +156,12 @@ text-decoration: none;
 font-family: "Montserrat", sans-serif;
 &:hover {
   transition: all 0.2s ease-in-out;
-  background: #fff;
-  color: #010606;
+  background-color: #b6d5db;
+  border-radius : 50px;
+  font-size: 18px;
+
+
 }
+
 
 `

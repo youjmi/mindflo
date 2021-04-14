@@ -28,7 +28,7 @@ console.log(pathname)
         <NavbarContainer sticky = "top">
           <NavLogo to = "/">mindflō</NavLogo>
           <Bars/>
-          { pathname === "/signin" || pathname === "/dashboard" || pathname === "/blog"  ?   <>  </> : 
+          { pathname === "/signin" || pathname === "/dashboard" || pathname === "/blog" || pathname === "/meditation"|| pathname === "/signup" ?   <>  </> : 
           <NavMenu>
             <NavItem> 
               <NavLinks to ="meditation" smooth ={true} duration ={500} >Meditation</NavLinks>  
@@ -39,11 +39,11 @@ console.log(pathname)
               <NavItem>
               <NavLinks to ="blog"smooth ={true} duration ={500}>Blog</NavLinks>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
               <NavLinks to ="signup"smooth ={true} duration ={500}>Sign Up</NavLinks>
-            </NavItem>
+            </NavItem> */}
             <NavItem>
-              <NavLinks to ="contact"smooth ={true} duration ={500}>Contact Us</NavLinks>
+              <NavLinks to ="footer"smooth ={true} duration ={500}>Contact Us</NavLinks>
             </NavItem>
             
           </NavMenu>

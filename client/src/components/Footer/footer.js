@@ -17,14 +17,15 @@ const Footer = () => {
         <Container>
         <div className="footer">
 
-            <Row >
-                <Col className="footerCol1" size="sm-4">
+            <Row className ="footerRow">
+                <Col className="footerCol1" size="lg-4">
                     <h1 className="footerTitle">Information</h1>
                     <Link className="footerLink"> About Us</Link>
                 </Col>
 
-                <Col className="footerCol2" size="sm-4">
+                <Col className="footerCol2" size="lg-8">
                     <div className="footerContact">
+                    <Link className = "homeTitle" to="contact"></Link>
                     <h1 className="footerTitle">Contact Us Here</h1>
                     <Contact/>
                     </div>
