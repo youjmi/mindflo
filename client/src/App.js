@@ -17,14 +17,14 @@ import apiBlog from "../src/utils/blog"
 
 function App() {
 
-  useEffect(async ()=>{
-    console.log("hi")
+  // useEffect(async ()=>{
+  //   console.log("hi")
 
-    apiBlog.getBlogs()
+  //   apiBlog.getBlogs()
   
   
 
-  }, [])
+  // }, [])
 
   return (
     <div>
