@@ -2,8 +2,8 @@ import React from "react";
 import { Button, Container, Row } from "react-bootstrap";
 //import ContactForm from "../components/ContactForm";
 import drop from "./images/dripdrop.png";
-import stones from "./images/stonestacked.png";
-import succulent from "./images/succlentpineapple.png";
+//import stones from "./images/stonestacked.png";
+//import succulent from "./images/succlentpineapple.png";
 import hay from "./images/hay.png";
 //import Row from "../components/Row";
 import Col from "../components/Col";
@@ -12,8 +12,10 @@ import Wrapper from "../components/Wrapper";
 //import Container from "../components/Container";
 import {Link} from "react-router-dom"
 //import Container from "../components/ImageContainer";
-
-
+import about from "./images/aboutusimg.png"
+import meditate from "./images/meditationimg.png"
+import blog from "./images/blogimg2.png"
+import dashboard from "./images/dashboadimg.png"
 
 function Home() {
   return (
@@ -23,9 +25,9 @@ function Home() {
         <Row>
         <Container>
           <Col size="lg-4">
-            {/* <Container> */}
-            <img  src={stones} className="leftimage"/>
-            {/* </Container> */}
+         
+            <img  src={about} className="leftimage"/>
+         
           </Col>
           
           <Col size="lg-8">
@@ -46,14 +48,15 @@ function Home() {
         
           <Col size="sm-4">
             
-              <img src={drop} className="rightimage"/>
+              <img src={meditate} className="rightimage"/>
          
           </Col>
           <Col size="sm-8">
           <h1 className="homeTitle2">Meditation</h1>
-            <h2 className="homeTitle2">Stuff about meditation!</h2>            
-            <Link className = "homeTitle2Button "to="/meditation">Experience it Here!</Link>
-
+            <h2 className="homeTitle2">Stuff about meditation!</h2>    
+            <div className="button2">       
+            <Link className = "homeTitle2Button "to="/meditation">Learn More</Link>
+</div> 
           </Col>
         </Row>
       </Container>
@@ -65,14 +68,15 @@ function Home() {
           
           <Col size="sm-4">
             
-            <img src={succulent} className="leftimage"/>
+            <img src={blog} className="leftimage"/>
             
           </Col>
           <Col size="sm-8">
           <h1 className="homeTitle1">Blog</h1>
             <h2 className="homeTitle1">Stuff about the blog</h2>
-            <Link className = "homeTitle1Button "to="/blog">Post </Link>
-
+          <div className="button1">
+           <Link className = "homeTitle1Button "to="/blog">View Blog </Link>
+          </div>
 
             
           </Col>
@@ -85,16 +89,16 @@ function Home() {
         <Row >
         <Col size="sm-4">
            
-           <img src={hay} className="rightimage"/>
+           <img src={dashboard} className="rightimage"/>
          
          </Col>
 
           <Col size="sm-8" className ="colHome">
           <h1 className="homeTitle2">Dashboard</h1>
             <h2 className="homeTitle2">Stuff about dashboard!</h2>
-         
-            <Link to="/dashboard" className= "homeTitle2Button">View </Link>
-            
+          <div className="button2">
+            <Link to="/dashboard" className= "homeTitle2Button">See Progress </Link>
+            </div>
           </Col>
 
         </Row>

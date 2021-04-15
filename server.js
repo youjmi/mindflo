@@ -10,10 +10,14 @@ const session = require("express-session");
 const bodyParser = require("body-parser");
 
 const mongoose = require("mongoose");
+<<<<<<< HEAD
+const routes = require("./routes/dashboard")
+=======
 const routesblog = require("./routes/blog");
 const routesdashboard= require("./routes/dashboard");
 const routesuser= require("./routes/user");
 
+>>>>>>> 5b6f358a546fdba2cf98f4fffa54de3c081ebd44
 const app = express();
 
 
@@ -34,6 +38,15 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 // Add routes, both API and view
+<<<<<<< HEAD
+ //app.use(routes);
+// require("./routes/dashboard")(app)
+// require("./routes/blog")(app)
+// require("./routes/user")(app)
+// app.use(function(req, res) {
+//   res.sendFile(path.join(__dirname, "../client/build/index.html"));
+// });
+=======
 app.use(routesblog);
 app.use(routesdashboard);
 app.use(routesuser);
@@ -45,6 +58,7 @@ router.use(function(req, res) {
 });
 
 
+>>>>>>> 5b6f358a546fdba2cf98f4fffa54de3c081ebd44
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mindflo",
