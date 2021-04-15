@@ -80,6 +80,8 @@ text-align:center;
 
 
 
+// put hover feature only for span
+
 export const SidebarLink = styled(LinkS)`
 display: flex;
 align-item: center;
@@ -93,14 +95,14 @@ color: #fff;
 cursor: pointer;
 font-family: "Montserrat", sans-serif;
 
-&:hover {
-    transition: all 0.2s ease-in-out;
-    color: #b6d5db;
-    border-radius : 50px;
-    font-size: 22px;
-    font-family: "Montserrat", sans-serif;
+// &:hover {
+//     transition: all 0.2s ease-in-out;
+//     color: #b6d5db;
+//     border-radius : 50px;
+//     font-size: 22px;
+//     font-family: "Montserrat", sans-serif;
 
-  }
+//   }
 
 `
 export const SidebarItem = styled.div`
