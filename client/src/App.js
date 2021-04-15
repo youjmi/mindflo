@@ -12,26 +12,29 @@ import Signup from "../src/pages/Signup"
 import Signin from "../src/pages/Signin"
 import React, { useState, useEffect } from 'react'
 import apiBlog from "../src/utils/blog"
-
+import Sidebar from "./components/Sidebar/index"
 
 
 function App() {
 
   // useEffect(async ()=>{
   //   console.log("hi")
-
   //   apiBlog.getBlogs()
-  
-  
-
   // }, [])
+
+const [isOpen, setIsOpen] = useState(false)
+const toggle = () => 
+  setIsOpen (!isOpen)
+
+
 
   return (
     <div>
       <BrowserRouter>
       <Wrapper>
       <Hero />
-      <Navigation />  
+      <Sidebar isOpen = {isOpen} toggle ={toggle} />
+      <Navigation toggle ={toggle} />  
       <Switch>
         <Route exact path="/" component={Home}/> 
         <Route exact path="/meditation" component={Meditation} />
