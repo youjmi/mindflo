@@ -23,8 +23,7 @@ function App() {
   // }, [])
 
 const [isOpen, setIsOpen] = useState(false)
-const toggle = () => 
-  setIsOpen (!isOpen)
+const toggle = () =>{setIsOpen (!isOpen)} 
 
 
 
@@ -33,8 +32,8 @@ const toggle = () =>
       <BrowserRouter>
       <Wrapper>
       <Hero />
-      <Sidebar isOpen = {isOpen} toggle ={toggle} />
-      <Navigation toggle ={toggle} />  
+      <Sidebar isOpen = {isOpen} toggle = {toggle} /> {/*toggle = {toggle}*/}
+      <Navigation toggle = {toggle} />   
       <Switch>
         <Route exact path="/" component={Home}/> 
         <Route exact path="/meditation" component={Meditation} />

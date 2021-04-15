@@ -12,42 +12,41 @@ const Sidebar = ({ isOpen, toggle }) => {
     console.log(pathname)
 
     return (
-        <SidebarContainer isOpen={isOpen} onClick={toggle} >
-            <Icon   >
-            <CloseIcon onClick={toggle}/>
+        <SidebarContainer isOpen ={isOpen}  > 
+            <Icon  onClick = {toggle}  >
+            <CloseIcon /> {/*onClick={toggle}*/}
             </Icon>
             <SidebarItem>
                 <SidebarLogo to="/" style ={{marginBottom: 70, marginTop:100, marginLeft:37}}>mindflō</SidebarLogo>
             </SidebarItem>
             { pathname === "/signin" || pathname === "/dashboard" || pathname === "/blog" || pathname === "/meditation" || pathname === "/signup" ? <>  </> :
-
                 <SidebarWrapper>
                     <SidebarMenu>
                         <SidebarItem>
-                            <SidebarLink to="meditation" smooth={true} duration={500} onClick={toggle}>
-                                Meditation
+                        
+                            <SidebarLink to="meditation" smooth={true} duration={500} >
+                                <span onClick={toggle}>Meditation</span>
                     </SidebarLink>
                         </SidebarItem>
                         <SidebarItem>
-                            <SidebarLink to="dashboard" smooth={true} duration={500} onClick={toggle}>
-                                Dashboard
+                            <SidebarLink to="dashboard" smooth={true} duration={500} >
+                               <span onClick={toggle}> Dashboard</span>
                     </SidebarLink>
                         </SidebarItem>
                         <SidebarItem>
-                            <SidebarLink to="blog" smooth={true} duration={500} offset={-100} onClick={toggle}>
-                                Blog
+                            <SidebarLink to="blog" smooth={true} duration={500} >
+                              <span onClick={toggle}>  Blog</span>
                     </SidebarLink>
                         </SidebarItem>
                         <SidebarItem>
-                            <SidebarLink to="footer" smooth={true} duration={500} onClick={toggle}>
-                                Contact Us
+                            <SidebarLink to="footer" smooth={true} duration={500} >
+                             <span onClick={toggle}>  Contact Us </span> 
                     </SidebarLink>
                         </SidebarItem>
                         <SidebarBtnWrap>
-                        <SidebarRoute to="/signin">Sign In</SidebarRoute>
+                        <SidebarRoute to="/signin"> <span> Sign In</span></SidebarRoute>
                     </SidebarBtnWrap>
                     </SidebarMenu>
-                    
                 </SidebarWrapper>
             }
 

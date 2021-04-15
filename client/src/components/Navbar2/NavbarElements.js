@@ -104,7 +104,7 @@ cursor: pointer;
 
 export const NavItem = styled.li
   `
-// height: 40px;
+height: 20px;
 `
 
 export const NavLinks = styled(LinkS)`
