@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap'
 const Button = (props) => {
     return (
         <div>
-            <Button>{props.children}</Button>
+            <Button className="btn">{props.children}</Button>
         </div>
     )
 }
