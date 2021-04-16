@@ -1,12 +1,15 @@
 import React from "react";
-import NewPost from "../components/NewPostCard"
+import BlogCard from "../components/BlogCard";
+//import NewPost from "../components/NewPostCard"
 import "./css/blog.css"
 
 function Blog() {
     return (
 
-            <NewPost/> 
+        //     <NewPost/> 
             /*Add another Component that pushes Posted Blogs HERE */
+
+        <BlogCard />
             
     );
   }

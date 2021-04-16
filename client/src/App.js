@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import React, { useState, useEffect } from 'react'
 import './App.css';
 import Home from "./pages/Home"
 import Hero from './components/Hero';
@@ -10,12 +11,14 @@ import Dashboard from "../src/pages/Dashboard"
 import Blog from "../src/pages/Blog"
 import Signup from "../src/pages/Signup"
 import Signin from "../src/pages/Signin"
-import React, { useState, useEffect } from 'react'
+
 import apiBlog from "../src/utils/blog"
 import Sidebar from "./components/Sidebar/index"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
+//import apiBlog from "../src/utils/blog"
 
-function App() {
+function App (){
 
   useEffect(async ()=>{
     console.log("hi")
@@ -32,7 +35,7 @@ const toggle = () =>{setIsOpen (!isOpen)}
   return (
     <div>
       <BrowserRouter>
-      <Wrapper>
+      {/* <Wrapper> */}
       <Hero />
       <Sidebar isOpen = {isOpen} toggle = {toggle} /> {/*toggle = {toggle}*/}
       <Navigation toggle = {toggle} />   
@@ -44,7 +47,7 @@ const toggle = () =>{setIsOpen (!isOpen)}
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/signin" component={Signin} />
         </Switch>
-      </Wrapper>
+      {/* </Wrapper> */}
       <Footer/>
       </BrowserRouter>
     </div>
