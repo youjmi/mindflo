@@ -17,10 +17,12 @@ import Sidebar from "./components/Sidebar/index"
 
 function App() {
 
-  // useEffect(async ()=>{
-  //   console.log("hi")
-  //   apiBlog.getBlogs()
-  // }, [])
+  useEffect(async ()=>{
+    console.log("hi")
+    apiBlog.getBlogs()
+  }, [])
+
+
 
 const [isOpen, setIsOpen] = useState(false)
 const toggle = () =>{setIsOpen (!isOpen)} 
