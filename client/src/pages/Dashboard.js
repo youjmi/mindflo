@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import SearchBar from "../components/SearchBar";
+import Charts from "../components/Charts";
 import "./css/dashboard.css";
 
 
@@ -10,6 +11,8 @@ function Dashboard() {
   return (
     <div>
       <h1>DASHBOARD SECTION</h1>
+<Charts/>
+
       <h6>
         Lorem ipsum dolor sit amet, veniam salutatus ad vel, ei vix iudicabit
         dissentiet, fugit percipit nec ad. Minim affert eloquentiam te quo.

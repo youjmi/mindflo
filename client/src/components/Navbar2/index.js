@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 // import { NavItem } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 import {useLocation} from "react-router-dom"
 import {

@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Container, Row } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css'
 //import ContactForm from "../components/ContactForm";
 import drop from "./images/dripdrop.png";
 //import stones from "./images/stonestacked.png";
