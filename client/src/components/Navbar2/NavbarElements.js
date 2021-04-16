@@ -14,7 +14,8 @@ display: flex;
 justify-content: center;
 padding: 0.5rem calc((100vw - 1000px) / 2);
 z-index: 10;
-
+// position: -webkit-sticky !important;
+// position: sticky !important;
 `;
 
 export const NavbarContainer = styled.div`
@@ -26,6 +27,8 @@ width : 100%;
 padding : 0 24px;
 max-width: 1100px;
 color: #2b3942;
+
+
 `;
 
 export const NavLogo = styled(LinkR)`

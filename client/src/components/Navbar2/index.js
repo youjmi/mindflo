@@ -26,7 +26,7 @@ console.log(pathname)
   return (
     <>
       <Navdiv >
-        <NavbarContainer sticky = "top">
+        <NavbarContainer >
           <NavLogo to = "/">mindflō</NavLogo>
           <Bars onClick = {toggle} />
           { pathname === "/signin" || pathname === "/dashboard" || pathname === "/blog" || pathname === "/meditation"|| pathname === "/signup" ?   <>  </> : 

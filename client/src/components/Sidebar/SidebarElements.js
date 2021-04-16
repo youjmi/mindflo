@@ -64,6 +64,8 @@ font-family: 'Alegreya', serif;
 
 export const SidebarWrapper = styled.div `
 color: #fff;
+display : ${({isOpen}) => isOpen ? "none" : "block"}
+
 `
 
 export const SidebarMenu = styled.ul`
