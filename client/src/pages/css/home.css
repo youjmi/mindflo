@@ -5,14 +5,14 @@ img {
 }
 
 .rightimage{
-    margin-right: 0;
+    margin-right: 4%;
     font-family: "Montserrat", sans-serif;
     /* display: inline; */
     float: right;
 }
 
 .leftimage {
-    margin-left: 0;
+    margin-left: 4%;
     font-family: "Montserrat", sans-serif;
     /* display: inline; */
     float:left;
