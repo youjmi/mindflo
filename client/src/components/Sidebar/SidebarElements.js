@@ -56,6 +56,7 @@ font-family: 'Alegreya', serif;
   color: #b6d5db;
   border-radius : 50px;
   font-size: 39px;
+  text-decoration:none
 }
 
 
@@ -103,6 +104,8 @@ font-family: "Montserrat", sans-serif;
 //     border-radius : 50px;
 //     font-size: 22px;
 //     font-family: "Montserrat", sans-serif;
+text-decoration:none
+
 
 //   }
 
@@ -136,6 +139,8 @@ font-family: "Montserrat", sans-serif;
     border-radius : 50px;
     font-size: 20px;
     font-family: "Montserrat", sans-serif;
+    text-decoration:none
+
 
   }
 

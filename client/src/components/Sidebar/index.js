@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React  from 'react'
 
 import { useLocation } from "react-router-dom"
 import { SidebarContainer, SidebarLogo, Icon, CloseIcon, SidebarWrapper, SidebarMenu, SidebarLink, SidebarBtnWrap, SidebarRoute, SidebarItem } from "./SidebarElements"
@@ -24,7 +24,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             </SidebarItem>
             
             {/* {hideMenu ? <SidebarWrapper/> :null } */}
-            { pathname === "/signin" || pathname === "/dashboard" || pathname === "/blog" || pathname === "/meditation" || pathname === "/signup" ? <>  </> :
+            { pathname === "/login" || pathname === "/dashboard" || pathname === "/blog" || pathname === "/meditation" || pathname === "/signup" ? <>  </> :
                 <SidebarWrapper>
                     <SidebarMenu>
                         <SidebarItem>
@@ -48,7 +48,7 @@ const Sidebar = ({ isOpen, toggle }) => {
                     </SidebarLink>
                         </SidebarItem>
                         <SidebarBtnWrap>
-                        <SidebarRoute to="/signin"> <span onClick={toggle}> Sign In</span></SidebarRoute>
+                        <SidebarRoute to="/login"> <span onClick={toggle}> Log In</span></SidebarRoute>
                     </SidebarBtnWrap>
                     </SidebarMenu>
                 </SidebarWrapper>
