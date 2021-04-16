@@ -1,3 +1,5 @@
+
+import React from 'react'
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import './App.css';
 import Home from "./pages/Home"
@@ -10,21 +12,13 @@ import Dashboard from "../src/pages/Dashboard"
 import Blog from "../src/pages/Blog"
 import Signup from "../src/pages/Signup"
 import Signin from "../src/pages/Signin"
-import React, { useState, useEffect } from 'react'
-import apiBlog from "../src/utils/blog"
+
+//import apiBlog from "../src/utils/blog"
 
 
 
 function App() {
 
-  // useEffect(async ()=>{
-  //   console.log("hi")
-
-  //   apiBlog.getBlogs()
-  
-  
-
-  // }, [])
 
   return (
     <div>
@@ -41,7 +35,7 @@ function App() {
         <Route exact path="/signin" component={Signin} />
         </Switch>
       </Wrapper>
-      <Footer/>
+      {/* <Footer/> */}
       </BrowserRouter>
     </div>
   );
