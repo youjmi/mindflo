@@ -2,11 +2,11 @@ import React from "react";
 import { Card, Container, CardColumns, Form, Button } from "react-bootstrap";
 // import Container from "../Container";
 import "./style.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+//import "bootstrap/dist/css/bootstrap.min.css";
 import beach from "./beachwave1.png";
 
-class BlogCard extends React.Component {
-  render() {
+function BlogCard (){
+ 
     return (
       <div>
         <div className="text-center">
@@ -123,7 +123,7 @@ class BlogCard extends React.Component {
         </Form>
       </div>
     );
-  }
+  
 }
 
 export default BlogCard;
