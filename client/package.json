@@ -7,6 +7,7 @@
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
     "apexcharts": "^3.26.0",
+    "bootstrap": "^4.6.0",
     "emailjs": "^3.4.0",
     "emailjs-com": "^2.6.4",
     "react": "^17.0.2",
