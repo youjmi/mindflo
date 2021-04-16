@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import Container from "../Container"
+// import Container from "../Container"
+import { Container } from "react-bootstrap"
 import Row from "../Row"
 import Col from "../Col"
 import "./style.css"
@@ -14,7 +15,7 @@ const Footer = () => {
         // <div className="footer" style={{textAlign: "center"}}>
         //     <h1>FOOTER</h1>
         // </div>
-        <Container>
+        
         <div className="footer">
 
             <Row className ="footerRow">
@@ -27,12 +28,14 @@ const Footer = () => {
                     <div className="footerContact">
                     <Link className = "homeTitle" to="contact"></Link>
                     <h1 className="footerTitle">Contact Us Here</h1>
+                    <div>
                     <Contact/>
+                    </div>
                     </div>
                 </Col>
             </Row>
         </div>
-        </Container>
+   
 
 
 
