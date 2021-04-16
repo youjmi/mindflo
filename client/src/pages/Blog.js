@@ -70,13 +70,16 @@ function Blogs() {
 
 
         
-function Blog() {
+
     return (
 
-            <NewPost/> 
+        //     <NewPost/> 
             /*Add another Component that pushes Posted Blogs HERE */
+
+        <BlogCard />
             
     );
-  }
   
-  export default Blog;
+ 
+}
+  export default Blogs;
