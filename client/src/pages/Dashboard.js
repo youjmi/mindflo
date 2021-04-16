@@ -2,6 +2,7 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import SearchBar from "../components/SearchBar";
 import Charts from "../components/Charts";
+import Dropdown from "../components/Dropdown"
 import "./css/dashboard.css";
 
 
@@ -12,7 +13,13 @@ function Dashboard() {
     <div>
       <h1>DASHBOARD SECTION</h1>
       <Charts/>
-
+      <Dropdown/>
+      <br></br>      
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
 
       <Container>
         <h1>Yoga Workouts</h1>

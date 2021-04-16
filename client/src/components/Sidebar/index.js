@@ -24,7 +24,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             </SidebarItem>
             
             {/* {hideMenu ? <SidebarWrapper/> :null } */}
-            { pathname === "/signin" || pathname === "/dashboard" || pathname === "/blog" || pathname === "/meditation" || pathname === "/signup" ? <>  </> :
+            { pathname === "/login" || pathname === "/dashboard" || pathname === "/blog" || pathname === "/meditation" || pathname === "/signup" ? <>  </> :
                 <SidebarWrapper>
                     <SidebarMenu>
                         <SidebarItem>
@@ -48,7 +48,7 @@ const Sidebar = ({ isOpen, toggle }) => {
                     </SidebarLink>
                         </SidebarItem>
                         <SidebarBtnWrap>
-                        <SidebarRoute to="/signin"> <span onClick={toggle}> Sign In</span></SidebarRoute>
+                        <SidebarRoute to="/login"> <span onClick={toggle}> Log In</span></SidebarRoute>
                     </SidebarBtnWrap>
                     </SidebarMenu>
                 </SidebarWrapper>

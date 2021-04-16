@@ -30,7 +30,7 @@ console.log(pathname)
         <NavbarContainer >
           <NavLogo to = "/">mindflō</NavLogo>
           <Bars onClick = {toggle} />
-          { pathname === "/signin" || pathname === "/dashboard" || pathname === "/blog" || pathname === "/meditation"|| pathname === "/signup" ?   <>  </> : 
+          { pathname === "/login" || pathname === "/dashboard" || pathname === "/blog" || pathname === "/meditation"|| pathname === "/signup" ?   <>  </> : 
           <NavMenu>
             <NavItem> 
               <NavLinks to ="meditation" smooth ={true} duration ={500} >Meditation</NavLinks>  
@@ -53,7 +53,7 @@ console.log(pathname)
           
 
           <NavBtn>
-            <NavBtnLink to ="/signin" >Sign In</NavBtnLink>
+            <NavBtnLink to ="/login" >Log In</NavBtnLink>
           </NavBtn>
         </NavbarContainer>
       </Navdiv>

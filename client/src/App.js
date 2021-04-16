@@ -9,7 +9,7 @@ import Meditation from "../src/pages/Meditation"
 import Dashboard from "../src/pages/Dashboard"
 import Blog from "../src/pages/Blog"
 import Signup from "../src/pages/Signup"
-import Signin from "../src/pages/Signin"
+import Login from "../src/pages/Login"
 import React, { useState, useEffect } from 'react'
 import apiBlog from "../src/utils/blog"
 import Sidebar from "./components/Sidebar/index"
@@ -42,7 +42,7 @@ const toggle = () =>{setIsOpen (!isOpen)}
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/blog" component={Blog} />
         <Route exact path="/signup" component={Signup} />
-        <Route exact path="/signin" component={Signin} />
+        <Route exact path="/Login" component={Login} />
         </Switch>
       </Wrapper>
       <Footer/>

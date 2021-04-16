@@ -152,24 +152,7 @@ function Charts() {
             </div>
 
 
-            <div>
-                <div className="container">
-                    <Form.Control
-                        as="select"
-                        custom
-                    // ref={this.myRef}
-                    >
-                        <option >Select</option>
-                        <option value="mind">Mind</option>
-                        <option value="body">Body</option>
-                        <option value="pamper">Pamper</option>
-
-                    </Form.Control>
-                    <button > {/*onClick={this.onButtonClick}*/}
-                    Submit
-                </button>
-                </div>
-            </div>
+           
         </div>
 
 
