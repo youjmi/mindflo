@@ -1,6 +1,6 @@
 
 import React from "react";
-
+import { Form } from "react-bootstrap"
 import ReactApexChart from "react-apexcharts";
 import "./style.css";
 
@@ -97,57 +97,82 @@ function Charts() {
         name: "Desktops",
         data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
     }]
-    const linesoptions= {
+    const linesoptions = {
         chart: {
-          height: 350,
-          type: 'line',
-          zoom: {
-            enabled: false
-          }
+            height: 350,
+            type: 'line',
+            zoom: {
+                enabled: false
+            }
         },
         dataLabels: {
             enabled: false
-          },
-          stroke: {
+        },
+        stroke: {
             curve: 'straight'
-          },
-          title: {
+        },
+        title: {
             text: 'Product Trends by Month',
             align: 'left'
-          },
-          grid: {
+        },
+        grid: {
             row: {
-              colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
-              opacity: 0.5
+                colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+                opacity: 0.5
             },
-          },
-          xaxis: {
+        },
+        xaxis: {
             categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
-          }}
+        }
+    }
 
 
-    
+
 
     return (
 
-        <div id="charts" className ="container">
-            <div className="row Chart1">
-                <div className ="col">
-                <ReactApexChart className="linechart" options={lineoptions} series={lineseries} type="area" height={300}  />
+        <div>
+            <div id="charts" className="container">
+                <div className="row Chart1">
+                    <div className="col">
+                        <ReactApexChart className="linechart" options={lineoptions} series={lineseries} type="area" height={300} />
+                    </div>
+                    <div className="col">
+                        <ReactApexChart className="linechart" options={linesoptions} series={linesseries} type="area" height={300} />
+                    </div>
                 </div>
-                <div className ="col">
-                <ReactApexChart className="linechart" options={linesoptions} series={linesseries} type="area" height={300} />
+                <div className="row Chart2">
+                    <div className="col">
+                        <ReactApexChart className="piechart" options={pieoptions} series={pieseries} type="pie" height={300} />
+                    </div>
+                    <div className="col">
+                        <ReactApexChart className="donutchart" options={donutoptions} series={donutseries} type="donut" height={300} />
+                    </div>
                 </div>
             </div>
-            <div className="row Chart2">
-            <div className ="col">
-            <ReactApexChart className="piechart" options={pieoptions} series={pieseries} type="pie" height={300} />
-            </div>
-            <div className ="col">
-            <ReactApexChart className="donutchart" options={donutoptions} series={donutseries} type="donut" height={300} />
-            </div>
+
+
+            <div>
+                <div className="container">
+                    <Form.Control
+                        as="select"
+                        custom
+                    // ref={this.myRef}
+                    >
+                        <option >Select</option>
+                        <option value="mind">Mind</option>
+                        <option value="body">Body</option>
+                        <option value="pamper">Pamper</option>
+
+                    </Form.Control>
+                    <button > {/*onClick={this.onButtonClick}*/}
+                    Submit
+                </button>
+                </div>
             </div>
         </div>
+
+
 
     )
 };
