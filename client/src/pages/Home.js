@@ -20,7 +20,7 @@ import dashboard from "./images/dashboadimg.png"
 
 function Home() {
   return (
-    <Wrapper>
+    <>
       <Container id="about" className="about">
      
         <Row>
@@ -137,7 +137,7 @@ function Home() {
           </Col>
         </Row>
       </Container> */}
-      </Wrapper>
+      </>
   );
 }
 
