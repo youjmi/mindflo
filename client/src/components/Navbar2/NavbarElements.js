@@ -48,6 +48,8 @@ font-family: 'Alegreya', serif;
   color: #b6d5db;
   border-radius : 50px;
   font-size: 1.6rem;
+  text-decoration:none
+
 
 
 }
@@ -129,6 +131,8 @@ color: #fff;
       color: #b6d5db;
       border-radius : 50px;
       font-size: 18px;
+      text-decoration:none
+
     
     
     }
@@ -161,7 +165,9 @@ font-family: "Montserrat", sans-serif;
   transition: all 0.2s ease-in-out;
   background-color: #b6d5db;
   border-radius : 50px;
+  text-decoration:none;
   font-size: 18px;
+  
 
 
 }

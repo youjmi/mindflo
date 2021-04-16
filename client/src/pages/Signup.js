@@ -1,25 +1,73 @@
 import React from "react";
 import "./css/signup.css"
+import { Form, Button, Card, Alert } from "react-bootstrap"
+// import { useAuth } from "../contexts/AuthContext"
+import { Link } from "react-router-dom"
+import 'bootstrap/dist/css/bootstrap.min.css'
 
-function Signup() {
-    return (
-      <div>
-          <h1>SIGNUP SECTION</h1>
-          <h6><p>Lorem ipsum dolor sit amet, veniam salutatus ad vel, ei vix iudicabit dissentiet, fugit percipit nec ad. Minim affert eloquentiam te quo. Causae scribentur in nec. Pri eros senserit ut, dolor rationibus adipiscing ex ius, ne est viris nusquam theophrastus. Vim cu quod vocent consectetuer, ad qui invidunt forensibus. Cu eum falli aliquip, ut aeque constituto incorrupte ius, per in mentitum laboramus neglegentur. Cu omnis persecuti mea.
 
-Possim euripidis mel te. Soleat feugait intellegat vis ut, sumo dicunt cotidieque mea id, ut cibo soleat eos. Dolore accusata at vis, ei eum tation putant. Eam an solum maluisset persequeris, labore feugiat feugait ad his. Facete percipit eos ut, cu cetero elaboraret philosophia quo. Pro laudem patrioque ei.
+export default function Signup () {
+  // const emailRef = useRef()
+  // const passwordRef = useRef()
+  // const passwordConfirmRef = useRef()
+  // const { signup } = useAuth()
+  // const [error, setError] = useState("")
+  // const [loading, setLoading] = useState(false)
+  // const history = useHistory()
 
-Melius minimum per ne, ius quaeque nusquam probatus id. Vix solum nominati adolescens ne, viris comprehensam ne has. Magna prima omnesque cu sea, ancillae invidunt assueverit ea usu. Ex minim accommodare qui. Numquam intellegat cu sed, eum exerci mediocrem sapientem at, ut usu affert postea. Eos ei legimus vituperata, qui ut posidonium assueverit instructior, minimum scaevola perfecto in vel.
+  // async function handleSubmit(e) {
+  //   e.preventDefault()
 
-Cum ex homero dignissim, per eu causae latine fastidii. Et verear temporibus disputando quo, in vel dico delenit persequeris. Qui in invidunt intellegam, no esse recusabo philosophia nec. Nec ei postea accusamus, minimum appareat appellantur nec ea, affert delenit singulis his ne. Mel ne veritus concludaturque, alia democritum eloquentiam no eam.
+  //   if (passwordRef.current.value !== passwordConfirmRef.current.value) {
+  //     return setError("Passwords do not match")
+  //   }
 
-Qui hinc liberavisse ad, pro in atqui labores maiestatis. In omnes integre menandri eos, vim animal platonem te. Ut simul ocurreret has, menandri electram complectitur has cu, no dico quando usu. Ex vel feugait delectus persecuti, mucius commodo vis no.</p></h6>
+  //   try {
+  //     setError("")
+  //     setLoading(true)
+  //     await signup(emailRef.current.value, passwordRef.current.value)
+  //     history.push("/")
+  //   } catch {
+  //     setError("Failed to create an account")
+  //   }
 
-<br></br>
+  //   setLoading(false)
+  // }
 
+  return (
+    <div className ="container signupboxForm">
+      <Card>
+        <Card.Body>
+          <h2 className="text-center mb-4">Sign Up</h2>
+          {/* {error && <Alert variant="danger">{error}</Alert>} */}
+          <Form > {/*onSubmit={handleSubmit}*/}
+            <Form.Group id="email">
+              <Form.Label>Email</Form.Label>
+              <Form.Control type="email"  required />{/*ref={} */}
+            </Form.Group>
+            <Form.Group id="password">
+              <Form.Label>Password</Form.Label>
+              <Form.Control type="password" required />{/*ref={} */}
+            </Form.Group>
+            <Form.Group id="password-confirm">
+              <Form.Label>Password Confirmation</Form.Label>
+              <Form.Control type="password" required /> {/*ref={} */}
+            </Form.Group>
+            <div>
+            <Button className="w-100" type="submit"> {/*disabled={loading} */}
+              Sign Up
+            </Button>
+            </div>
+          </Form>
+        </Card.Body>
+      </Card>
+      <div className="w-100 text-center mt-2 ">
+        Already have an account? <Link to="/login">Log In</Link>
       </div>
-  
-    );
-  }
-  
-  export default Signup;
+
+    </div>
+
+  );
+}
+
+
