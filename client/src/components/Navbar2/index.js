@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 // import { NavItem } from 'react-bootstrap';
 
 import {useLocation} from "react-router-dom"
@@ -14,9 +14,10 @@ import {
   Bars
 } from './NavbarElements';
 
-const Navigation = () => {
+const Navigation = ({toggle}) => {
 
-let {pathname} = useLocation() ;
+
+let {pathname} = useLocation() 
 
 
 console.log(pathname)
@@ -25,9 +26,9 @@ console.log(pathname)
   return (
     <>
       <Navdiv >
-        <NavbarContainer sticky = "top">
+        <NavbarContainer >
           <NavLogo to = "/">mindflō</NavLogo>
-          <Bars/>
+          <Bars onClick = {toggle} />
           { pathname === "/signin" || pathname === "/dashboard" || pathname === "/blog" || pathname === "/meditation"|| pathname === "/signup" ?   <>  </> : 
           <NavMenu>
             <NavItem> 

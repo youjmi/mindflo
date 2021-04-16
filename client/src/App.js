@@ -1,6 +1,5 @@
-
-import React from 'react'
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import React, { useState, useEffect } from 'react'
 import './App.css';
 import Home from "./pages/Home"
 import Hero from './components/Hero';
@@ -13,19 +12,33 @@ import Blog from "../src/pages/Blog"
 import Signup from "../src/pages/Signup"
 import Signin from "../src/pages/Signin"
 
+import apiBlog from "../src/utils/blog"
+import Sidebar from "./components/Sidebar/index"
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 //import apiBlog from "../src/utils/blog"
 
+function App (){
+
+  useEffect(async ()=>{
+    console.log("hi")
+    apiBlog.getBlogs()
+  }, [])
 
 
-function App() {
+
+const [isOpen, setIsOpen] = useState(false)
+const toggle = () =>{setIsOpen (!isOpen)} 
+
 
 
   return (
     <div>
       <BrowserRouter>
-      <Wrapper>
+      {/* <Wrapper> */}
       <Hero />
-      <Navigation />  
+      <Sidebar isOpen = {isOpen} toggle = {toggle} /> {/*toggle = {toggle}*/}
+      <Navigation toggle = {toggle} />   
       <Switch>
         <Route exact path="/" component={Home}/> 
         <Route exact path="/meditation" component={Meditation} />
@@ -34,8 +47,8 @@ function App() {
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/signin" component={Signin} />
         </Switch>
-      </Wrapper>
-      {/* <Footer/> */}
+      {/* </Wrapper> */}
+      <Footer/>
       </BrowserRouter>
     </div>
   );
