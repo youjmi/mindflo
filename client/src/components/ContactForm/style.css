@@ -13,11 +13,15 @@ button.contactBtn.btn.btn-primary{
     border-color: #0d2e5b;
   }
   
-  textarea#exampleForm\.ControlTextarea1.form-control {
+  /* textarea#exampleForm\.ControlTextarea1.form-control {
     border-color: #0d2e5b;
-    width: 20%;
+    width: 60%;
    
-  }
+  } */
+/* 
+  textarea{
+    width: 100px;
+  } */
 
   /* form{
       display:-webkit-flexblock;
@@ -40,3 +44,7 @@ button.contactBtn.btn.btn-primary{
     background-color: #0d2e5b;
     font-family: "Montserrat", sans-serif;
   } */
+
+  .form {
+    width: 600px;
+  }
