@@ -35,9 +35,9 @@ export default function Login () {
               <Form.Control type="password" required />{/*ref={} */}
             </Form.Group>
             <div>
-            <Button  className="w-100" type="submit">  {/*disabled={loading}*/}
+            <button  className="w-10 mt-3" type="submit">  {/*disabled={loading}*/}
               Log In
-            </Button>
+            </button>
             </div>
           </Form>
           {/* <div className="w-100 text-center mt-3">

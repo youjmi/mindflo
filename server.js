@@ -19,7 +19,7 @@ const app = express();
 
 
 // const User = require("./models/User");
-const db = require("./models")
+// const db = require("./models")
 
 
 
@@ -36,7 +36,6 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.use(cors())
-
 
 router.use(function(req, res) {
   res.sendFile(path.join(__dirname, "../client/build/index.html"));
