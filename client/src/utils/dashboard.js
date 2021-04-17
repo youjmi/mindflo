@@ -16,6 +16,8 @@ export default {
   // Saves a book to the database
   saveDashboard: function(dashboardData) {
     return axios.post("/dashboard", dashboardData);
+
+
   }
 };
 

@@ -70,6 +70,7 @@ function Blogs() {
 
 
 
+//    function Blogs()   {
 
     return (
 
@@ -80,6 +81,6 @@ function Blogs() {
             
     );
   
- 
-}
+    }
+
   export default Blogs;

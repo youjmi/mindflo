@@ -1,80 +1,75 @@
 
 import React, {useState, useEffect} from "react";
+import API from "../../utils/dashboard"
 import { Form, InputGroup,FormControl,Button } from "react-bootstrap"
-// import API from "../../utils/dashboard";
 
 function Dropdown() {
-
-    const [isSelected, setIsSelected] = useState(false);
-    const [isName, setIsName] =useState("");
-    const [isDuration, setIsDuration] =useState("");
-    const [isMood, setIsMood] =useState("");
-    const [savedInfo, setSavedInfo] = useState([]);
-const [formObject, setFormObject] =useState ({
-
-    type: ""    
-})
-
-
-    // useEffect(() => {
-    //     loadDashboard()
-    // }, [])
-
-
-    const submitMind = () => {
-      let  mindObj ={
-        selfcare: [{
-            type: isSelected,
-            name: isName,
-            duration: isDuration,
-            mood: isMood
-        }]
-      }
-      console.log(mindObj)
-      }
-
-    const submitBody = () => {
-        let bodyObj = {
-            selfcare: [{
-                type: isSelected,
-                name: isName,
-                duration: isDuration,
-                mood: isMood
-            }]
-        }
-        console.log(bodyObj)
-    }
-
-    // function submitBody(event) {
-    //     event.preventDefault();
+    //   // Setting our component's initial state
+    // const [isSelected, setIsSelected] = useState(false);
+      const [dashboard, setDashboard] = useState([])
+      const [formObject, setFormObject] = useState({
+        type: "",
+        name: "",
+        duration: "",
+        mood: ""
+        // day: "",
+        // user: ""
+      })
+    
+    // load by  ID
+      // Load all blogs and store them with setBlogs 
+      useEffect(() => {
+        loadDashboard()
+      }, [])
+    
+      // Loads all books and sets them to blogs
+      function loadDashboard() {
+        API.getDashboard()
+          .then(res => 
+            setDashboard(res.data)
+          )
+          .catch(err => console.log(err));
+      };
+    
+      // Deletes a blogs from the database with a given id, then reloads blogs from the db
+    //   function deleteDashboard(id) {
+    //     API.deleteDashboard(id)
+    //       .then(res => loadDashboard())
+    //       .catch(err => console.log(err));
+    //   }
+    
+      // Handles updating component state when the user types into the input field
+      function handleInputChange(event) {
+        const { name, value } = event.target;
+        setFormObject({...formObject, [name]: value})
+      };
+    
+      // When the form is submitted, use the API.saveBook method to save the book data
+      // Then reload books from the database
+      function handleFormSubmit(event) {
+        event.preventDefault();
         
-    //       API.saveDashboard({
-    //         type: isSelected,
-    //         name: isName,
-    //         duration: isDuration,
-    //         mood: isMood
-    //       })
-            
-    //         // .then(() => loadDashboard())
-    //         .catch(err => console.log(err));
-           
+          API.saveDashboard({
+            type: formObject.type,
+            name: formObject.name,
+            duration: formObject.duration,
+            mood: formObject.mood,
+            // day: formObject.day,
+            // user: formObject.user,
+          })
+            .then(() => setFormObject({
+              type: "",
+        name: "",
+        duration: "",
+        mood: "",
+        // day: "",
+        // user: ""
+            }))
+            .then(() => loadDashboard())
+            .catch(err => console.log(err));
         
-    //   };
-    const submitPamper = () => {
-        let pamperObj = {
-        selfcare: [{
-            type: isSelected,
-            name: isName,
-            duration: isDuration,
-            mood: isMood
-        }]
-    }
-    console.log(pamperObj)
-    }
-////=--test------////
-
-        
-
+      };
+    
     
 
     return (
@@ -84,22 +79,23 @@ const [formObject, setFormObject] =useState ({
                     as="select"
                     custom
                 // ref={this.myRef}
-                    onChange={e => setIsSelected(e.target.value)} >
+                onChange={formObject.type}
+                >
                     <option disabled selected>Select Mindful Practice</option>
                     <option value="mind">Mind (Meditation) </option>
                     <option value="body">Body (Yoga) </option>
                     <option value="pamper">Pamper (Treat Yo Self) </option>
                 </Form.Control>
             </div>
-            { isSelected == "mind" ?   
+            { value == "mind" ?   
             <div className="container  mindBOX">
                 <InputGroup className="mb-3">
                     <FormControl
                         placeholder="Mind Session Name"
                         aria-label="Session Name"
                         aria-describedby="basic-addon2"
-                        onChange ={e => setIsName(e.target.value)}
-                        value = {isName}
+                        onChange={handleInputChange}
+                        value = {formObject.name}
 
                     />
                 </InputGroup>
@@ -109,8 +105,8 @@ const [formObject, setFormObject] =useState ({
                         aria-label="minutes"
                         aria-describedby="basic-addon2"
                         type="number"
-                        onChange ={e => setIsDuration(e.target.value)}
-                        value = {isDuration}
+                        onChange={handleInputChange}
+                        value = {formObject.duration}
                     />
                 </InputGroup>
                 <InputGroup className="mb-3">
@@ -119,24 +115,24 @@ const [formObject, setFormObject] =useState ({
                         aria-label="affirmations"
                         aria-describedby="basic-addon2"
                         type="number"
-                        onChange ={e => setIsMood(e.target.value)}
-                        value = {isMood}
+                        onChange={handleInputChange}
+                        value = {formObject.mood}
                     />
                 </InputGroup>
-                <button className=""  onClick={submitMind}  > {/*onClick={this.onButtonClick}*/}
+                <button className=""  onClick={handleFormSubmit}  > {/*onClick={this.onButtonClick}*/}
                  Submit
                  </button>
             </div>
             :<> </> }
-            { isSelected == "body" ?  
+            { value == "body" ?  
             <div className="container hidden bodyBOX">
                 <InputGroup className="mb-3">
                     <FormControl
                         placeholder="Body Session Name"
                         aria-label="Session Name"
                         aria-describedby="basic-addon2"
-                        onChange ={e => setIsName(e.target.value)}
-                        value = {isName}
+                        onChange={handleInputChange}
+                        value = {formObject.name}
                     />
                 </InputGroup>
                 <InputGroup className="mb-3">
@@ -145,8 +141,8 @@ const [formObject, setFormObject] =useState ({
                         aria-label="minutes"
                         aria-describedby="basic-addon2"
                         type="number"
-                        onChange ={e => setIsDuration(e.target.value)}
-                        value = {isDuration}
+                        onChange={handleInputChange}
+                        value = {formObject.duration}
                     />
                 </InputGroup>
                 <InputGroup className="mb-3">
@@ -155,25 +151,25 @@ const [formObject, setFormObject] =useState ({
                         aria-label="affirmations"
                         aria-describedby="basic-addon2"
                         type="number"
-                        onChange ={e => setIsMood(e.target.value)}
-                        value = {isMood}
+                        onChange={handleInputChange}
+                        value = {formObject.mood}
                     />
                 </InputGroup>
 
-                <button className="" onClick={submitBody}> {/*onClick={this.onButtonClick}*/}
+                <button className="" onClick={handleFormSubmit}> {/*onClick={this.onButtonClick}*/}
                  Submit
                  </button>
             </div>
             : <> </>}
-            { isSelected == "pamper" ?  
+            { value == "pamper" ?  
             <div className="container hidden pamperboxOX">
                 <InputGroup className="mb-3">
                     <FormControl
                         placeholder="Pamper Name Session"
                         aria-label="Session Name"
                         aria-describedby="basic-addon2"
-                        onChange ={e => setIsName(e.target.value)}
-                        value = {isName}
+                        onChange={handleInputChange}
+                        value = {formObject.name}
                     />
                 </InputGroup>
                 <InputGroup className="mb-3">
@@ -194,10 +190,10 @@ const [formObject, setFormObject] =useState ({
                         aria-label="affirmations"
                         aria-describedby="basic-addon2"
                         type="number"
-                        onChange ={e => setIsMood(e.target.value)}
-                        value = {isMood}
+                        onChange={handleInputChange}
+                        value = {formObject.mood}
                     />
-                <button className="" onClick={submitPamper}> {/*onClick={this.onButtonClick}*/}
+                <button className="" onClick={handleFormSubmit}> {/*onClick={this.onButtonClick}*/}
                  Submit
                  </button>
             </div>
