@@ -70,6 +70,10 @@ function Blogs() {
 
 
 
+<<<<<<< HEAD
+//    function Blogs()   {
+=======
+>>>>>>> e638a68758377976d3c847b7354be7ac289600c7
 
     return (
     <>
@@ -82,6 +86,6 @@ function Blogs() {
     </>     
     );
   
- 
-}
+    }
+
   export default Blogs;
