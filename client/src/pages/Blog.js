@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import NewPost from "../components/NewPostCard"
 import "./css/blog.css"
 import API from "../utils/blog"
+import BlogCard from "../components/BlogCard"
 
 
 
@@ -69,7 +70,7 @@ function Blogs() {
 
 
 
-        
+//    function Blogs()   {
 
     return (
 
@@ -80,6 +81,6 @@ function Blogs() {
             
     );
   
- 
-}
+    }
+
   export default Blogs;
