@@ -1,4 +1,4 @@
-import React  from 'react'
+import React from 'react'
 
 import { useLocation } from "react-router-dom"
 import { SidebarContainer, SidebarLogo, Icon, CloseIcon, SidebarWrapper, SidebarMenu, SidebarLink, SidebarBtnWrap, SidebarRoute, SidebarItem } from "./SidebarElements"
@@ -23,9 +23,8 @@ const Sidebar = ({ isOpen, toggle }) => {
                 <SidebarLogo to="/" style ={{marginBottom: 70, marginTop:100, marginLeft:37}} ><span onClick={toggle}> mindflō </span></SidebarLogo>
             </SidebarItem>
             
-            {/* {hideMenu ? <SidebarWrapper/> :null } */}
             { pathname === "/login" || pathname === "/dashboard" || pathname === "/blog" || pathname === "/meditation" || pathname === "/signup" ? <>  </> :
-                <SidebarWrapper>
+                <SidebarWrapper style = {{display: isOpen ? "block" : "none"}}>
                     <SidebarMenu>
                         <SidebarItem>
                             <SidebarLink to="meditation" smooth={true} duration={500} >
@@ -53,6 +52,9 @@ const Sidebar = ({ isOpen, toggle }) => {
                     </SidebarMenu>
                 </SidebarWrapper>
             }
+            {/* {hideMenu ? <SidebarWrapper/> : null } */}
+            {/* { pathname === "/login" || pathname === "/dashboard" || pathname === "/blog" || pathname === "/meditation" || pathname === "/signup" ? ( <SidebarWrapper style ={{color : "black"}} />) : null } */}
+
 
         </SidebarContainer>
     )
