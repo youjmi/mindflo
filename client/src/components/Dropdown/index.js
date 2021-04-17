@@ -1,6 +1,7 @@
 
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { Form, InputGroup,FormControl,Button } from "react-bootstrap"
+// import API from "../../utils/dashboard";
 
 function Dropdown() {
 
@@ -8,50 +9,57 @@ function Dropdown() {
     const [isName, setIsName] =useState("");
     const [isDuration, setIsDuration] =useState("");
     const [isMood, setIsMood] =useState("");
+    const [savedInfo, setSavedInfo] = useState([]);
+const [formObject, setFormObject] =useState ({
 
-    
+    type: ""    
+})
+
+
+    // useEffect(() => {
+    //     loadDashboard()
+    // }, [])
+
+
+
+
     const submitMind = () => {
       let  mindObj ={
         selfcare: [{
-
             type: isSelected,
             name: isName,
             duration: isDuration,
             mood: isMood
-
         }]
       }
       console.log(mindObj)
-
       }
+
     const submitBody = () => {
         let bodyObj = {
             selfcare: [{
-
                 type: isSelected,
                 name: isName,
                 duration: isDuration,
                 mood: isMood
-    
             }]
         }
         console.log(bodyObj)
     }
     const submitPamper = () => {
-
         let pamperObj = {
         selfcare: [{
-
             type: isSelected,
             name: isName,
             duration: isDuration,
             mood: isMood
-
         }]
     }
     console.log(pamperObj)
-
     }
+////=--test------////
+
+        
 
 
 
@@ -62,8 +70,7 @@ function Dropdown() {
                     as="select"
                     custom
                 // ref={this.myRef}
-                    onChange={e => setIsSelected(e.target.value)}
-                >
+                    onChange={e => setIsSelected(e.target.value)} >
                     <option disabled selected>Select Mindful Practice</option>
                     <option value="mind">Mind (Meditation) </option>
                     <option value="body">Body (Yoga) </option>

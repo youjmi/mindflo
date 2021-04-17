@@ -3,7 +3,7 @@ import axios from "axios";
 export default {
   // Gets all blogs
   getDashboards: function() {
-    return axios.get("http://localhost:3001/dashboard");
+    return axios.get("/dashboard");
   },
   // Gets the blog with the given id
   getDashboard: function(id) {
