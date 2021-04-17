@@ -13,16 +13,16 @@ import Signup from "../src/pages/Signup"
 import Login from "../src/pages/Login"
 import apiBlog from "../src/utils/blog"
 import Sidebar from "./components/Sidebar/index"
-//import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // import apiBlog from "../src/utils/blog"
 
 function App (){
 
-  useEffect(async ()=>{
-    console.log("hi")
-    apiBlog.getBlogs()
-  }, [])
+  // useEffect(async ()=>{
+  //   console.log("hi")
+  //   apiBlog.getBlogs()
+  // }, [])
 
 //tessstt
 
