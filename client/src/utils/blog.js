@@ -1,5 +1,7 @@
 import axios from "axios";
 
+
+
 export default {
   // Gets all blogs
   getBlogs: function() {

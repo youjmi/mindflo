@@ -10,10 +10,6 @@ function Dropdown() {
     const [isDuration, setIsDuration] =useState("");
     const [isMood, setIsMood] =useState("");
     const [savedInfo, setSavedInfo] = useState([]);
-const [formObject, setFormObject] =useState ({
-
-    type: ""    
-})
 
 
     // useEffect(() => {
@@ -70,12 +66,7 @@ const [formObject, setFormObject] =useState ({
         }]
     }
     console.log(pamperObj)
-    }
-////=--test------////
-
-        
-
-    
+}
 
     return (
         <div>

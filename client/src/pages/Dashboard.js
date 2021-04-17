@@ -2,7 +2,7 @@ import React, { useEffect, useState }  from "react";
 import { Container } from "react-bootstrap";
 import SearchBar from "../components/SearchBar";
 import Charts from "../components/Charts";
-import Dropdown from "../components/Dropdown/test"
+import Dropdown from "../components/Dropdown/index"
 import "./css/dashboard.css";
 import API from "../utils/dashboard"
 

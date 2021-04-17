@@ -1,14 +1,14 @@
 
 import React, {useState, useEffect} from "react";
 import API from "../../utils/dashboard"
-import { Form, InputGroup,FormControl,Button } from "react-bootstrap"
+import { Form,} from "react-bootstrap"
 
-function Dropdown() {
+function Dropdown(event) {
     //   // Setting our component's initial state
     // const [isSelected, setIsSelected] = useState(false);
       const [dashboard, setDashboard] = useState([])
       const [formObject, setFormObject] = useState({
-        type: "",
+        // type: "",
         name: "",
         duration: "",
         mood: ""
@@ -50,7 +50,6 @@ function Dropdown() {
         event.preventDefault();
         
           API.saveDashboard({
-            type: formObject.type,
             name: formObject.name,
             duration: formObject.duration,
             mood: formObject.mood,
@@ -58,7 +57,7 @@ function Dropdown() {
             // user: formObject.user,
           })
             .then(() => setFormObject({
-              type: "",
+            //   type: "",
         name: "",
         duration: "",
         mood: "",
@@ -75,11 +74,12 @@ function Dropdown() {
     return (
         <div>
             <div className="container">
+
                 <Form.Control
                     as="select"
                     custom
                 // ref={this.myRef}
-                onChange={formObject.type}
+                // onChange={formObject.type}
                 >
                     <option disabled selected>Select Mindful Practice</option>
                     <option value="mind">Mind (Meditation) </option>
@@ -87,20 +87,22 @@ function Dropdown() {
                     <option value="pamper">Pamper (Treat Yo Self) </option>
                 </Form.Control>
             </div>
-            { value == "mind" ?   
             <div className="container  mindBOX">
-                <InputGroup className="mb-3">
-                    <FormControl
+        
+
+                <Form.Group className="mb-3">
+                    <Form.Control
                         placeholder="Mind Session Name"
                         aria-label="Session Name"
                         aria-describedby="basic-addon2"
                         onChange={handleInputChange}
                         value = {formObject.name}
+                        type
 
                     />
-                </InputGroup>
-                <InputGroup className="mb-3">
-                    <FormControl
+                </Form.Group>
+                <Form.Group className="mb-3">
+                    <Form.Control
                         placeholder="How many minutes?"
                         aria-label="minutes"
                         aria-describedby="basic-addon2"
@@ -108,9 +110,9 @@ function Dropdown() {
                         onChange={handleInputChange}
                         value = {formObject.duration}
                     />
-                </InputGroup>
-                <InputGroup className="mb-3">
-                <FormControl
+                </Form.Group>
+                <Form.Group className="mb-3">
+                <Form.Control
                         placeholder="Rate your Mood from 1-10"
                         aria-label="affirmations"
                         aria-describedby="basic-addon2"
@@ -118,14 +120,13 @@ function Dropdown() {
                         onChange={handleInputChange}
                         value = {formObject.mood}
                     />
-                </InputGroup>
+                </Form.Group>
                 <button className=""  onClick={handleFormSubmit}  > {/*onClick={this.onButtonClick}*/}
                  Submit
                  </button>
             </div>
-            :<> </> }
-            { value == "body" ?  
-            <div className="container hidden bodyBOX">
+            
+            {/* <div className="container hidden bodyBOX">
                 <InputGroup className="mb-3">
                     <FormControl
                         placeholder="Body Session Name"
@@ -156,12 +157,12 @@ function Dropdown() {
                     />
                 </InputGroup>
 
-                <button className="" onClick={handleFormSubmit}> {/*onClick={this.onButtonClick}*/}
+                <button className="" onClick={handleFormSubmit}> 
                  Submit
                  </button>
             </div>
-            : <> </>}
-            { value == "pamper" ?  
+             */}
+            {/* { formObject.type == "pamper" ?  
             <div className="container hidden pamperboxOX">
                 <InputGroup className="mb-3">
                     <FormControl
@@ -193,11 +194,11 @@ function Dropdown() {
                         onChange={handleInputChange}
                         value = {formObject.mood}
                     />
-                <button className="" onClick={handleFormSubmit}> {/*onClick={this.onButtonClick}*/}
+                <button className="" onClick={handleFormSubmit}> 
                  Submit
-                 </button>
-            </div>
-            : <> </> }
+                 </button> */}
+            {/* </div> */}
+          
 
 
 
