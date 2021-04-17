@@ -8,30 +8,30 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 
 
-const Cards = () => {
+const NewPostCard = () => {
 
-    const [blogs, setBlogs] = useState([])
+    //const [blogs, setBlogs] = useState([])
     const [formObject, setFormObject] = useState({
       title: "",
       post: "",
-      date: "",
-      user: "",
-      image: ""
+    //   date: "",
+    //   user: "",
+    //   image: ""
     })
 
-    useEffect(() => {
-        loadBlogs()
+    // useEffect(() => {
+    //     loadBlogs()
         
-      }, [])
+    //   }, [])
     
     
-      function loadBlogs() {
-        API.getBlogs()
-          .then(res => 
-            setBlogs(res.data)
-          )
-          .catch(err => console.log(err));
-      };
+    //   function loadBlogs() {
+    //     API.getBlogs()
+    //       .then(res => 
+    //         setBlogs(res.data)
+    //       )
+    //       .catch(err => console.log(err));
+    //   };
 
     function handleInputChange(event) {
         const { name, value } = event.target;
@@ -42,24 +42,27 @@ const Cards = () => {
       // Then reload books from the database
       function handleFormSubmit(event) {
         event.preventDefault();
-        if (formObject.title && formObject.user) {
+        console.log("working")
+        // if (formObject.title && formObject.user) {
           API.saveBlog({
             title: formObject.title,
-            user: formObject.user,
+            // user: formObject.user,
             post: formObject.post,
-            date: formObject.date,
-            image: formObject.image
+            // date: formObject.date,
+            // image: formObject.image
           })
             .then(() => setFormObject({
               title: "",
-              user: "",
+            //   user: "",
               post: "",
-              date: "",
-              image:""
-            }))
-            .then(() => loadBlogs())
+            //   date: "",
+            //   image:""
+            })).then(() => {
+                console.log(formObject)
+            })
+            // .then(() => loadBlogs())
             .catch(err => console.log(err));
-        }
+        // }
       };
 
 
@@ -70,7 +73,7 @@ const Cards = () => {
 
 
     return (
-        <Container style={{}}>
+        <Container >
 
             <Form>
                 <Form.Group controlId="formBasicTitle">
@@ -82,7 +85,7 @@ const Cards = () => {
                     />
                 </Form.Group>
 
-                <Form.Group controlId="formBasicImage">
+                {/* <Form.Group controlId="formBasicImage">
                     <Form.Label>Image:</Form.Label>
                     <Form.Control type="image" placeholder="insert image link"
                     onChange={handleInputChange}
@@ -90,7 +93,7 @@ const Cards = () => {
                     value={formObject.image}
                     
                     />
-                </Form.Group>
+                </Form.Group> */}
 
                 {/* <Form.Group controlId="formBasicUsername">
                     <Form.Label>Image:</Form.Label>
@@ -110,9 +113,9 @@ const Cards = () => {
                     />
                 </Form.Group>
 
-                <Button variant="primary" type="submit" onSubmit={handleFormSubmit}>
+                <button variant="primary" type="submit" onClick={handleFormSubmit}>
                     Submit
-                 </Button>
+                 </button>
 
                 <br />
 
@@ -142,4 +145,4 @@ const Cards = () => {
   );
 }
 
-export default Cards
+export default NewPostCard;

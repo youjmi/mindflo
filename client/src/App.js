@@ -19,10 +19,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App (){
 
-  useEffect(async ()=>{
-    console.log("hi")
-    apiBlog.getBlogs()
-  }, [])
+  // useEffect(async ()=>{
+  //   console.log("hi")
+  //   apiBlog.getBlogs()
+  // }, [])
 
 //tessstt
 

@@ -1,18 +1,19 @@
 const express = require("express");
 const router = require("express").Router();
-
+//const path = require("path");
 const cors = require("cors");
-const passport = require("passport");
-const passportLocal = require("passport-local").Strategy;
-const cookieParser = require("cookie-parser");
-const bcrypt = require("bcryptjs");
-const session = require("express-session");
-const bodyParser = require("body-parser");
+// const passport = require("passport");
+// const passportLocal = require("passport-local").Strategy;
+// const cookieParser = require("cookie-parser");
+// const bcrypt = require("bcryptjs");
+// const session = require("express-session");
+// const bodyParser = require("body-parser");
 
 const mongoose = require("mongoose");
 const routesblog = require("./routes/blog");
 const routesdashboard= require("./routes/dashboard");
 const routesuser= require("./routes/user");
+// const routeshtml = require("./routes/html")
 
 const app = express();
 
@@ -33,18 +34,32 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-// Add routes, both API and view
- //app.use(routes);
-// require("./routes/dashboard")(app)
-// require("./routes/blog")(app)
-// require("./routes/user")(app)
-app.use(function(req, res) {
+
+app.use(cors())
+
+
+router.use(function(req, res) {
   res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
 
 app.use(routesblog);
 app.use(routesdashboard);
 app.use(routesuser);
+// Add routes, both API and view
+ //app.use(routes);
+// require("./routes/dashboard")(app)
+// require("./routes/blog")(app)
+// require("./routes/user")(app)
+// router.use(function(req, res) {
+//   res.sendFile(path.join(__dirname, "../client/build/index.html"));
+// });
+// router.use(function(req, res) {
+//   res.sendFile(path.join(__dirname, "../client/build/index.html"));
+// });
+
+// router.use(routesblog);
+// router.use(routesdashboard);
+// router.use(routesuser);
 
 
 // Connect to the Mongo DB
