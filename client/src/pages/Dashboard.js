@@ -78,8 +78,8 @@ function Dashboard() {
   return (
     <div>
       <h1>DASHBOARD SECTION</h1>
-      <Charts/>
-      <Dropdown/>
+       <Charts/> 
+    <Dropdown/> 
       <br></br>      
       <br></br>
       <br></br>

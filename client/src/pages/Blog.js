@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-// import NewPost from "../components/NewPostCard"
+import NewPost from "../components/NewPostCard"
 import "./css/blog.css"
-import API from "../utils/blog"
+// import API from "../utils/blog"
 import BlogCard from "../components/BlogCard"
 
 
@@ -70,15 +70,17 @@ function Blogs() {
 
 
 
-//    function Blogs()   {
+    
 
     return (
+    <>
+    <NewPost/> 
+        //Add a button to create a new post and pop up NewPost component.
 
-        //     <NewPost/> 
-            /*Add another Component that pushes Posted Blogs HERE */
-
-        <BlogCard />
-            
+          
+    //get Dashboard posts all blog cards
+    <BlogCard />
+    </>     
     );
   
     }
