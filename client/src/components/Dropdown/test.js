@@ -5,7 +5,7 @@ import { Form, InputGroup,FormControl,Button } from "react-bootstrap"
 
 function Dropdown() {
     //   // Setting our component's initial state
-    // const [isSelected, setIsSelected] = useState(false);
+    const [isSelected, setIsSelected] = useState(false);
       const [dashboard, setDashboard] = useState([])
       const [formObject, setFormObject] = useState({
         type: "",
@@ -79,7 +79,8 @@ function Dropdown() {
                     as="select"
                     custom
                 // ref={this.myRef}
-                onChange={formObject.type}
+                onChange={e => setIsSelected(e.target.value)}
+
                 >
                     <option disabled selected>Select Mindful Practice</option>
                     <option value="mind">Mind (Meditation) </option>
@@ -87,7 +88,7 @@ function Dropdown() {
                     <option value="pamper">Pamper (Treat Yo Self) </option>
                 </Form.Control>
             </div>
-            { value == "mind" ?   
+            { isSelected == "mind" ?   
             <div className="container  mindBOX">
                 <InputGroup className="mb-3">
                     <FormControl
@@ -124,7 +125,7 @@ function Dropdown() {
                  </button>
             </div>
             :<> </> }
-            { value == "body" ?  
+            {isSelected == "body" ?  
             <div className="container hidden bodyBOX">
                 <InputGroup className="mb-3">
                     <FormControl
@@ -161,7 +162,7 @@ function Dropdown() {
                  </button>
             </div>
             : <> </>}
-            { value == "pamper" ?  
+            { isSelected == "pamper" ?  
             <div className="container hidden pamperboxOX">
                 <InputGroup className="mb-3">
                     <FormControl

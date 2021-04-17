@@ -14,6 +14,7 @@ const routesblog = require("./routes/blog");
 const routesdashboard= require("./routes/dashboard");
 const routesuser= require("./routes/user");
 
+const path = require("path")
 const app = express();
 
 
@@ -52,9 +53,9 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mindflo",
 
   {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
+    // useUnifiedTopology: true,
+    // useCreateIndex: true,
+    // useFindAndModify: false,
   }
 
 )
