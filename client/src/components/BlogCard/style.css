@@ -24,3 +24,7 @@
   .card .text-muted i {
     margin: 0 10px;
   }
+
+  button.btn.btn-primary {
+    position: relative;
+  }

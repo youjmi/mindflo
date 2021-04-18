@@ -9,11 +9,11 @@ export default {
   },
   // Gets the blog with the given id
   getBlog: function (id) {
-    return axios.get(`${baseURL}/blog` + id);
+    return axios.get(`${baseURL}/blog/` + id);
   },
   // Deletes the book with the given id
   deleteBlog: function (id) {
-    return axios.delete(`${baseURL}/blog` + id);
+    return axios.delete(`${baseURL}/blog/` + id);
   },
   // Saves a book to the database
   saveBlog: function (blogData) {
@@ -29,4 +29,8 @@ export default {
     // }
     );
   },
+
+  updateBlog: function(id) {
+    return axios.put(`${baseURL}/blog/` + id);
+  }
 };

@@ -27,7 +27,7 @@ let upload = multer({ storage, fileFilter });
 
 
 // Matches with "/blog"
-router.route("/blog/uploads")
+router.route("/blog")
   .get(blogsController.findAll)
   .post(upload.single('photo'), blogsController.create);
 
