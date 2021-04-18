@@ -9,15 +9,15 @@ import API from "../utils/dashboard"
 
 // function Dashboard() {
 //   // Setting our component's initial state
-//   const [dashboard, setDashboard] = useState([])
-//   const [formObject, setFormObject] = useState({
-//     type: "",
-//     name: "",
-//     duration: "",
-//     mood: "",
-//     day: "",
-//     user: ""
-//   })
+  //  const [dashboard, setDashboard] = useState([])
+  // const [formObject, setFormObject] = useState({
+  //   type: "",
+  //   name: "",
+  //   duration: "",
+  //   mood: "",
+  //   // day: "",
+  //   // user: ""
+  // })
 
 // // load by  ID
 //   // Load all blogs and store them with setBlogs 

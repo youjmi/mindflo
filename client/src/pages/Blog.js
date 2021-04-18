@@ -75,10 +75,10 @@ function Blogs() {
     return (
     <>
     <NewPost/> 
-        //Add a button to create a new post and pop up NewPost component.
+        {/* //Add a button to create a new post and pop up NewPost component.
 
           
-    //get Dashboard posts all blog cards
+    //get Dashboard posts all blog cards */}
     <BlogCard />
     </>     
     );
