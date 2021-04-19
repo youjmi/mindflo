@@ -135,18 +135,18 @@ function Charts() {
             <div id="charts" className="container">
                 <div className="row Chart1">
                     <div className="col">
-                        <ReactApexChart className="linechart" options={lineoptions} series={lineseries} type="area" height={300} />
+                        <ReactApexChart id="linechart" options={lineoptions} series={lineseries} type="area" height={300} />
                     </div>
                     <div className="col">
-                        <ReactApexChart className="linechart" options={linesoptions} series={linesseries} type="area" height={300} />
+                        <ReactApexChart id="linechart2" options={linesoptions} series={linesseries} type="area" height={300} />
                     </div>
                 </div>
                 <div className="row Chart2">
                     <div className="col">
-                        <ReactApexChart className="piechart" options={pieoptions} series={pieseries} type="pie" height={300} />
+                        <ReactApexChart id="piechart" options={pieoptions} series={pieseries} type="pie" height={300} />
                     </div>
                     <div className="col">
-                        <ReactApexChart className="donutchart" options={donutoptions} series={donutseries} type="donut" height={300} />
+                        <ReactApexChart id="donutchart" options={donutoptions} series={donutseries} type="donut" height={300} />
                     </div>
                 </div>
             </div>

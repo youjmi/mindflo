@@ -8,86 +8,100 @@ import drop from "./images/dripdrop.png";
 import hay from "./images/hay.png";
 //import Row from "../components/Row";
 import Col from "../components/Col";
-import "./css/home.css";
+import "./css/home.css"
 import Wrapper from "../components/Wrapper";
 //import Container from "../components/Container";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom"
 //import Container from "../components/ImageContainer";
-import about from "./images/aboutusimg.png";
-import meditate from "./images/meditationimg.png";
-import blog from "./images/blogimg2.png";
-import dashboard from "./images/dashboadimg.png";
+import about from "./images/aboutusimg.png"
+import meditate from "./images/meditationimg.png"
+import blog from "./images/blogimg2.png"
+import dashboard from "./images/dashboadimg.png"
 
 function Home() {
   return (
     <>
       <Container id="about" className="about">
+     
         <Row>
-          <Container>
-            <Col size="lg-4">
-              <img src={about} className="leftimage" />
-            </Col>
+        <Container>
+          <Col size="lg-4">
+         
+            <img  src={about} className="leftimage"/>
+         
+          </Col>
+          
+          <Col size="lg-8">
+        
+          <h1 className="homeTitle1">About Us</h1>
+            <h2 className="homeTitle1">Stuff about this applicaton!
+            </h2>
+          </Col>
 
-            <Col size="lg-8">
-              <h1 className="homeTitle1">About Us</h1>
-              <h2 className="homeTitle1">Stuff about this applicaton!</h2>
-            </Col>
-          </Container>
+        </Container>
         </Row>
       </Container>
-      <div className="divider"></div>
-
+      <div className ="divider"></div>
+      
       <Container id="meditation" className="meditation">
+      
         <Row>
+        
           <Col size="sm-4">
-            <img src={meditate} className="rightimage" />
+            
+              <img src={meditate} className="rightimage"/>
+         
           </Col>
           <Col size="sm-8">
-            <h1 className="homeTitle2">Meditation</h1>
-            <h2 className="homeTitle2">Stuff about meditation!</h2>
-            <div className="button2">
-              <Link className="homeTitle2Button " to="/meditation">
-                Learn More
-              </Link>
-            </div>
+          <h1 className="homeTitle2">Meditation</h1>
+            <h2 className="homeTitle2">Stuff about meditation!</h2>    
+            <div className="button2">       
+            <Link className = "homeTitle2Button "to="/meditation">Learn More</Link>
+</div> 
           </Col>
         </Row>
       </Container>
-      <div className="divider"></div>
+      <div className ="divider"></div>
 
       <Container id="blog" className="blog">
+      
         <Row>
+          
           <Col size="sm-4">
-            <img src={blog} className="leftimage" />
+            
+            <img src={blog} className="leftimage"/>
+            
           </Col>
           <Col size="sm-8">
-            <h1 className="homeTitle1">Blog</h1>
+          <h1 className="homeTitle1">Blog</h1>
             <h2 className="homeTitle1">Stuff about the blog</h2>
-            <div className="button1">
-              <Link className="homeTitle1Button " to="/blog">
-                View Blog{" "}
-              </Link>
-            </div>
+          <div className="button1">
+           <Link className = "homeTitle1Button "to="/blog">View Blog </Link>
+          </div>
+
+            
           </Col>
         </Row>
       </Container>
-      <div className="divider"></div>
+      <div className ="divider"></div>
 
       <Container id="dashboard" className="dashboard">
-        <Row>
-          <Col size="sm-4">
-            <img src={dashboard} className="rightimage" />
-          </Col>
+      
+        <Row >
+        <Col size="sm-4">
+           
+           <img src={dashboard} className="rightimage"/>
+         
+         </Col>
 
-          <Col size="sm-8" className="colHome">
-            <h1 className="homeTitle2">Dashboard</h1>
+          <Col size="sm-8" className ="colHome">
+          <h1 className="homeTitle2">Dashboard</h1>
             <h2 className="homeTitle2">Stuff about dashboard!</h2>
-            <div className="button2">
-              <Link to="/dashboard" className="homeTitle2Button">
-                See Progress{" "}
-              </Link>
+          <div className="button2">
+            <Link to="/dashboard" className= "homeTitle2Button">See Progress </Link>
             </div>
           </Col>
+
         </Row>
       </Container>
 
@@ -107,6 +121,9 @@ function Home() {
         </Row>
       </Container> */}
 
+
+      
+      
       {/* <Container id="about" className="contact">
       
         <Row>
@@ -120,7 +137,7 @@ function Home() {
           </Col>
         </Row>
       </Container> */}
-    </>
+      </>
   );
 }
 
