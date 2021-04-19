@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from "react";
-import { Card, Container, CardColumns, Form, Button, Modal} from "react-bootstrap";
-
-import "./style.css";
-//import Container from "../Container"
+import React, { useState, useParams, useEffect } from "react";
+import { Modal, Button, Form, Container } from "react-bootstrap"
 import API from "../../utils/blog.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const NewPostCard = (props) => {
-  //const [blogs, setBlogs] = useState([])
+function EditPost(props) {
+
+  const [blogs, setBlogs] = useState([]);
+
   const [formObject, setFormObject] = useState({
     title: "",
     post: "",
@@ -20,6 +19,14 @@ const NewPostCard = (props) => {
       "content-type": "multipart/form-data",
     },
   };
+
+  // const {id} = useParams()
+  // useEffect(() => {
+  //   API.getBlog(id)
+  //     .then(res => setBlogs(res.data))
+  //     .catch(err => console.log(err));
+  // }, [])
+
 
   // useEffect(() => {
   //     loadBlogs()
@@ -76,28 +83,33 @@ const NewPostCard = (props) => {
     // }
   }
 
+
+
+
+
+
+
   return (
-    <>
-      <Modal
-        {...props}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-        style={{opacity:1}}
-      >
-        <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
-            Submit New Blog Post
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Container>
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+      style={{opacity:1}}
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          Update Blog Post
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+      <Container>
             <Form>
               <Form.Group controlId="formBasicTitle">
                 <Form.Label>Title</Form.Label>
                 <Form.Control
                   type="title"
-                  placeholder="enter title"
+                  placeholder={"enter title"}
                   onChange={handleInputChange}
                   name="title"
                   value={formObject.title}
@@ -142,19 +154,17 @@ const NewPostCard = (props) => {
               <br />
             </Form>
           </Container>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button
+      </Modal.Body>
+      <Modal.Footer>
+      <Button
             onClick={props.onHide}
             onSubmit={handleFormSubmit}
             encType="multipart/form-data"
           >
             Submit
           </Button>
-        </Modal.Footer>
-      </Modal>
-    </>
+      </Modal.Footer>
+    </Modal>
   );
-};
-
-export default NewPostCard;
+}
+export default EditPost;

@@ -9,15 +9,15 @@ import API from "../utils/dashboard"
 
 // function Dashboard() {
 //   // Setting our component's initial state
-//   const [dashboard, setDashboard] = useState([])
-//   const [formObject, setFormObject] = useState({
-//     type: "",
-//     name: "",
-//     duration: "",
-//     mood: "",
-//     day: "",
-//     user: ""
-//   })
+  //  const [dashboard, setDashboard] = useState([])
+  // const [formObject, setFormObject] = useState({
+  //   type: "",
+  //   name: "",
+  //   duration: "",
+  //   mood: "",
+  //   // day: "",
+  //   // user: ""
+  // })
 
 // // load by  ID
 //   // Load all blogs and store them with setBlogs 
@@ -100,11 +100,7 @@ function Dashboard() {
           adipiscing ex ius, ne est viris nusquam theophrastus. Vim cu quod
           vocent consectetuer, ad qui invidunt forensibus. Cu eum falli aliquip,
           ut aeque constituto incorrupte ius, per in mentitum laboramus
-          neglegentur. Cu omnis persecuti mea. Possim euripidis mel te. Soleat
-          feugait intellegat vis ut, sumo dicunt cotidieque mea id, ut cibo
-          soleat eos. Dolore accusata at vis, ei eum tation putant. Eam an solum
-          maluisset persequeris, labore feugiat feugait ad his. Facete percipit
-          eos ut, cu cetero elaboraret philosophia quo. Pro laudem patrioque ei.
+
         </h6>
       </Container>
     </div>

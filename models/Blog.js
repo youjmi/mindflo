@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const blogSchema = new Schema({
   title: { type: String, required: true },
   post: { type: String, required: true },
+  photo: { data: Buffer, type: String}
   // date: { type: Date, default: Date.now },
   // user: [
   //   {

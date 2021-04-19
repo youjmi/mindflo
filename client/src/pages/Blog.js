@@ -1,88 +1,42 @@
 import React, { useEffect, useState } from "react";
-import NewPost from "../components/NewPostCard"
-import "./css/blog.css"
-// import API from "../utils/blog"
-import BlogCard from "../components/BlogCard"
+import NewPost from "../components/NewPostCard";
+import { Button, Modal } from "react-bootstrap";
+import "./css/blog.css";
+import API from "../utils/blog";
+import BlogCard from "../components/BlogCard";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { MdCreate} from "react-icons/md";
 
 
 function Blogs() {
-        // // Setting our component's initial state
-        // const [blogs, setBlogs] = useState([])
-        // const [formObject, setFormObject] = useState({
-        //   title: "",
-        //   post: "",
-        //   date: "",
-        //   user: ""
-        // })
-  
-      
-        // // Load all blogs and store them with setBlogs
-        // useEffect(() => {
-        //   loadBlogs()
-        // }, [])
-      
-        // // Loads all books and sets them to blogs
-        // function loadBlogs() {
-        //   API.getBlogs()
-        //     .then(res => 
-        //       setBlogs(res.data)
-        //     )
-        //     .catch(err => console.log(err));
-        // };
-      
-        // // Deletes a blogs from the database with a given id, then reloads blogs from the db
-        // function deleteBlog(id) {
-        //   API.deleteBlog(id)
-        //     .then(res => loadBlogs())
-        //     .catch(err => console.log(err));
-        // }
-      
-        // // Handles updating component state when the user types into the input field
-        // function handleInputChange(event) {
-        //   const { name, value } = event.target;
-        //   setFormObject({...formObject, [name]: value})
-        // };
-      
-        // // When the form is submitted, use the API.saveBook method to save the book data
-        // // Then reload books from the database
-        // function handleFormSubmit(event) {
-        //   event.preventDefault();
-        //   if (formObject.title && formObject.user) {
-        //     API.saveBlog({
-        //       title: formObject.title,
-        //       user: formObject.user,
-        //       post: formObject.post,
-        //       date: formObject.date
-        //     })
-        //       .then(() => setFormObject({
-        //         title: "",
-        //         user: "",
-        //         post: "",
-        //         date: ""
-        //       }))
-        //       .then(() => loadBlogs())
-        //       .catch(err => console.log(err));
-        //   }
-        // };
+//   const [blogs, setBlogs] = useState([]);
 
+//   useEffect(() => {
+//     loadBlogs();
+//   }, []);
 
+//   function loadBlogs() {
+//     API.getBlogs()
+//       .then((res) => setBlogs(res.data))
+//       .catch((err) => console.log(err));
+//   }
 
+  const [modalShow, setModalShow] = useState(false);
 
-
-
-    
-
-    return (
+  return (
     <>
-    <NewPost/> 
-        //Add a button to create a new post and pop up NewPost component.
+      <h1 className="blogTitle">Mindflo Community Blog</h1>
+      <Button className="newPostBtn"  onClick={() => setModalShow(true)}>
+      <MdCreate/> New Post 
+       </Button>
+      <NewPost show={modalShow} onHide={() => setModalShow(false)} />
+      {/* //Add a button to create a new post and pop up NewPost component.
 
           
-    //get Dashboard posts all blog cards
-    <BlogCard />
-    </>     
-    );
-  
-    }
+    //get Dashboard posts all blog cards */}
+      <BlogCard />
+    </>
+  );
+}
 
-  export default Blogs;
+export default Blogs;
