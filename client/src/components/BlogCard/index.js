@@ -1,132 +1,103 @@
-import React from "react";
-import { Card, Container, CardColumns, Form, Button } from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+import {
+  Card,
+  Container,
+  CardColumns,
+  Form,
+  Button,
+  ButtonGroup,
+} from "react-bootstrap";
 // import Container from "../Container";
+import { FaEdit} from "react-icons/fa";
+import { RiDeleteBin6Line } from "react-icons/ri";
+import { Link } from "react-router-dom";
 import "./style.css";
-//import API from "../utils/blog"
+import API from "../../utils/blog";
 import "bootstrap/dist/css/bootstrap.min.css";
 import beach from "./beachwave1.png";
+import EditPost from "../EditPost";
 
-function BlogCard (){
-
-  // const [blogs, setBlogs] = useState([])
+function BlogCard() {
+  const [blogs, setBlogs] = useState([]);
   // const [formObject, setFormObject] = useState({
   //   title="",
   //   post="",
-  //   image=""
+  //   // image=""
   // })
 
+  const [modalShow, setModalShow] = useState(false);
 
-  // useEffect(() => {
-  //   loadBlogs()
-    
-  // }, [])
+  useEffect(() => {
+    loadBlogs();
+  }, []);
 
+  function loadBlogs() {
+    API.getBlogs()
+      .then((res) => setBlogs(res.data))
+      .catch((err) => console.log(err));
+  }
 
-  // function loadBlogs() {
-  //   API.getBlogs()
-  //     .then(res => 
-  //       setBlogs(res.data)
-  //     )
-  //     .catch(err => console.log(err));
-  // };
+  function deleteBlog(id) {
+    API.deleteBlog(id)
+      .then((res) => loadBlogs())
+      .catch((err) => console.log(err));
+  }
 
-  // function deleteBlog(id) {
-  //   API.deleteBlog(id)
-  //     .then(res => loadBlogs())
-  //     .catch(err => console.log(err));
+  // function updateBlog(id) {
+  //   API.updateBlog(id)
+  //     .then((res) => loadBlogs())
+  //     .catch((err) => console.log(err));
   // }
 
-  //Add function for update when user clicks edit. 
+  //Add function for update when user clicks edit.
 
- 
-    return (
-      <div>
-        <div className="text-center">
-          <h1 className="blogTitle">Blog Cards</h1>
-        </div>
+  return (
+    <div>
+      {blogs.length ? (
         <Container>
-          <CardColumns className="card-columns">
-            <Card className="card">
-              <a href="#">
-                <Card.Img variant="top" src={beach} />
-
-                <Card.Body>
-                  <Card.Title>Lorem ipsum dolor sit amet.</Card.Title>
-                  <Card.Text>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
-                    accusantium ad alias, aliquid amet aspernatur atque culpa
-                    cum debitis dicta doloremque, dolorum ea eos et excepturi
-                    explicabo facilis harum illo impedit incidunt laborum
-                    laudantium...
-                  </Card.Text>
-                  {/* <Card.Text >
-                    <small className="text-muted">
-                      <i className="fas fa-eye"></i>1000
-                      <i className="far fa-user"></i>
-                      admin<i className="fas fa-calendar-alt"></i>Jan 20, 2018
-                    </small>
-                  </Card.Text> */}
-                </Card.Body>
-              </a>
-            </Card>
-            <Card className="card">
-              <a href="#">
-                <Card.Img
-                  variant="top"
-                  src="https://unsplash.com/photos/t1NEMSm1rgI"
-                />
-
-                <Card.Body>
-                  <Card.Title>Lorem ipsum dolor sit amet.</Card.Title>
-                  <Card.Text>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
-                    accusantium ad alias, aliquid amet aspernatur atque culpa
-                    cum debitis dicta doloremque, dolorum ea eos et excepturi
-                    explicabo facilis harum illo impedit incidunt laborum
-                    laudantium...
-                  </Card.Text>
-                  {/* <Card.Text >
-                    <small className="text-muted">
-                      <i className="fas fa-eye"></i>1000
-                      <i className="far fa-user"></i>
-                      admin<i className="fas fa-calendar-alt"></i>Jan 20, 2018
-                    </small>
-                  </Card.Text> */}
-                </Card.Body>
-              </a>
-            </Card>
-            <Card className="card">
-              <a href="#">
-                <Card.Img
-                  variant="top"
-                  src="https://unsplash.com/photos/t1NEMSm1rgI"
-                />
-
-                <Card.Body>
-                  <Card.Title>Lorem ipsum dolor sit amet.</Card.Title>
-                  <Card.Text>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
-                    accusantium ad alias, aliquid amet aspernatur atque culpa
-                    cum debitis dicta doloremque, dolorum ea eos et excepturi
-                    explicabo facilis harum illo impedit incidunt laborum
-                    laudantium...
-                  </Card.Text>
-                  {/* <Card.Text >
-                    <small className="text-muted">
-                      <i className="fas fa-eye"></i>1000
-                      <i className="far fa-user"></i>
-                      admin<i className="fas fa-calendar-alt"></i>Jan 20, 2018
-                    </small>
-                  </Card.Text> */}
-                </Card.Body>
-              </a>
-            </Card>
+          <CardColumns>
+            {blogs.map((blog) => {
+              return (
+                <Card key={blog._id}>
+                  <Link href={"/blog/" + blog._id} to="/blog">
+                    <Card.Img variant="top" />
+                    <Card.Body>
+                      <Card.Title>{blog.title}</Card.Title>
+                      <Card.Text>{blog.post}</Card.Text>
+                       <Link
+                      className="deleteBtn"
+                      to="/blog"
+                      onClick={() => deleteBlog(blog._id)}
+                    >
+                      <RiDeleteBin6Line className="deleteIcon"/>
+                    </Link>
+                    <Link
+                      className="editBtn"
+                      to="/blog"
+                      onClick={() => setModalShow(true)}
+                    >
+                    <FaEdit className="editIcon"/>
+                    </Link>
+                    <EditPost
+                      show={modalShow}
+                      onHide={() => setModalShow(false)}
+                    />
+                    
+                    
+                    
+                    </Card.Body>
+                 
+                  </Link>
+                </Card>
+              );
+            })}
           </CardColumns>
         </Container>
-
-      </div>
-    );
-  
+      ) : (
+        <h3>No Blog Posts Added Yet!</h3>
+      )}
+    </div>
+  );
 }
 
 export default BlogCard;

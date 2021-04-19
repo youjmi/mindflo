@@ -1,6 +1,6 @@
 form.search {
     overflow: auto;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     font-family: 'Lato', sans-serif;
     border-color: #003153;
   }
@@ -8,7 +8,7 @@ form.search {
  .form-group {
      color: #003153;;
      font-size: 20px;
-     font-weight:900;
+     /* font-weight:900; */
      font-family: 'Lato', sans-serif;
 
  }
@@ -17,9 +17,9 @@ form.search {
      border-color:  #003153;
  }
 
- button.searchBtn {
-    position: absolute;
-    margin: 0;
+ button.searchBtn.btn.btn-primary{
+    position: relative;
+    margin-top: 0%;
     margin-right: 4%;
     text-align: left;
     display: grid;
@@ -31,7 +31,7 @@ form.search {
     text-decoration: none;
     
     font-family: "Montserrat", sans-serif;    
-    margin-top: 0;
+   
     font-size: 25px;
-    padding: 1rem;
+   
  }
