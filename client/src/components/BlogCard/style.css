@@ -5,8 +5,8 @@
   /* .blogTitle {
     color: #fff;
     padding: 10px 0;
-  }
-   */
+  } */
+  
   .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
@@ -27,4 +27,30 @@
 
   button.btn.btn-primary {
     position: relative;
+  }
+
+  a.deleteBtn, a.editBtn{
+    margin-right: 2%;
+    text-align: center;
+    display: inline-block;
+    background-color: #2b3942;
+    width: 12%;
+    height: auto;
+    justify-content: center;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    
+    font-family: "Montserrat", sans-serif;    
+    margin-top: 0;
+    color: white;
+    padding: .4rem;
+    align-content: center;
+  }
+
+  svg.deleteIcon, svg.editIcon {
+    width: 62%;
+    height: auto;
+    align-content: center;
+    text-align: center;
   }

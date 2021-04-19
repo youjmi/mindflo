@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Card, Container, CardColumns, Form, Button } from "react-bootstrap";
+import { Card, Container, CardColumns, Form, Button, Modal} from "react-bootstrap";
+
 import "./style.css";
 //import Container from "../Container"
 import API from "../../utils/blog.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const NewPostCard = () => {
+const NewPostCard = (props) => {
   //const [blogs, setBlogs] = useState([])
   const [formObject, setFormObject] = useState({
     title: "",
@@ -16,9 +17,9 @@ const NewPostCard = () => {
 
   const config = {
     headers: {
-        'content-type': 'multipart/form-data'
-    }
-};
+      "content-type": "multipart/form-data",
+    },
+  };
 
   // useEffect(() => {
   //     loadBlogs()
@@ -36,11 +37,9 @@ const NewPostCard = () => {
   function handleInputChange(event) {
     const { name, value } = event.target;
     setFormObject({ ...formObject, [name]: value });
-    
   }
 
   function handleInputImage(event) {
-   
     setFormObject({ ...formObject, photo: event.target.files[0] });
   }
 
@@ -67,7 +66,6 @@ const NewPostCard = () => {
           post: "",
           //   date: "",
           photo: "",
-          
         })
       )
       .then(() => {
@@ -79,33 +77,46 @@ const NewPostCard = () => {
   }
 
   return (
-    <Container>
-      <Form >
-        <Form.Group controlId="formBasicTitle">
-          <Form.Label>Title</Form.Label>
-          <Form.Control
-            type="title"
-            placeholder="enter title"
-            onChange={handleInputChange}
-            name="title"
-            value={formObject.title}
-          />
-        </Form.Group>
+    <>
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+        style={{opacity:1}}
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="contained-modal-title-vcenter">
+            Submit New Blog Post
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Container>
+            <Form>
+              <Form.Group controlId="formBasicTitle">
+                <Form.Label>Title</Form.Label>
+                <Form.Control
+                  type="title"
+                  placeholder="enter title"
+                  onChange={handleInputChange}
+                  name="title"
+                  value={formObject.title}
+                />
+              </Form.Group>
 
-        <Form.Group controlId="formBasicImage">
-          <Form.Label>Image:</Form.Label>
-          <Form.Control
-            type="file"
-            placeholder="Upload"
-            onChange={handleInputImage}
-            accept=".png, .jpg, .jpeg"
-            name="photo"
-            encType={"multipart/form-data"}
-        
-          />
-        </Form.Group>
+              <Form.Group controlId="formBasicImage">
+                <Form.Label>Image:</Form.Label>
+                <Form.Control
+                  type="file"
+                  placeholder="Upload"
+                  onChange={handleInputImage}
+                  accept=".png, .jpg, .jpeg"
+                  name="photo"
+                  encType={"multipart/form-data"}
+                />
+              </Form.Group>
 
-        {/* <Form.Group controlId="formBasicUsername">
+              {/* <Form.Group controlId="formBasicUsername">
                     <Form.Label>Image:</Form.Label>
                     <Form.Control type="username" placeholder="username" 
                       onChange={handleInputChange}
@@ -113,44 +124,36 @@ const NewPostCard = () => {
                       value={formObject.user}/>
                 </Form.Group> */}
 
-        <Form.Group controlId="blogText">
-          <Form.Label>Blog Text:</Form.Label>
-          <Form.Control
-            as="textarea"
-            rows={10}
-            onChange={handleInputChange}
-            name="post"
-            value={formObject.post}
-          />
-        </Form.Group>
+              <Form.Group controlId="blogText">
+                <Form.Label>Blog Text:</Form.Label>
+                <Form.Control
+                  as="textarea"
+                  rows={10}
+                  onChange={handleInputChange}
+                  name="post"
+                  value={formObject.post}
+                />
+              </Form.Group>
 
-        <button variant="primary" type="submit" onClick={handleFormSubmit} encType='multipart/form-data'>
-          Submit
-        </button>
+              {/* <Button variant="primary" type="submit" onClick={handleFormSubmit} encType='multipart/form-data'>
+            Submit
+        </Button> */}
 
-        <br />
-      </Form>
-      {/* <form className="contact-form contact-holdbox" > 
-    <h1 className="pageTitle pt-5"> Post Blog here</h1>
-        <div className ="row pt-2 mx-auto">
-            <div className ="col-8 form-group mx-auto">
-                <input type ="text" className="form-control" placeholder="Subject" name="subject"  />
-            </div>
-            <div className ="col-8 form-group mx-auto">
-                <input type ="text" className="form-control emailConfirm" placeholder="Email" name="email"   />
-            </div>
-            <div className ="col-8 form-group mx-auto">
-                <input type ="text" className="form-control" placeholder="Name" name="name"   />
-            </div>
-            <div className ="col-8 form-group mx-auto">
-                <textarea type ="text" className="form-control" placeholder="Write blog here..." name="message"   />
-            </div>
-            <div className ="py-1 col-8 form-group mx-auto">
-                <input type ="submit" className="btn btn-info" value="Post"/> {/*ADD onClick={handleOnClickDefault*/}
-      {/* </div> 
-        </div >
-    </form > * /} */}
-    </Container>
+              <br />
+            </Form>
+          </Container>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button
+            onClick={props.onHide}
+            onSubmit={handleFormSubmit}
+            encType="multipart/form-data"
+          >
+            Submit
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </>
   );
 };
 

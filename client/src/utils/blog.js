@@ -19,7 +19,7 @@ export default {
   saveBlog: function (blogData) {
     console.log(blogData);
    
-    return axios.post(`${baseURL}/blog/uploads`, blogData
+    return axios.post(`${baseURL}/blog`, blogData
     // , {
     //   headers: {
        
