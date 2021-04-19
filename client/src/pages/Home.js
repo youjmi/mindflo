@@ -9,88 +9,99 @@ import hay from "./images/hay.png";
 //import Row from "../components/Row";
 //import Col from "../components/Col";
 import "./css/home.css";
+//import Col from "../components/Col";
+import "./css/home.css"
 import Wrapper from "../components/Wrapper";
 //import Container from "../components/Container";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom"
 //import Container from "../components/ImageContainer";
-import about from "./images/aboutusimg.png";
-import meditate from "./images/meditationimg.png";
-import blog from "./images/blogimg2.png";
-import dashboard from "./images/dashboadimg.png";
+import about from "./images/aboutusimg.png"
+import meditate from "./images/meditationimg.png"
+import blog from "./images/blogimg2.png"
+import dashboard from "./images/dashboadimg.png"
 
 function Home() {
   return (
     <>
       <section id="about" className="about">
+     
         <Row>
+ 
+          <Col size="sm-4">
+         
+            <img  src={about} className="leftimage"/>
+         
+          </Col>
           
-            <Col size="sm-4">
-              <img src={about} className="leftimage" />
-            </Col>
+          <Col size="sm-8">
+        
+          <h1 className="homeTitle1">About Us</h1>
+            <h2 className="homeTitle1">Stuff about this applicaton!
+            </h2>
+          </Col>
 
-            <Col size="sm-8">
-              <h1 className="homeTitle1">About Us</h1>
-              <h2 className="homeTitle1">Stuff about this applicaton!</h2>
-            </Col>
-          
+   
         </Row>
       </section>
-      <div className="divider"></div>
-
-      <section id="meditation" className="meditation">
-        <Row>
+      <div className ="divider"></div>
       
+      <section id="meditation" className="meditation">
+      
+        <Row>
+        
           <Col size="sm-8">
-            <h1 className="homeTitle2">Meditation</h1>
-            <h2 className="homeTitle2">Stuff about meditation!</h2>
-            <div className="button2">
-              <Link className="homeTitle2Button " to="/meditation">
-                Learn More
-              </Link>
-            </div>
+          <h1 className="homeTitle2">Meditation</h1>
+            <h2 className="homeTitle2">Stuff about meditation!</h2>    
+            <div className="button2">       
+            <Link className = "homeTitle2Button "to="/meditation">Learn More</Link>
+          </div> 
           </Col>
           <Col size="sm-4">
             <img src={meditate} className="rightimage" />
           </Col>
         </Row>
       </section>
-      <div className="divider"></div>
+      <div className ="divider"></div>
 
       <section id="blog" className="blog">
+      
         <Row>
+          
           <Col size="sm-4">
-            <img src={blog} className="leftimage" />
+            
+            <img src={blog} className="leftimage"/>
+            
           </Col>
           <Col size="sm-8">
-            <h1 className="homeTitle1">Blog</h1>
+          <h1 className="homeTitle1">Blog</h1>
             <h2 className="homeTitle1">Stuff about the blog</h2>
-            <div className="button1">
-              <Link className="homeTitle1Button " to="/blog">
-                View Blog{" "}
-              </Link>
-            </div>
+          <div className="button1">
+           <Link className = "homeTitle1Button "to="/blog">View Blog </Link>
+          </div>
+
+            
           </Col>
         </Row>
       </section>
-      <div className="divider"></div>
+      <div className ="divider"></div>
 
       <section id="dashboard" className="dashboard">
-        <Row>
-          
+      
+        <Row >
 
-          <Col size="sm-8" className="colHome">
-            <h1 className="homeTitle2">Dashboard</h1>
+
+          <Col size="sm-8" className ="colHome">
+          <h1 className="homeTitle2">Dashboard</h1>
             <h2 className="homeTitle2">Stuff about dashboard!</h2>
-            <div className="button2">
-              <Link to="/dashboard" className="homeTitle2Button">
-                See Progress{" "}
-              </Link>
+          <div className="button2">
+            <Link to="/dashboard" className= "homeTitle2Button">See Progress </Link>
             </div>
             
           </Col>
           <Col size="sm-4">
             <img src={dashboard} className="rightimage" />
           </Col>
+
         </Row>
       </section>
 
@@ -110,6 +121,9 @@ function Home() {
         </Row>
       </Container> */}
 
+
+      
+      
       {/* <Container id="about" className="contact">
       
         <Row>
@@ -123,7 +137,7 @@ function Home() {
           </Col>
         </Row>
       </Container> */}
-    </>
+      </>
   );
 }
 

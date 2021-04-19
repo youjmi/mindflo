@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, InputGroup, FormControl, Button } from "react-bootstrap"
+import { Form, InputGroup, FormControl,  } from "react-bootstrap"
 import API from "../../utils/dashboard"
 
 const Dropdown = () => {
@@ -11,26 +11,15 @@ const Dropdown = () => {
 
 
     const [formObj, setFormObj] = useState({
-        type: "",
-        name: "",
-        duration: "",
-        mood: ""
+        selfcare: [{
+            type: isSelected,
+            name: isName,
+            duration: isDuration,
+            mood: isMood
+            }]
 
     })
-
-    // const submitDashboard = () => {
-    //     let  formObj ={
-    //              selfcare: [{
-
-    //                  type: isSelected,
-    //                  name: isName,
-    //                  duration: isDuration,
-    //                 mood: isMood,
-
-    //              }]
-    //          }
-    //          console.log(formObj)
-    // }
+    
 
 
     const submitDashboard = () => {
@@ -44,11 +33,11 @@ const Dropdown = () => {
         })
             .then(() => setFormObj({
                 selfcare: [{
-                type: "",
-                name: "",
-                duration: "",
-                mood: ""
-                }]
+                    type: isSelected,
+                    name: isName,
+                    duration: isDuration,
+                    mood: isMood
+                    }]
 
             })).then(() => {
                 console.log(formObj)

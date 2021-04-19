@@ -14,8 +14,8 @@ display: flex;
 justify-content: center;
 padding: 0.5rem calc((100vw - 1000px) / 2);
 z-index: 10;
-// position: -webkit-sticky !important;
-// position: sticky !important;
+position: -webkit-sticky !important;
+position: sticky !important;
 `;
 
 export const NavbarContainer = styled.div`
