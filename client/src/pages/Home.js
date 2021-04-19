@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Container, Row } from "react-bootstrap";
+import { Button, Container, Row, Col } from "react-bootstrap";
 //import 'bootstrap/dist/css/bootstrap.min.css'
 //import ContactForm from "../components/ContactForm";
 import drop from "./images/dripdrop.png";
@@ -7,7 +7,7 @@ import drop from "./images/dripdrop.png";
 //import succulent from "./images/succlentpineapple.png";
 import hay from "./images/hay.png";
 //import Row from "../components/Row";
-import Col from "../components/Col";
+//import Col from "../components/Col";
 import "./css/home.css";
 import Wrapper from "../components/Wrapper";
 //import Container from "../components/Container";
@@ -21,27 +21,25 @@ import dashboard from "./images/dashboadimg.png";
 function Home() {
   return (
     <>
-      <Container id="about" className="about">
+      <section id="about" className="about">
         <Row>
-          <Container>
-            <Col size="lg-4">
+          
+            <Col size="sm-4">
               <img src={about} className="leftimage" />
             </Col>
 
-            <Col size="lg-8">
+            <Col size="sm-8">
               <h1 className="homeTitle1">About Us</h1>
               <h2 className="homeTitle1">Stuff about this applicaton!</h2>
             </Col>
-          </Container>
+          
         </Row>
-      </Container>
+      </section>
       <div className="divider"></div>
 
-      <Container id="meditation" className="meditation">
+      <section id="meditation" className="meditation">
         <Row>
-          <Col size="sm-4">
-            <img src={meditate} className="rightimage" />
-          </Col>
+      
           <Col size="sm-8">
             <h1 className="homeTitle2">Meditation</h1>
             <h2 className="homeTitle2">Stuff about meditation!</h2>
@@ -51,11 +49,14 @@ function Home() {
               </Link>
             </div>
           </Col>
+          <Col size="sm-4">
+            <img src={meditate} className="rightimage" />
+          </Col>
         </Row>
-      </Container>
+      </section>
       <div className="divider"></div>
 
-      <Container id="blog" className="blog">
+      <section id="blog" className="blog">
         <Row>
           <Col size="sm-4">
             <img src={blog} className="leftimage" />
@@ -70,14 +71,12 @@ function Home() {
             </div>
           </Col>
         </Row>
-      </Container>
+      </section>
       <div className="divider"></div>
 
-      <Container id="dashboard" className="dashboard">
+      <section id="dashboard" className="dashboard">
         <Row>
-          <Col size="sm-4">
-            <img src={dashboard} className="rightimage" />
-          </Col>
+          
 
           <Col size="sm-8" className="colHome">
             <h1 className="homeTitle2">Dashboard</h1>
@@ -87,9 +86,13 @@ function Home() {
                 See Progress{" "}
               </Link>
             </div>
+            
+          </Col>
+          <Col size="sm-4">
+            <img src={dashboard} className="rightimage" />
           </Col>
         </Row>
-      </Container>
+      </section>
 
       {/* <Container id="signup" className="signup">
       

@@ -3,7 +3,6 @@ section.hero {
   width: auto;
   height: 32rem;
   background-size: cover;
-  animation-duration: 4s;
   background-repeat: no-repeat;
   margin: 0;
 }
@@ -13,7 +12,7 @@ section.hero {
 
 
 /*this ensures the logo is completely centered */
-.minfloLogo { 
+.mindfloLogo { 
   margin: 0 auto;
-  display: block;
+  display: inline-flexbox;
 }
