@@ -54,9 +54,9 @@ export default function Signup () {
               <Form.Control type="password" required /> {/*ref={} */}
             </Form.Group>
             <div>
-            <Button className="w-100" type="submit"> {/*disabled={loading} */}
+            <button className="w-10 mt-3" type="submit"> {/*disabled={loading} */}
               Sign Up
-            </Button>
+            </button>
             </div>
           </Form>
         </Card.Body>
