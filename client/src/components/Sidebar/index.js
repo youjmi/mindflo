@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { useLocation } from "react-router-dom"
+import { useLocation,useHistory } from "react-router-dom"
 import { SidebarContainer, SidebarLogo, Icon, CloseIcon, SidebarWrapper, SidebarMenu, SidebarLink, SidebarBtnWrap, SidebarRoute, SidebarItem } from "./SidebarElements"
 
 const Sidebar = ({ isOpen, toggle }) => {
@@ -13,6 +13,13 @@ const Sidebar = ({ isOpen, toggle }) => {
 
 
     console.log(pathname)
+
+    const history = useHistory()
+const logoutHandler = ()=> {
+  localStorage.removeItem("authToken");
+  history.push("/login")
+};
+    
 
     return (
         <SidebarContainer isOpen ={isOpen} > 
@@ -47,7 +54,7 @@ const Sidebar = ({ isOpen, toggle }) => {
                     </SidebarLink>
                         </SidebarItem>
                         <SidebarBtnWrap>
-                        <SidebarRoute to="/login"> <span onClick={toggle}> Log In</span></SidebarRoute>
+                        <SidebarRoute  to="/login" onClick={logoutHandler}> <span onClick={toggle}> Log Out</span></SidebarRoute>
                     </SidebarBtnWrap>
                     </SidebarMenu>
                 </SidebarWrapper>

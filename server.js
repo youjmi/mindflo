@@ -1,12 +1,12 @@
 require("dotenv").config({ path: "./config.env" });
 
-const connectDB = require("./config/db")
+// const connectDB = require("./config/db")
 
-connectDB()
+// connectDB()
 
 const express = require("express");
 const router = require("express").Router();
-//const path = require("path");
+const path = require("path");
 const cors = require("cors");
 // const passport = require("passport");
 // const passportLocal = require("passport-local").Strategy;
@@ -84,16 +84,16 @@ app.use(routesuser);
 
 
 // Connect to the Mongo DB
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mindflo",
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mindflo",
 
-//   {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//     useCreateIndex: true,
-//     useFindAndModify: false,
-//   }
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+  }
 
-// )
+)
 
 // Start the API server
 const server = app.listen(PORT, function () {
