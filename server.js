@@ -7,7 +7,7 @@ const cors = require("cors");
 // const cookieParser = require("cookie-parser");
 // const bcrypt = require("bcryptjs");
 // const session = require("express-session");
-// const bodyParser = require("body-parser");
+const bodyParser = require("body-parser");
 
 const mongoose = require("mongoose");
 const routesblog = require("./routes/blog");
@@ -36,6 +36,9 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
+app.set("view engine", "ejs");
+
+
 app.use(cors())
 
 router.use(function(req, res) {
@@ -60,6 +63,7 @@ app.use(routesuser);
 // router.use(routesblog);
 // router.use(routesdashboard);
 // router.use(routesuser);
+
 
 
 // Connect to the Mongo DB

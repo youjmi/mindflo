@@ -4,7 +4,8 @@ import React from "react";
 // import Row from "../components/Row";
 // import Col from "../components/Col";
 // import Cards from "../components/Cards/Cards"
-// import { Card } from "reactstrap";
+import {Container} from "react-bootstrap"
+import PlayerBtn from "../components/PlayerBtn";
 import "./css/meditation.css"
 
 //MEDITATION page info..//
@@ -34,6 +35,12 @@ Cum ex homero dignissim, per eu causae latine fastidii. Et verear temporibus dis
 Qui hinc liberavisse ad, pro in atqui labores maiestatis. In omnes integre menandri eos, vim animal platonem te. Ut simul ocurreret has, menandri electram complectitur has cu, no dico quando usu. Ex vel feugait delectus persecuti, mucius commodo vis no.</p></h6>
 
 <br></br>
+
+
+<Container>
+    <PlayerBtn/>
+
+</Container>
 
        </div>
 
