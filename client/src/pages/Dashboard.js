@@ -27,7 +27,7 @@ import API from "../utils/dashboard"
 
 //   // Loads all books and sets them to blogs
 //   function loadDashboard() {
-//     API.getDashboard()
+//     API.getDashboard() 
 //       .then(res => 
 //         setDashboard(res.data)
 //       )

@@ -20,7 +20,6 @@ export default {
     console.log(dashboardData)
     return axios.post(`${baseURL}/dashboard`, dashboardData);
 
-
   }
 };
 

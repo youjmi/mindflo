@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch  } from "react-router-dom";
 import React, { useState, useEffect } from 'react'
 import './App.css';
 import Home from "./pages/Home"
@@ -15,6 +15,9 @@ import apiBlog from "../src/utils/blog"
 import Sidebar from "./components/Sidebar/index"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import PrivateRoute from "./components/routing/PrivateRoute"
+import PrivateScreen from "./components/privatescreen/PrivateScreen"
+
 // import apiBlog from "../src/utils/blog"
 
 function App (){
@@ -24,7 +27,8 @@ function App (){
   //   apiBlog.getBlogs()
   // }, [])
 
-//tessstt
+  //tessstt
+
 
 const [isOpen, setIsOpen] = useState(false)
 const toggle = () =>{setIsOpen (!isOpen)} 
@@ -37,14 +41,16 @@ const toggle = () =>{setIsOpen (!isOpen)}
       {/* <Wrapper> */}
       <Hero />
       <Sidebar isOpen = {isOpen} toggle = {toggle} /> {/*toggle = {toggle}*/}
-      <Navigation toggle = {toggle} />   
+      <Navigation toggle = {toggle} /> 
       <Switch>
+      <PrivateRoute exact path ="/" component = {PrivateScreen} /> 
         <Route exact path="/" component={Home}/> 
         <Route exact path="/meditation" component={Meditation} />
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/blog" component={Blog} />
         <Route exact path="/signup" component={Signup} />
-        <Route exact path="/Login" component={Login} />
+        <Route exact path="/login" component={Login} />
+        
         </Switch>
       {/* </Wrapper> */}
       <Footer/>

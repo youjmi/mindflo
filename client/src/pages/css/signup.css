@@ -23,3 +23,43 @@ p{
   height: 40%;
   padding: 20px;
 }
+
+.register-screen {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-screen__form {
+  width: 580px;
+  padding: 1.5rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  background: #fff;
+}
+
+.register-screen__title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 1rem;
+}
+
+.register-screen__subtext {
+  font-size: 15px;
+  display: block;
+  margin: 0.5rem 0;
+
+}
+.form-group {
+  font-size: 20px;
+}
+.registeraccount{
+  font-size: 20px;
+  display: inline-block;
+    float: right
+
+}
+.inputBoxes {
+  display: inline-block;
+float: right
+}
