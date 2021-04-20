@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import NewPost from "../components/NewPostCard";
-import { Button, Modal } from "react-bootstrap";
+import { Button, Container, Modal } from "react-bootstrap";
 import "./css/blog.css";
 import API from "../utils/blog";
 import BlogCard from "../components/BlogCard";
@@ -25,15 +25,13 @@ function Blogs() {
 
   return (
     <>
+      <Container>
       <h1 className="blogTitle">Mindflo Community Blog</h1>
       <Button className="newPostBtn"  onClick={() => setModalShow(true)}>
       <MdCreate/> New Post 
        </Button>
+       </Container>
       <NewPost show={modalShow} onHide={() => setModalShow(false)} />
-      {/* //Add a button to create a new post and pop up NewPost component.
-
-          
-    //get Dashboard posts all blog cards */}
       <BlogCard />
     </>
   );
