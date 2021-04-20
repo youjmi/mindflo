@@ -29,28 +29,48 @@
     position: relative;
   }
 
+  a.deleteBtn{
+    margin-left: 58%;
+  }
+
   a.deleteBtn, a.editBtn{
     margin-right: 2%;
+    margin-top: 2%;
     text-align: center;
-    display: inline-block;
+    display: inline-flex;
     background-color: #2b3942;
-    width: 12%;
+    width: 19%;
     height: auto;
     justify-content: center;
     color: white;
     border-radius: 8px;
-    text-decoration: none;
-    
     font-family: "Montserrat", sans-serif;    
-    margin-top: 0;
+    
     color: white;
-    padding: .4rem;
-    align-content: center;
+    padding: .5rem;
+    
   }
 
   svg.deleteIcon, svg.editIcon {
-    width: 62%;
+    width: 64%;
     height: auto;
     align-content: center;
     text-align: center;
   }
+
+  .likeBtn {
+    border-radius: 10px;
+    padding: 2px 4px;
+    align-content: center;
+    text-align: center;
+    border-color:  #2b3942;
+    background-color: white;
+    /* background-color: #2b3942; */
+    margin-left: 1%;
+    margin-top: 1%;
+  }
+
+  .likeBtn:hover{
+    opacity: 50%;
+  }
+
