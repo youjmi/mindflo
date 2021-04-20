@@ -58,7 +58,9 @@ const logoutHandler = ()=> {
             
           </NavMenu>
           }
-              <button onClick ={logoutHandler}>LOGOUT</button>          
+          <NavBtn>
+              <button onClick ={logoutHandler}>LOGOUT</button>      
+              </NavBtn>    
 {/* 
           <NavBtn>
             <NavBtnLink to ="/logout" >Log out</NavBtnLink>
