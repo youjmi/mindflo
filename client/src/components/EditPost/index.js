@@ -95,7 +95,7 @@ function EditPost(props) {
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
-      style={{opacity:1}}
+      style={{ opacity: 1 }}
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
@@ -103,32 +103,32 @@ function EditPost(props) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-      <Container>
-            <Form>
-              <Form.Group controlId="formBasicTitle">
-                <Form.Label>Title</Form.Label>
-                <Form.Control
-                  type="title"
-                  placeholder={"enter title"}
-                  onChange={handleInputChange}
-                  name="title"
-                  value={formObject.title}
-                />
-              </Form.Group>
+        <Container>
+          <Form>
+            <Form.Group controlId="formBasicTitle">
+              <Form.Label>Title</Form.Label>
+              <Form.Control
+                type="title"
+                placeholder="enter title"
+                onChange={handleInputChange}
+                name="title"
+                value={formObject.title}
+              />
+            </Form.Group>
 
-              <Form.Group controlId="formBasicImage">
-                <Form.Label>Image:</Form.Label>
-                <Form.Control
-                  type="file"
-                  placeholder="Upload"
-                  onChange={handleInputImage}
-                  accept=".png, .jpg, .jpeg"
-                  name="photo"
-                  encType={"multipart/form-data"}
-                />
-              </Form.Group>
+            <Form.Group controlId="formBasicImage">
+              <Form.Label>Image:</Form.Label>
+              <Form.Control
+                type="file"
+                placeholder="Upload"
+                onChange={handleInputImage}
+                accept=".png, .jpg, .jpeg"
+                name="photo"
+                encType={"multipart/form-data"}
+              />
+            </Form.Group>
 
-              {/* <Form.Group controlId="formBasicUsername">
+            {/* <Form.Group controlId="formBasicUsername">
                     <Form.Label>Image:</Form.Label>
                     <Form.Control type="username" placeholder="username" 
                       onChange={handleInputChange}
@@ -136,32 +136,32 @@ function EditPost(props) {
                       value={formObject.user}/>
                 </Form.Group> */}
 
-              <Form.Group controlId="blogText">
-                <Form.Label>Blog Text:</Form.Label>
-                <Form.Control
-                  as="textarea"
-                  rows={10}
-                  onChange={handleInputChange}
-                  name="post"
-                  value={formObject.post}
-                />
-              </Form.Group>
+            <Form.Group controlId="blogText">
+              <Form.Label>Blog Text:</Form.Label>
+              <Form.Control
+                as="textarea"
+                rows={10}
+                onChange={handleInputChange}
+                name="post"
+                value={formObject.post}
+              />
+            </Form.Group>
 
-              {/* <Button variant="primary" type="submit" onClick={handleFormSubmit} encType='multipart/form-data'>
+            {/* <Button variant="primary" type="submit" onClick={handleFormSubmit} encType='multipart/form-data'>
             Submit
         </Button> */}
 
-              <br />
-            </Form>
-          </Container>
+            <br />
+          </Form>
+        </Container>
       </Modal.Body>
       <Modal.Footer>
-      <Button
-            onClick={props.onHide}
-            onSubmit={handleFormSubmit}
-            encType="multipart/form-data"
-          >
-            Submit
+        <Button
+          onClick={props.onHide}
+          onSubmit={handleFormSubmit}
+          encType="multipart/form-data"
+        >
+          Submit
           </Button>
       </Modal.Footer>
     </Modal>

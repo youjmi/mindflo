@@ -1,6 +1,6 @@
 import React, { Component, useState } from "react";
 import flower from "./flowerwater.png"
-import MusicPlayer from "../MusicPlayer"
+import MusicPlayer from "../MusicPlayer/spotify"
 import * as $ from "jquery";
 import {Button} from "react-bootstrap"
 import hash from "./hash";
@@ -96,7 +96,7 @@ render (){
       {!this.state.token && (
         <a
           className="btn btn--loginApp-link"
-          href={`${authEndpoint}client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join("%20")}&response_type=token&show_dialog=true`}
+          href='http://localhost:3000/meditation'
         >
           Login to Spotify
         </a>

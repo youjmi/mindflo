@@ -61,6 +61,7 @@ function Home() {
           </Col>
         </Row>
       </section>
+      
       <div className ="divider"></div>
 
       <section id="blog" className="blog">

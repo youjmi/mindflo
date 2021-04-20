@@ -7,8 +7,47 @@ import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 
 function Yoga() {
-  // Setting our component's initial state
-  const youtube
+   
+    const youtube_Key = "AIzaSyCkGh56mI4GQnvTtVoHCWVTvkUX7uzpjr8"
+
+     function youtubeVideo(valueSelected) {
+        return axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=how+to+do+${valueSelected}+yoga+pose&maxResults=1&&safeSearch=moderate&key=${youtube_Key}`
+        )
+        .then(youtubeResult =>
+            youtubeResult.json())
+          .then(youtubeResult => {
+            displayOtherResults(youtubeResult.items[0]);
+          })
+          .catch(error =>
+            console.log(error))
+    
+    
+    
+    }
+    function getVariableforAllPoses(newResult){
+        for(let i=0; i<newResult.length; i++){
+          let allPoses = newResult[i].english_name;
+          $('.select-dropdown').append(
+            `
+            <option class="dropdown-style" id="move-dropdown" value="${allPoses}">
+              ${allPoses}
+            </option>
+            `)
+          if(allPoses === newResult[i].english_name){
+            let sanskritName = newResult[i].sanskrit_name;
+            let poseImage = newResult[i].img_url;
+          }
+        }
+        submitButton(newResult);
+      }
+
+
+
+
+  
+
+
+
 
   // Load all books and store them with setBooks
   useEffect(() => {
@@ -30,31 +69,16 @@ function Yoga() {
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>What Books Should I Read?</h1>
+              <h1>Research Yoga</h1>
             </Jumbotron>
-            <form>
-              <Input
-                onChange={() => {}}
-                name="title"
-                placeholder="Title (required)"
-              />
-              <Input
-                onChange={() => {}}
-                name="author"
-                placeholder="Author (required)"
-              />
-              <TextArea
-                onChange={() => {}}
-                name="synopsis"
-                placeholder="Synopsis (Optional)"
-              />
-              <FormBtn
-                disabled={!(formObject.author && formObject.title)}
-                onClick={() => {}}
-              >
-                Submit Book
-              </FormBtn>
-            </form>
+            <Dropdown>
+                <Dropdown.Toggle variant="success" id="dropdown-basic">
+                    Dropdown Button
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu>
+                        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                    </Dropdown.Menu>
+            </Dropdown>
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>

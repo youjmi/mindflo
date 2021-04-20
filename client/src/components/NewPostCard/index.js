@@ -135,9 +135,9 @@ const NewPostCard = (props) => {
                 />
               </Form.Group>
 
-              {/* <Button variant="primary" type="submit" onClick={handleFormSubmit} encType='multipart/form-data'>
+              <Button variant="primary" type="submit" onClick={handleFormSubmit} onSubmit={props.onHide} encType='multipart/form-data'>
             Submit
-        </Button> */}
+        </Button>
 
               <br />
             </Form>
@@ -146,10 +146,10 @@ const NewPostCard = (props) => {
         <Modal.Footer>
           <Button
             onClick={props.onHide}
-            onSubmit={handleFormSubmit}
-            encType="multipart/form-data"
+            // onClick={handleFormSubmit}
+            // encType="multipart/form-data"
           >
-            Submit
+           Close
           </Button>
         </Modal.Footer>
       </Modal>

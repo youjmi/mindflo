@@ -1,39 +1,33 @@
-import React from "react";
-import "./style.css";
+import React, {useState} from 'react'
+import Player from "./musiccontrols"
 
-const MusicPlayer = props => {
-  const backgroundStyles = {
-    backgroundImage:`url(${props.item.album.images[0].url})`,
-  };
-  
-  const progressBarStyles = {
-    width: (props.progress_ms * 100 / props.item.duration_ms) + '%'
-  };
-  
-  return (
-    <div className="App">
-      <div className="main-wrapper">
-        <div className="now-playing__img">
-          <img src={props.item.album.images[0].url} />
+const MusicPlayer = () => {
+
+    const [songs, setSongs] = useStat([
+        {
+            title: "Buddha Music Santuary",
+            artist: "Hatha Yoga",
+            // img_src:
+            src: "../../meditationmusic/Meditation1.mp3"
+        },
+        {
+            title: "Meditation",
+            artist: "Lucia Micarelli",
+            // img_src:
+            src: "../../meditationmusic/meditation2.mp3"
+        }
+
+    ])
+
+    const [currentSong, setCurrentSong] = useState(0)
+    const [nextSong, setnextSong] = useState(currentSong + 1)
+
+
+    return (
+        <div>
+            <Player songs={songs[currentSong]} nextSong={songs[nextSong]} />
         </div>
-        <div className="now-playing__side">
-          <div className="now-playing__name">{props.item.name}</div>
-          <div className="now-playing__artist">
-            {props.item.artists[0].name}
-          </div>
-          <div className="now-playing__status">
-            {props.is_playing ? "Playing" : "Paused"}
-          </div>
-          <div className="progress">
-            <div
-              className="progress__bar"
-              style={progressBarStyles}
-            />
-          </div>
-        </div>
-        <div className="background" style={backgroundStyles} />{" "}
-      </div>
-    </div>
-  );
+    )
 }
-export default MusicPlayer;
+
+export default MusicPlayer
