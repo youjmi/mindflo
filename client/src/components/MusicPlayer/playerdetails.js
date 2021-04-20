@@ -1,6 +1,8 @@
 import React from 'react'
+import "./style.css"
 
-const PlayerDetails = () => {
+
+const PlayerDetails = (props) => {
     return (
         <div className="c-player-details">
             <div className="details-img">

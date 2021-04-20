@@ -1,36 +1,56 @@
-/** Now Playing **/
-.now-playing__name {
-    font-size: 1.5em;
-    margin-bottom: 0.2em;
-  }
-  .now-playing__artist {
-    margin-bottom: 1em;
-  }
-  .now-playing__status {
-    margin-bottom: 1em;
-  }
-  .now-playing__img {
-    float: left;
-    margin-right: 10px;
-    text-align: right;
-    width: 45%;
-  }
-  .now-playing__img img {
-    max-width: 80vmin;
-    width: 100%;
-  }
-  .now-playing__side {
-    margin-left: 5%;
-    width: 45%;
-  }
-  /** Progress **/
-  .progress {
-    border: 1px solid #eee;
-    height: 6px;
-    border-radius: 3px;
-    overflow: hidden;
-  }
-  .progress__bar {
-    background-color: #eee;
-    height: 4px;
-  }
+.c-player {
+  display: flexbox;
+  background-color: lemonchiffon;
+  padding: 50px;
+  border-radius: 16px;
+  /* box-shadow: inset -6px -6px; */
+}
+
+.c-player > h4 {
+  color: black;
+  text-align: center;
+}
+
+.c-player--details .details-img {
+  position: relative;
+  width: fit-content;
+  margin: 50px auto;
+}
+
+.c-player--details .details-img img {
+  display: block;
+  margin: 0px auto;
+  max-width: 250px;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.c-player--details .details-title {
+  color: black;
+  
+}
+
+.c-player--controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.c-player--controls .playBtn {
+  display: flex;
+  margin: 0 30px;
+  padding: 20px;
+  border-radius: 50%;
+  font-size: 24px;
+}
+
+.c-player--controls .skipBtn .fastBtn {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: black;
+  font-style: 18px;
+}
+
