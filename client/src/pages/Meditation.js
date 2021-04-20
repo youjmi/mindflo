@@ -27,7 +27,7 @@ Qui hinc liberavisse ad, pro in atqui labores maiestatis. In omnes integre menan
 
 <br></br>
 
-<MedCarousel />
+{/* <MedCarousel /> */}
 
 <br></br>
 

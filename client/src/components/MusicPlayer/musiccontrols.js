@@ -10,7 +10,7 @@ const MusicControls = (props) => {
     return (
         <div className="c-player--control">
             <Button className="skipBtn" onClick={() => props.changeSong(false)} ><IoPlayBack/></Button>
-            <Button className="playBtn" onClick={() => props.setIsPlaying(!props.isPlay)}>{props.isPlay ? <RiPlayCircleLine/> : <AiOutlinePauseCircle/>} </Button>
+            <Button className="playBtn" onClick={() => props.setIsPlaying(!props.isPlay)}>{props.isPlay ? <AiOutlinePauseCircle/> : <RiPlayCircleLine/>} </Button>
             <Button className="fastBtn" onClick={() => props.changeSong()}><IoPlayForward/></Button>
         </div>
     )
