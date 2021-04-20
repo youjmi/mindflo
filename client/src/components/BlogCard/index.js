@@ -6,19 +6,24 @@ import {
   Form,
   Button,
   ButtonGroup,
+  Row,
+  Col
 } from "react-bootstrap";
 // import Container from "../Container";
 import { FaEdit} from "react-icons/fa";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { FcLike } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import "./style.css";
 import API from "../../utils/blog";
 import "bootstrap/dist/css/bootstrap.min.css";
 import beach from "./beachwave1.png";
 import EditPost from "../EditPost";
+import { setActiveLink } from "react-scroll/modules/mixins/scroller";
 
 function BlogCard() {
   const [blogs, setBlogs] = useState([]);
+  const [likes, setLike] = useState(false)
   // const [formObject, setFormObject] = useState({
   //   title="",
   //   post="",
@@ -43,6 +48,20 @@ function BlogCard() {
       .catch((err) => console.log(err));
   }
 
+
+  const handleLike = (e) => {
+
+    if(likes == false) {
+      setLike(true)
+      console.log('clicked')
+    } 
+    else {
+      setLike(false)
+      console.log('false')
+    }
+
+
+  }
   // function updateBlog(id) {
   //   API.updateBlog(id)
   //     .then((res) => loadBlogs())
@@ -60,11 +79,13 @@ function BlogCard() {
               return (
                 <Card key={blog._id}>
                   <Link href={"/blog/" + blog._id} to="/blog">
-                    <Card.Img variant="top" />
-                    <Card.Body>
-                      <Card.Title>{blog.title}</Card.Title>
-                      <Card.Text>{blog.post}</Card.Text>
-                       <Link
+                    <Card.Img variant="top" src={beach} />
+                    <Row>
+                    <Col>
+                    <Button className="likeBtn" onClick={handleLike}><FcLike className="likeIcon"/></Button>
+                   </Col>
+                  <Col>
+                    <Link
                       className="deleteBtn"
                       to="/blog"
                       onClick={() => deleteBlog(blog._id)}
@@ -82,6 +103,12 @@ function BlogCard() {
                       show={modalShow}
                       onHide={() => setModalShow(false)}
                     />
+                    </Col>
+                    </Row>
+                    <Card.Body>
+                      <Card.Title>{blog.title}</Card.Title>
+                      <Card.Text>{blog.post}</Card.Text>
+              
                     
                     
                     

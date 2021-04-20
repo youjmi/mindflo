@@ -5,7 +5,7 @@ img {
 }
 
 .rightimage{
-    margin-right: 4%;
+    margin-right: 1%;
     font-family: "Montserrat", sans-serif;
     /* display: inline; */
     float: right;
@@ -13,7 +13,7 @@ img {
 }
 
 .leftimage {
-    margin-left: 4%;
+    margin-left: 2%;
     font-family: "Montserrat", sans-serif;
     /* display: inline; */
     float:left;
@@ -59,6 +59,7 @@ font-family: "Montserrat", sans-serif;
 }
 
 .about, .blog,.homeTitle2   {
+    margin-top: 2%;
     margin-right: 4%;
     text-align: left;
     display: grid;
