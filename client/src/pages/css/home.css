@@ -9,6 +9,7 @@ img {
     font-family: "Montserrat", sans-serif;
     /* display: inline; */
     float: right;
+    
 }
 
 .leftimage {
@@ -81,7 +82,7 @@ a.homeTitle2Button{
     text-align: left;
     display: grid;
     background-color: #2b3942;
-    width: 18%;
+    width: 40%;
     justify-content: center;
     color: white;
     border-radius: 50px;
@@ -109,9 +110,9 @@ a.homeTitle2Button{
     text-decoration: none;
     font-size: 60px;
     font-family: "Montserrat", sans-serif;     */
-    margin-top: 0;
+    /* margin-top: 0;
     position: absolute;
-    margin-left: 80%;
+    margin-left: 80%; */
 }
 
 .button1:hover{
@@ -122,10 +123,13 @@ a.homeTitle2Button{
     font-size: 18px;
 }
 
-.button2{
-    width: 70%;
-    height: 20%;
-}
+/* .button2{
+    width: 80%;
+    height: 40%;
+    margin-top: 0;
+    position: absolute;
+   
+} */
 
 a.homeTitle2Button:hover{
     transition: all 0.2s ease-in-out;
@@ -143,7 +147,7 @@ a.homeTitle1Button{
     background-color: #2b3942;
     border-radius: 50px;
     justify-content: right;
-    width: 120%;
+    width: 40%;
     color: white;
     font-size: 25px;
     padding: 1rem;
