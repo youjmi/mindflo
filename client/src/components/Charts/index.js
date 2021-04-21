@@ -1,10 +1,28 @@
 
-import React from "react";
+import React, {useEffect,useState}from "react";
 import { Form } from "react-bootstrap"
 import ReactApexChart from "react-apexcharts";
 import "./style.css";
+import API from "../../utils/dashboard"
 
 function Charts() {
+
+    const [charts, setCharts] = useState([]);
+
+    useEffect(() => {
+      loadCharts();
+      console.log(charts)
+    }, []);
+  
+    const loadCharts = () => {
+      API.getDashboards()
+        .then(() => setCharts())
+        .catch((err) => console.log(err));
+        console.log(setCharts)
+    }
+
+
+
     const donutseries = [44, 55, 41, 17, 15]
     const donutoptions = {
         chart: {
@@ -23,13 +41,13 @@ function Charts() {
         }]
     }
 
-    const pieseries = [44, 55, 13, 43, 22]
+    const pieseries = [44, 55, 13,]
     const pieoptions = {
         chart: {
             width: 380,
             type: 'pie',
         },
-        labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
+        labels: ["Mind","Body","Pamper"],
         responsive: [{
             breakpoint: 480,
             options: {
@@ -95,7 +113,7 @@ function Charts() {
     };
     const linesseries = [{
         name: "Desktops",
-        data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+        data: []
     }]
     const linesoptions = {
         chart: {
@@ -146,7 +164,7 @@ function Charts() {
                         <ReactApexChart id="piechart" options={pieoptions} series={pieseries} type="pie" height={300} />
                     </div>
                     <div className="col">
-                        <ReactApexChart id="donutchart" options={donutoptions} series={donutseries} type="donut" height={300} />
+                        <ReactApexChart className="donutchart" options={donutoptions} series={donutseries} type="donut" height={300} />
                     </div>
                 </div>
             </div>
