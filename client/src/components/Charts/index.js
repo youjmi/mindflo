@@ -1,11 +1,38 @@
 
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Form } from "react-bootstrap"
 import ReactApexChart from "react-apexcharts";
 import "./style.css";
+import API from "../../utils/dashboard";
+
 
 function Charts() {
-    const donutseries = [44, 55, 41, 17, 15]
+
+
+    const [charts, setCharts] = useState([]);
+
+  
+ 
+  
+    useEffect(() => {
+      loadBlogs();
+      console.log(charts)
+    }, []);
+  
+    function loadBlogs() {
+      API.getDashboards()
+        .then((res) => 
+            setCharts(res.data))
+        .catch((err) => console.log(err));
+    }
+  
+
+
+
+  
+
+
+    const donutseries = []
     const donutoptions = {
         chart: {
             type: 'donut',
@@ -42,7 +69,13 @@ function Charts() {
             }
         }]
     }
+
+
+ 
     const lineseries = [
+        
+     
+
         {
             name: "Cases",
             data: [
