@@ -30,7 +30,7 @@ const Sidebar = ({ isOpen, toggle }) => {
                 <SidebarLogo to="/" style={{ marginBottom: 70, marginTop: 100, marginLeft: 37 }} ><span onClick={toggle}> mindflō </span></SidebarLogo>
             </SidebarItem>
 
-            { pathname === "/login" || pathname === "/dashboard" || pathname === "/blog" || pathname === "/meditation" || pathname === "/signup" ? <>  </> :
+            { pathname === "/login"|| pathname ==="/" || pathname === "/dashboard" || pathname === "/blog" || pathname === "/meditation" || pathname === "/signup" ? <>  </> :
                 <SidebarWrapper style={{ display: isOpen ? "block" : "none" }}>
                     <SidebarMenu>
                         <SidebarItem>
@@ -59,12 +59,15 @@ const Sidebar = ({ isOpen, toggle }) => {
                     </SidebarMenu>
                 </SidebarWrapper>
             }
-
             {pathname !== "/login" ? <> </> :
                 <SidebarBtnWrap>
                     <SidebarRoute to="/login" style={{marginLeft:31}}> <span onClick={toggle}> Log in</span></SidebarRoute>
                 </SidebarBtnWrap>
-
+            }
+            {pathname === "/login" ? <> </> :
+            <SidebarBtnWrap>
+            <SidebarRoute style={{marginLeft:31}} onClick={logoutHandler}> <span onClick={toggle}> Log Out</span></SidebarRoute>
+            </SidebarBtnWrap>
             }
 
             {/* {hideMenu ? <SidebarWrapper/> : null } */}
