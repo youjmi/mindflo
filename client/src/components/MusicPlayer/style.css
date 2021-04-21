@@ -1,14 +1,36 @@
 .c-player {
   display: flexbox;
-  background-color: lemonchiffon;
+  background-color: #45535c;;/*2b394*/
   padding: 50px;
+  
   border-radius: 16px;
+  width: fit-content;
+  align-self: center;
+
+  margin: auto;
+  /* width: 50%; */
+ color: white;
+ font-family: "Montserrat", sans-serif; 
+ text-align: center;
   /* box-shadow: inset -6px -6px; */
+
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2);  /*jeezy added this feature. Rachel can remove if u want*/
+
+
+  
+}
+
+img {
+  width: 300px;
+  height: auto;
+  margin-bottom: 5%;
+  border-radius: 50px;
 }
 
 .c-player > h4 {
-  color: black;
+  color: white;
   text-align: center;
+  
 }
 
 .c-player--details .details-img {
@@ -26,7 +48,7 @@
 }
 
 .c-player--details .details-title {
-  color: black;
+  color: white;
   
 }
 
@@ -40,7 +62,7 @@
 .c-player--controls .playBtn {
   display: flex;
   margin: 0 30px;
-  padding: 20px;
+  padding: 60px;
   border-radius: 50%;
   font-size: 24px;
 }
@@ -54,3 +76,41 @@
   font-style: 18px;
 }
 
+button.skipBtn.btn.btn-primary, button.fastBtn.btn.btn-primary, button.playBtn.btn.btn-primary   {
+  width: 20%;
+  height: auto;
+  padding: auto;
+  margin: 5%;
+  background-color:   #cfacab;    /*#d2807d;*/
+  border-color:  #cfacab; ;/*#d2807d;*/
+  align-content: center;
+  border-radius: 5px;
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2);  /*jeezy added this feature. Rachel can remove if u want*/
+
+}
+
+button.skipBtn.btn.btn-primary:hover, button.fastBtn.btn.btn-primary:hover, button.playBtn.btn.btn-primary:hover{
+  background-color: white;
+}
+
+.startStop{
+ width: 4rem;
+ height: auto;
+  color: white;
+  padding: auto;
+}
+
+.startStop:hover{
+  color: #d2807d;
+}
+
+.backwardIcon{
+  width: 3rem;
+  height: 3rem;
+  color: white;
+  padding: auto;
+}
+
+.backwardIcon:hover{
+  color: #d2807d;
+}

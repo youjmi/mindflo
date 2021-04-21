@@ -16,9 +16,10 @@ function Charts() {
   
     const loadCharts = () => {
       API.getDashboards()
-        .then(() => setCharts())
+        .then((res) => setCharts(res.data))
         .catch((err) => console.log(err));
         console.log(setCharts)
+         
     }
 
 
@@ -41,13 +42,13 @@ function Charts() {
         }]
     }
 
-    const pieseries = [44, 55, 13,]
+    const pieseries = [44, 55, 13, 43, 22]
     const pieoptions = {
         chart: {
             width: 380,
             type: 'pie',
         },
-        labels: ["Mind","Body","Pamper"],
+        labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
         responsive: [{
             breakpoint: 480,
             options: {
@@ -113,7 +114,7 @@ function Charts() {
     };
     const linesseries = [{
         name: "Desktops",
-        data: []
+        data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
     }]
     const linesoptions = {
         chart: {

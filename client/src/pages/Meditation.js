@@ -7,8 +7,9 @@ import React from "react";
 import {Container} from "react-bootstrap"
 //import PlayerBtn from "../components/PlayerBtn";
 import MusicPlayer from "../components/MusicPlayer" 
-import MedCarousel from "../components/MedCarousel"
+import MedCarousel from "../components/MedCarousel/bootstrap"
 import "./css/meditation.css"
+import "bootstrap/dist/css/bootstrap.min.css";
 
 //MEDITATION page info..//
 function Meditation() {
@@ -26,18 +27,19 @@ Cum ex homero dignissim, per eu causae latine fastidii. Et verear temporibus dis
 Qui hinc liberavisse ad, pro in atqui labores maiestatis. In omnes integre menandri eos, vim animal platonem te. Ut simul ocurreret has, menandri electram complectitur has cu, no dico quando usu. Ex vel feugait delectus persecuti, mucius commodo vis no.</p></h6>
 
 <br></br>
-
-{/* <MedCarousel /> */}
+<section className="meditationVideos">
+<MedCarousel />
+</section>
 
 <br></br>
 
-
+<section className="musicPlayer">
 <Container>
-    {/* <PlayerBtn/> */}
+
     <MusicPlayer/>
 
 </Container>
-
+</section>
        </div>
 
   );
