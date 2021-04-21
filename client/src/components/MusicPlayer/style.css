@@ -1,6 +1,6 @@
 .c-player {
   display: flexbox;
-  background-color: #2b3942;;
+  background-color: #45535c;;/*2b394*/
   padding: 50px;
   
   border-radius: 16px;
@@ -13,6 +13,11 @@
  font-family: "Montserrat", sans-serif; 
  text-align: center;
   /* box-shadow: inset -6px -6px; */
+
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2);  /*jeezy added this feature. Rachel can remove if u want*/
+
+
+  
 }
 
 img {
@@ -25,6 +30,7 @@ img {
 .c-player > h4 {
   color: white;
   text-align: center;
+  
 }
 
 .c-player--details .details-img {
@@ -75,9 +81,12 @@ button.skipBtn.btn.btn-primary, button.fastBtn.btn.btn-primary, button.playBtn.b
   height: auto;
   padding: auto;
   margin: 5%;
-  background-color: #d2807d;
-  border-color: #d2807d;
+  background-color:   #cfacab;    /*#d2807d;*/
+  border-color:  #cfacab; ;/*#d2807d;*/
   align-content: center;
+  border-radius: 5px;
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2);  /*jeezy added this feature. Rachel can remove if u want*/
+
 }
 
 button.skipBtn.btn.btn-primary:hover, button.fastBtn.btn.btn-primary:hover, button.playBtn.btn.btn-primary:hover{

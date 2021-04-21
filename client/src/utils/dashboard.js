@@ -5,7 +5,8 @@ const baseURL = "http://localhost:3001"
 export default {
   // Gets all blogs
   getDashboards: function() {
-    return axios.get(`${baseURL}/dashboard`);
+    console.log()
+    return axios.get(`${baseURL}/dashboard`, );
   },
   // Gets the blog with the given id
   getDashboard: function(id) {
