@@ -9,3 +9,13 @@ p{
     font-family: "Montserrat", sans-serif;
     font-size: larger;
 } */
+
+.musicPlayer {
+  background-color: #d2807d;
+  padding: 5%;
+}
+
+.meditationVideos {
+  padding: 5%;
+  height: 1rem;
+}

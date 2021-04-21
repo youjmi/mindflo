@@ -1,4 +1,5 @@
 
+
 import React, {useEffect,useState}from "react";
 import { Form } from "react-bootstrap"
 import ReactApexChart from "react-apexcharts";
@@ -24,6 +25,7 @@ function Charts() {
 
 
     const donutseries = [44, 55, 41, 17, 15]
+
     const donutoptions = {
         chart: {
             type: 'donut',
@@ -60,7 +62,13 @@ function Charts() {
             }
         }]
     }
+
+
+ 
     const lineseries = [
+        
+     
+
         {
             name: "Cases",
             data: [

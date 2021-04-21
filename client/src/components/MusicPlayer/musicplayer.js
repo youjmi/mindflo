@@ -56,12 +56,12 @@ const MusicAudio = (props) => {
     return (
         <div className="c-player--control">
             <audio src={props.songs[props.currentSong].src} ref={audioEl}></audio>
-            <h4>Playing Now</h4>
+            {/* <h4>Playing Now</h4> */}
             <PlayerDetails song={props.songs[props.currentSong]}/>
             <MusicControls isPlay={isPlay} setIsPlaying={setIsPlaying}
             changeSong={changeSong}/>
 
-            <p><strong>Next Up:</strong>{props.songs[props.nextSong].title} by {props.nextSong.artist} </p>
+            <p><strong>Next Up: </strong>{props.songs[props.nextSong].title} by {props.nextSong.artist} </p>
         </div>
     )
 }
