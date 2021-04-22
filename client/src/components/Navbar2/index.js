@@ -69,6 +69,11 @@ const Navigation = ({ toggle }) => {
             <NavBtnLink to="/login" >Log In</NavBtnLink>
           </NavBtn>
           }
+          {pathname === "/login" || pathname ==="/" ? <> </> :
+          
+          <NavBtn>
+          <NavBtnLink onClick={logoutHandler}>Log Out</NavBtnLink>
+        </NavBtn>}
           {/* 
           <NavBtn>
             <NavBtnLink to ="/logout" >Log out</NavBtnLink>
