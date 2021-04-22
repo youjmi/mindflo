@@ -27,7 +27,8 @@ export default {
     //     "content-type": "multipart/form-object"
     //   }
     // }
-    );
+    )
+    .then(response => console.log(response));
   },
 
   updateBlog: function(id) {
