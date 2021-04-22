@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Form, InputGroup, FormControl,  } from "react-bootstrap"
 import API from "../../utils/dashboard"
+import "./style.css";
+
 
 const Dropdown = () => {
 
@@ -20,7 +22,7 @@ const Dropdown = () => {
 
     })
     
-
+  
 
     const submitDashboard = () => {
         API.saveDashboard({
@@ -43,6 +45,8 @@ const Dropdown = () => {
                 console.log(formObj)
             })
             .catch(err => console.log(err))
+
+            window.location.reload()
 
     }
 
@@ -97,6 +101,8 @@ const Dropdown = () => {
         <div>
             <div className="container">
                 <Form.Control
+                style={{fontSize:16}} 
+
                     as="select"
                     custom
                     onChange={e => setIsSelected(e.target.value)}
@@ -111,6 +117,8 @@ const Dropdown = () => {
                 <div className="container mt-3 mindBOX">
                     <InputGroup className="mb-3">
                         <FormControl
+                        style={{fontSize:16}} 
+
                             placeholder="Mind Session Name"
                             aria-label="Session Name"
                             aria-describedby="basic-addon2"
@@ -121,6 +129,8 @@ const Dropdown = () => {
                     </InputGroup>
                     <InputGroup className="mb-3">
                         <FormControl
+                        style={{fontSize:16}} 
+
                             placeholder="How many minutes?"
                             aria-label="minutes"
                             aria-describedby="basic-addon2"
@@ -131,15 +141,18 @@ const Dropdown = () => {
                     </InputGroup>
                     <InputGroup className="mb-3">
                         <FormControl
+                        style={{fontSize:16}} 
+
                             placeholder="Rate your Mood from 1-10"
                             aria-label="affirmations"
                             aria-describedby="basic-addon2"
-                            type="number"
+                            maxLength={1}
+                            type="text"
                             onChange={e => setIsMood(e.target.value)}
                             value={isMood}
                         />
                     </InputGroup>
-                    <button className="" onClick={submitDashboard}  > {/*onClick={this.onButtonClick}*/}
+                    <button className="" style={{fontSize:12}}  onClick={submitDashboard}  > {/*onClick={this.onButtonClick}*/}
                  Submit
                  </button>
                 </div>
@@ -148,6 +161,7 @@ const Dropdown = () => {
                 <div className="container mt-3 mindBOX">
                     <InputGroup className="mb-3">
                         <FormControl
+                        style={{fontSize:16}} 
                             placeholder="Body Session Name"
                             aria-label="Session Name"
                             aria-describedby="basic-addon2"
@@ -158,6 +172,8 @@ const Dropdown = () => {
                     </InputGroup>
                     <InputGroup className="mb-3">
                         <FormControl
+                        style={{fontSize:16}} 
+
                             placeholder="How many minutes?"
                             aria-label="minutes"
                             aria-describedby="basic-addon2"
@@ -168,6 +184,8 @@ const Dropdown = () => {
                     </InputGroup>
                     <InputGroup className="mb-3">
                         <FormControl
+                        style={{fontSize:16}} 
+
                             placeholder="Rate your Mood from 1-10"
                             aria-label="affirmations"
                             aria-describedby="basic-addon2"
@@ -176,7 +194,7 @@ const Dropdown = () => {
                             value={isMood}
                         />
                     </InputGroup>
-                    <button className="" onClick={submitDashboard}  > {/*onClick={this.onButtonClick}*/}
+                    <button className="" style={{fontSize:12}}  onClick={submitDashboard}  > {/*onClick={this.onButtonClick}*/}
                    Submit
                    </button>
                 </div>
@@ -185,6 +203,8 @@ const Dropdown = () => {
                 <div className="container mt-3 pamperBOX">
                     <InputGroup className="mb-3">
                         <FormControl
+                        style={{fontSize:16}} 
+
                             placeholder="Pamper Session Name"
                             aria-label="Session Name"
                             aria-describedby="basic-addon2"
@@ -195,6 +215,8 @@ const Dropdown = () => {
                     </InputGroup>
                     <InputGroup className="mb-3">
                         <FormControl
+                        style={{fontSize:16}} 
+
                             placeholder="How many minutes?"
                             aria-label="minutes"
                             aria-describedby="basic-addon2"
@@ -205,6 +227,8 @@ const Dropdown = () => {
                     </InputGroup>
                     <InputGroup className="mb-3">
                         <FormControl
+                        style={{fontSize:16}} 
+
                             placeholder="Rate your Mood from 1-10"
                             aria-label="affirmations"
                             aria-describedby="basic-addon2"
@@ -213,7 +237,7 @@ const Dropdown = () => {
                             value={isMood}
                         />
                     </InputGroup>
-                    <button className="" onClick={submitDashboard}  > {/*onClick={this.onButtonClick}*/}
+                    <button className="" style={{fontSize:12}}  onClick={submitDashboard}  > {/*onClick={this.onButtonClick}*/}
                       Submit
                       </button>
                 </div>

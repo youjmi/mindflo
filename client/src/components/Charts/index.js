@@ -4,6 +4,9 @@ import { Form } from "react-bootstrap"
 import ReactApexChart from "react-apexcharts";
 import "./style.css";
 import API from "../../utils/dashboard"
+import moment from "moment"
+
+
 
 function Charts() {
 
@@ -22,10 +25,13 @@ function Charts() {
          
     }
 
-
-
-    const donutseries = [44, 55, 41, 17, 15]
+    const donutseries = [
+        charts.filter(chart => chart.selfcare[0].type === "mind").length, 
+        charts.filter(chart => chart.selfcare[0].type === "body").length, 
+        charts.filter(chart => chart.selfcare[0].type === "pamper").length]
     const donutoptions = {
+  labels: ['Mind', 'Body', 'Pamper'],
+
         chart: {
             type: 'donut',
         },
@@ -39,52 +45,53 @@ function Charts() {
                     position: 'bottom'
                 }
             }
-        }]
+        }],
+        title: {
+            text: 'Session Types',
+            align: 'left',
+            // margin: '1px',
+            style: {
+                fontSize: "30px"
+            }
+        },
+        
     }
 
-    const pieseries = [44, 55, 13, 43, 22]
-    const pieoptions = {
-        chart: {
-            width: 380,
-            type: 'pie',
-        },
-        labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
-        responsive: [{
-            breakpoint: 480,
-            options: {
-                chart: {
-                    width: 200
-                },
-                legend: {
-                    position: 'bottom'
-                }
-            }
-        }]
-    }
+    // const pieseries = [, 55, 13, 43, 22]
+    // const pieoptions = {
+    //     chart: {
+    //         width: 380,
+    //         type: 'pie',
+    //     },
+    //     labels: ['Mind Minutes', 'Body Minutes', 'Pamper Minutes'],
+    //     responsive: [{
+    //         breakpoint: 480,
+    //         options: {
+    //             chart: {
+    //                 width: 200
+    //             },
+    //             legend: {
+    //                 position: 'bottom'
+    //             }
+    //         }
+    //     }]
+    // }
     const lineseries = [
-        {
-            name: "Cases",
-            data: [
-                555,
-                12038,
-                69030,
-                88369,
-                167466,
-                932638,
-                2055423,
-                3343777,
-                3845718,
-            ],
-        },
-        {
-            name: "Recovered",
-            data: [28, 284, 9394, 42710, 76026, 191853, 501538, 1029651, 1255481],
-        },
-        {
-            name: "Deaths",
-            data: [17, 259, 1666, 2996, 6472, 49675, 140658, 238619, 269567],
-        },
-    ];
+    {
+        name: "Mind",
+        data: charts.filter(chart => chart.selfcare[0].type === "mind")
+        .map(chart =>chart.selfcare[0].duration),
+    },
+    {
+        name: "Body",
+        data: charts.filter(chart => chart.selfcare[0].type === "body")
+        .map(chart =>chart.selfcare[0].duration),
+    },
+    {
+        name: "Pamper",
+        data: charts.filter(chart => chart.selfcare[0].type === "pamper")
+        .map(chart =>chart.selfcare[0].duration),
+    }]
     const lineoptions = {
         dataLabels: {
             enabled: false,
@@ -92,29 +99,31 @@ function Charts() {
         stroke: {
             curve: "smooth",
         },
+        // xaxis: {
+        //     type: "datetime",
+        //     categories: charts.map(chart => moment(chart.day).format('l')),
+        // },
+        // tooltip: {
+        //     x: {
+        //         format: "dd/MM/yy",
+        //     },
+        // },
+        title: {
+            text: 'MBP Minutes',
+            align: 'center',
+            style: {
+                fontSize: "30px"
+            }
+        },
         xaxis: {
-            type: "datetime",
-            categories: [
-                "1/22/20",
-                "2/1/20",
-                "2/15/20",
-                "3/1/20",
-                "3/15/20",
-                "4/1/20",
-                "4/15/20",
-                "5/1/20",
-                "5/7/20",
-            ],
-        },
-        tooltip: {
-            x: {
-                format: "dd/MM/yy",
-            },
-        },
+            categories: charts.map(chart => moment(chart.day).format('l')),
+        }
     };
     const linesseries = [{
-        name: "Desktops",
-        data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+        name: "Mood",
+        data: charts.map(chart => chart.selfcare[0].mood)
+            
+            // , 41, 35, 51, 49, 62, 69, 91, 148]
     }]
     const linesoptions = {
         chart: {
@@ -131,8 +140,11 @@ function Charts() {
             curve: 'straight'
         },
         title: {
-            text: 'Product Trends by Month',
-            align: 'left'
+            text: 'Your Mood Tracker',
+            align: 'center',
+            style: {
+                fontSize: "30px"
+            }
         },
         grid: {
             row: {
@@ -141,7 +153,7 @@ function Charts() {
             },
         },
         xaxis: {
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+            categories: charts.map(chart => moment(chart.day).format('l')),
         }
     }
 
@@ -161,11 +173,12 @@ function Charts() {
                     </div>
                 </div>
                 <div className="row Chart2">
-                    <div className="col">
+                    {/* <div className="col">
                         <ReactApexChart id="piechart" options={pieoptions} series={pieseries} type="pie" height={300} />
-                    </div>
+                    </div> */}
                     <div className="col">
-                        <ReactApexChart className="donutchart" options={donutoptions} series={donutseries} type="donut" height={300} />
+                        <ReactApexChart 
+                        className="donutchart" options={donutoptions} series={donutseries} type="donut" height={300} />
                     </div>
                 </div>
             </div>

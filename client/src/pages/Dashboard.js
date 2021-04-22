@@ -77,7 +77,8 @@ import API from "../utils/dashboard"
 function Dashboard() {
   return (
     <div>
-      <h1>DASHBOARD SECTION</h1>
+      <h1 className ="dashboardTitle">DASHBOARD SECTION:</h1>
+      <h1 className ="dashboardTitle"> Track Your Progress</h1>
        <Charts/> 
     <Dropdown/> 
       <br></br>      
