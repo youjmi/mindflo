@@ -1,6 +1,12 @@
+require("dotenv").config({ path: "./config.env" });
+
+const connectDB = require("./config/db")
+
+connectDB()
+
 const express = require("express");
 const router = require("express").Router();
-//const path = require("path");
+const path = require("path");
 const cors = require("cors");
 // const passport = require("passport");
 // const passportLocal = require("passport-local").Strategy;
@@ -15,8 +21,9 @@ const routesdashboard= require("./routes/dashboard");
 const routesuser= require("./routes/user");
 // const routeshtml = require("./routes/html")
 
-const path = require("path")
-const app = express();
+const errorHandler = require("./middleware/error")
+
+const app = express()
 
 
 // const User = require("./models/User");
@@ -24,7 +31,7 @@ const app = express();
 
 
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001; 
 
 // Define middleware here
 app.use(express.urlencoded({
@@ -35,6 +42,16 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+ 
+
+// Connecting Routes
+app.use("/api/auth", require("./routes/auth"));
+app.use("/api/private", require("./routes/private"));
+
+// Error Handler Middleware
+app.use(errorHandler);
+ 
+
 
 app.set("view engine", "ejs");
 
@@ -67,18 +84,25 @@ app.use(routesuser);
 
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mindflo",
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mindflo",
 
-  {
-    useNewUrlParser: true,
-    // useUnifiedTopology: true,
-    // useCreateIndex: true,
-    // useFindAndModify: false,
-  }
+//   {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//     useCreateIndex: true,
+//     useFindAndModify: false,
+//   }
 
-)
+// )
 
 // Start the API server
-app.listen(PORT, function () {
+const server = app.listen(PORT, function () {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+});
+
+
+
+process.on("unhandledRejection", (err, promise) => {
+  console.log(`Logged Error: ${err.message}`);
+  server.close(() => process.exit(1));
 });

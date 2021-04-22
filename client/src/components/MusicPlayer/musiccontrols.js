@@ -1,13 +1,17 @@
 import React from 'react'
-import PlayerDetails from "./playerdetais"
+import { RiPlayCircleLine } from "react-icons/ri";
+import { Button } from 'react-bootstrap';
+import { IoPlayForward, IoPlayBack } from "react-icons/io5";
+import { AiOutlinePauseCircle } from "react-icons/ai";
+import "./style.css"
+
+
 const MusicControls = (props) => {
     return (
-        <div className="c-player">
-            <audio></audio>
-            <h4>Playing Now</h4>
-            <PlayerDetails song={props.song}/>
-            {/* Controls */}
-            <p><strong>Next Up:</strong>{props.nextSong.title} by {props.nextSong.artist} </p>
+        <div className="c-player--control">
+            <Button className="skipBtn" onClick={() => props.changeSong(false)} ><IoPlayBack/></Button>
+            <Button className="playBtn" onClick={() => props.setIsPlaying(!props.isPlay)}>{props.isPlay ? <RiPlayCircleLine/> : <AiOutlinePauseCircle/>} </Button>
+            <Button className="fastBtn" onClick={() => props.changeSong()}><IoPlayForward/></Button>
         </div>
     )
 }

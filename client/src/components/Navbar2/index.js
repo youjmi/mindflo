@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 // import { NavItem } from 'react-bootstrap';
 //import 'bootstrap/dist/css/bootstrap.min.css'
 
-import {useLocation} from "react-router-dom"
+
+import {useLocation, useHistory} from "react-router-dom"
 import {
   Navdiv,
   NavbarContainer,
@@ -22,6 +23,13 @@ let {pathname} = useLocation()
 
 
 console.log(pathname)
+
+const history = useHistory()
+const logoutHandler = ()=> {
+  localStorage.removeItem("authToken");
+  history.push("/login")
+};
+
 
 
   return (
@@ -49,12 +57,12 @@ console.log(pathname)
             </NavItem>
             
           </NavMenu>
-          } 
-          
-
+          }
+              <button onClick ={logoutHandler}>LOGOUT</button>          
+{/* 
           <NavBtn>
-            <NavBtnLink to ="/login" >Log In</NavBtnLink>
-          </NavBtn>
+            <NavBtnLink to ="/logout" >Log out</NavBtnLink>
+          </NavBtn> */}
         </NavbarContainer>
       </Navdiv>
     </>
