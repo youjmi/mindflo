@@ -11,7 +11,7 @@ import Dashboard from "../src/pages/Dashboard"
 import Blog from "../src/pages/Blog"
 import Signup from "../src/pages/Signup"
 import Login from "../src/pages/Login"
-import apiBlog from "../src/utils/blog"
+import apiBlog from "../src/utils/dashboard"
 import Sidebar from "./components/Sidebar/index"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
