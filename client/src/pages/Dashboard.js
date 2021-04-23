@@ -4,7 +4,8 @@ import SearchBar from "../components/SearchBar";
 import Charts from "../components/Charts";
 import Dropdown from "../components/Dropdown/index"
 import "./css/dashboard.css";
-import API from "../utils/dashboard"
+// import API from "../utils/dashboard"
+import Yoga from "../components/Yoga"
 
 
 // function Dashboard() {
@@ -89,11 +90,14 @@ function Dashboard() {
       <br></br>
 
       <Container>
+        <Yoga/>
         <h1>Yoga Workouts</h1>
         <SearchBar 
         // search={this.state.search}
         //     handleInputChange={this.handleInputChange}
             />
+
+          
         <h6>
           Lorem ipsum dolor sit amet, veniam salutatus ad vel, ei vix iudicabit
           dissentiet, fugit percipit nec ad. Minim affert eloquentiam te quo.
