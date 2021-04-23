@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 // import { NavItem } from 'react-bootstrap';
 //import 'bootstrap/dist/css/bootstrap.min.css'
 
 
-import {useLocation, useHistory} from "react-router-dom"
+import { useLocation, useHistory } from "react-router-dom"
 import {
   Navdiv,
   NavbarContainer,
@@ -16,19 +16,19 @@ import {
   Bars
 } from './NavbarElements';
 
-const Navigation = ({toggle}) => {
+const Navigation = ({ toggle }) => {
 
 
-let {pathname} = useLocation() 
+  let { pathname } = useLocation()
 
 
-console.log(pathname)
+  console.log(pathname)
 
-const history = useHistory()
-const logoutHandler = ()=> {
-  localStorage.removeItem("authToken");
-  history.push("/login")
-};
+  const history = useHistory()
+  const logoutHandler = () => {
+    localStorage.removeItem("authToken");
+    history.push("/login")
+  };
 
 
 
@@ -36,30 +36,40 @@ const logoutHandler = ()=> {
     <>
       <Navdiv >
         <NavbarContainer >
-          <NavLogo to = "/">mindflō</NavLogo>
-          <Bars onClick = {toggle} />
-          { pathname === "/login" || pathname === "/dashboard" || pathname === "/blog" || pathname === "/meditation"|| pathname === "/signup" ?   <>  </> : 
-          <NavMenu>
-            <NavItem> 
-              <NavLinks to ="meditation" smooth ={true} duration ={500} >Meditation</NavLinks>  
+          <NavLogo to="/">mindflō</NavLogo>
+          <Bars onClick={toggle} />
+
+
+          {pathname === "/login" || pathname === "/dashboard" || pathname === "/blog" || pathname === "/meditation" || pathname === "/signup" ? <>  </> :
+            <>
+            <NavMenu> 
+              <NavItem>
+                <NavLinks to="meditation" smooth={true} duration={500} >Meditation</NavLinks>
               </NavItem>
               <NavItem>
-              <NavLinks to ="dashboard" smooth ={true} duration ={500}>Dashboard</NavLinks>
-            </NavItem>
+                <NavLinks to="dashboard" smooth={true} duration={500}>Dashboard</NavLinks>
+              </NavItem>
               <NavItem>
-              <NavLinks to ="blog"smooth ={true} duration ={500}>Blog</NavLinks>
-            </NavItem>
-            {/* <NavItem>
+                <NavLinks to="blog" smooth={true} duration={500}>Blog</NavLinks>
+              </NavItem>
+              {/* <NavItem>
               <NavLinks to ="signup"smooth ={true} duration ={500}>Sign Up</NavLinks>
             </NavItem> */}
-            <NavItem>
-              <NavLinks to ="footer"smooth ={true} duration ={500}>Contact Us</NavLinks>
-            </NavItem>
-            
-          </NavMenu>
+              <NavItem>
+                <NavLinks to="footer" smooth={true} duration={500}>Contact Us</NavLinks>
+              </NavItem>
+            </NavMenu>
+                   <NavBtn>
+                   <NavBtnLink onClick={logoutHandler}>Log Out</NavBtnLink>
+                 </NavBtn>
+                 </>
           }
-              <button onClick ={logoutHandler}>LOGOUT</button>          
-{/* 
+          {pathname !== "/login" ? <> </> : 
+          <NavBtn>
+            <NavBtnLink to="/login" >Log In</NavBtnLink>
+          </NavBtn>
+          }
+          {/* 
           <NavBtn>
             <NavBtnLink to ="/logout" >Log out</NavBtnLink>
           </NavBtn> */}

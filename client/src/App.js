@@ -44,13 +44,16 @@ const toggle = () =>{setIsOpen (!isOpen)}
       <Navigation toggle = {toggle} /> 
       <Switch>
       <PrivateRoute exact path ="/" component = {PrivateScreen} /> 
-        <Route exact path="/" component={Home}/> 
-        <Route exact path="/meditation" component={Meditation} />
-        <Route exact path="/dashboard" component={Dashboard} />
-        <Route exact path="/blog" component={Blog} />
+      {/* <PrivateRoute exact path ="/home" component = {PrivateScreen} /> 
+      <PrivateRoute exact path ="/meditation" component = {PrivateScreen} /> 
+      <PrivateRoute exact path ="/dashboard" component = {PrivateScreen} /> 
+      <PrivateRoute exact path ="/blog" component = {PrivateScreen} />  */}
+        <PrivateRoute exact path="/home" component={Home}/> 
+        <PrivateRoute exact path="/meditation" component={Meditation} />
+        <PrivateRoute exact path="/dashboard" component={Dashboard} />
+        <PrivateRoute exact path="/blog" component={Blog} />
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/login" component={Login} />
-        
         </Switch>
       {/* </Wrapper> */}
       <Footer/>

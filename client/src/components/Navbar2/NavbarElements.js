@@ -72,7 +72,6 @@ export const Bars = styled(FaBars)`
     transform: translate(-100%, 75%);
     font-size: 1.5rem;
     cursor: pointer;
-    margin-top:-16px
 
   }
 `;

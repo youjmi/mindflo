@@ -32,13 +32,23 @@ const PrivateScreen = () => {
     },[]);
 
 
-    return(
-        error? <span className = "error-message">{error}</span> :<>
-    {/* <div style={{background: "green", color: 'white'}}>{privateData}
-    </div> */}
-    <Home/>
-        </>
-    )
-}
+//     return(
+//         error? <span className = "error-message">{error}</span> :<>
+//     {/* <div style={{background: "green", color: 'white'}}>{privateData}
+//     </div> */}
+//     <Home/>
+//         </>
+//     )
+// }
+
+return error ? (
+  <span className="error-message">{error}</span>
+) : (
+  <Home/>
+  
+
+
+);
+};
 
     export default PrivateScreen; 

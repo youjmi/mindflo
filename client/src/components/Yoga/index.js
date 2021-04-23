@@ -2,80 +2,80 @@ import React, { useEffect, useState } from "react";
 import Jumbotron from "react-bootstrap/Jumbotron";
 // import DeleteBtn from "../components/DeleteBtn";
 // import API from "../../utils/API";
-import { Col, Row, Container } from "react-bootstrap";
+import { Col, Row, Container, Dropdown} from "react-bootstrap";
 // import { List, ListItem } from "../components/List";
 // import { Input, TextArea, FormBtn } from "../components/Form";
 import { Button } from "react-bootstrap";
+import API from "../../utils/yoga"
+import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
+
+import 'bootstrap/dist/js/bootstrap.js';
+
 
 function Yoga() {
    
-    const youtube_Key = "AIzaSyCkGh56mI4GQnvTtVoHCWVTvkUX7uzpjr8"
-    const [allPoses, getVariableforAllPoses] = useState([]);
+    // const youtube_Key = "AIzaSyCkGh56mI4GQnvTtVoHCWVTvkUX7uzpjr8"
+    const [allPoses, setPoses] = useState([]);
 
     useEffect(() => {
             listOfAllYogaPoses()
           }, [])
 
-          function listOfAllYogaPoses(){
-            return axios.get('https://raw.githubusercontent.com/rebeccaestes/yoga_api/master/yoga_api.json')
-            .then(result =>
-              result.json())
-            .then(newResult => {
-              getVariableforAllPoses(newResult)
-              var newResult = newResult;
-            })
-            .catch(error =>
-              console.log(error))
+  function listOfAllYogaPoses(){
+    API.getYoga()
+    .then((res) => setPoses(res.data))
+    .catch(error => console.log(error))   
+              
           }
-          
-    function getVariableforAllPoses(newResult){
-        for(let i=0; i<newResult.length; i++){
-          let allPoses = newResult[i].english_name;
+          console.log(allPoses)
+    // function getVariableforAllPoses(newResult){
+    //     for(let i=0; i<newResult.length; i++){
+    //       let allPoses = newResult[i].english_name;
         
-          if(allPoses === newResult[i].english_name){
-            let sanskritName = newResult[i].sanskrit_name;
-            let poseImage = newResult[i].img_url;
-          }
-        }
-        submitButton(newResult);
-      }
+    //       if(allPoses === newResult[i].english_name){
+    //         let sanskritName = newResult[i].sanskrit_name;
+    //         let poseImage = newResult[i].img_url;
+    //       }
+    //     }
+    //     submitButton(newResult);
+    //   }
 
 
 
-     function youtubeVideo(valueSelected) {
-        return axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=how+to+do+${valueSelected}+yoga+pose&maxResults=1&&safeSearch=moderate&key=${youtube_Key}`
-        )
-        .then(youtubeResult =>
-            youtubeResult.json())
-          .then(youtubeResult => {
-            displayOtherResults(youtubeResult.items[0]);
-          })
-          .catch(error =>
-            console.log(error))
+    //  function youtubeVideo(valueSelected) {
+    //     return axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=how+to+do+${valueSelected}+yoga+pose&maxResults=1&&safeSearch=moderate&key=${youtube_Key}`
+    //     )
+    //     .then(youtubeResult =>
+    //         youtubeResult.json())
+    //       .then(youtubeResult => {
+    //         displayOtherResults(youtubeResult.items[0]);
+    //       })
+    //       .catch(error =>
+    //         console.log(error))
     
     
     
-    }
+    // }
  
       
 
 
   
 
-    function submitButton(newResult){
-        $('.dropdown-form').submit(event => {
-          event.preventDefault();
-          let valueSelected = $('.dropdown-style:selected').val();
-          callYoutubeAPI(valueSelected);
-          for(let i=0; i<newResult.length; i++){
-            if(valueSelected === newResult[i].english_name){
-              let objectSelected = newResult[i];
-              cssChanges();
-              displayResults(objectSelected);
-            }
-          }
-        });
+    // function submitButton(newResult){
+    //     $('.dropdown-form').submit(event => {
+    //       event.preventDefault();
+    //       let valueSelected = $('.dropdown-style:selected').val();
+    //       callYoutubeAPI(valueSelected);
+    //       for(let i=0; i<newResult.length; i++){
+    //         if(valueSelected === newResult[i].english_name){
+    //           let objectSelected = newResult[i];
+    //           cssChanges();
+    //           displayResults(objectSelected);
+    //         }
+    //       }
+    //     });
 
 
   // Load all books and store them with setBooks
@@ -91,25 +91,27 @@ function Yoga() {
 //       )
 //       .catch(err => console.log(err));
 //   };
-
+const [isOpen, setIsOpen] = useState(false)
+const toggle = () =>{setIsOpen (!isOpen)} 
 
     return (
+
       <Container fluid>
         <Row>
           <Col size="md-6">
             <Jumbotron>
               <h1>Research Yoga</h1>
             </Jumbotron>
-            <Dropdown>
-                <Dropdown.Toggle variant="success" id="dropdown-basic">
-                    Dropdown Button
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                        <Dropdown.Item href="#/action-1" value={allPoses}> {allPoses}</Dropdown.Item>
-                        
-                    </Dropdown.Menu>
-            </Dropdown> 
-            <Button>Submit</Button>
+
+            <Dropdown isOpen={isOpen} toggle={toggle}>
+              <Dropdown.Toggle caret id="size-dropdown">Yoga Psoes</Dropdown.Toggle>
+              <Dropdown.Menu>{allPoses.map(yoga => (<Dropdown.Item>{yoga.english_name}</Dropdown.Item>))}
+   </Dropdown.Menu>
+</Dropdown>
+          
+    
+         
+            {/* <Button  onClick={submitButton} >Submit</Button> */}
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
@@ -122,5 +124,5 @@ function Yoga() {
     );
   }
 
-}
+
 export default Yoga;

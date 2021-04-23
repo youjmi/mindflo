@@ -19,8 +19,9 @@ import about from "./images/aboutusimg.png"
 import meditate from "./images/meditationimg.png"
 import blog from "./images/blogimg2.png"
 import dashboard from "./images/dashboadimg.png"
+import ReactApexChart from "../components/Charts";
 
-function Home() {
+function Home(props) {
   return (
     <>
       <section id="about" className="about">
@@ -94,6 +95,11 @@ function Home() {
           <Col size="sm-8" className ="colHome">
           <h1 className="homeTitle2">Dashboard</h1>
             <h2 className="homeTitle2">Stuff about dashboard!</h2>
+
+            <ReactApexChart  style ={{}}/> {/*How to isolate only 1 graph*/}
+
+        
+
           <div className="button2">
             <Link to="/dashboard" className= "homeTitle2Button">See Progress </Link>
             </div>
