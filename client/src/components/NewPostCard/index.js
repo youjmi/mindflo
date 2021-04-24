@@ -8,6 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const NewPostCard = (props) => {
   //const [blogs, setBlogs] = useState([])
+
   const [formObject, setFormObject] = useState({
     title: "",
     post: "",
@@ -53,11 +54,17 @@ const NewPostCard = (props) => {
     // blogData.append("birthdate", formObject.post);
     // blogData.append("name", formObject.photo);
     // if (formObject.title && formObject.user) {
+  //  const formData = new FormData()
+  //  formData.append('file', formObject.photo)
+  //  formData.append('title', formObject.title)
+  //  formData.append('post', formObject.post)
+  
+
     API.saveBlog({
       title: formObject.title,
       // user: formObject.user,
       post: formObject.post,
-      photo: formObject.photo,
+      photo: formObject.photo
     })
       .then(() =>
         setFormObject({
@@ -107,12 +114,13 @@ const NewPostCard = (props) => {
               <Form.Group controlId="formBasicImage">
                 <Form.Label>Image:</Form.Label>
                 <Form.Control
-                  type="file"
+                  type="photo"
                   placeholder="Upload"
-                  onChange={handleInputImage}
-                  accept=".png, .jpg, .jpeg"
+                  onChange={handleInputChange}
+                  // accept=".png, .jpg, .jpeg"
                   name="photo"
-                  encType={"multipart/form-data"}
+                  value={formObject.photo}
+                  // encType={"multipart/form-data"}
                 />
               </Form.Group>
 
