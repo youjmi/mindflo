@@ -7,16 +7,31 @@ import styled from 'styled-components';
 
 export const Navdiv = styled.nav`
 
+// background: #2b3942;
+//  height: 50px;
+// // margin-top : -80px;
+// display: flex;
+// justify-content: center;
+// padding: 0.5rem calc((100vw - 1000px) / 2);
+// z-index: 10;
+// // position: -webkit-sticky !important;
+// position: sticky !important;
+
 background: #2b3942;
- height: 50px;
-// margin-top : -80px;
+height: 50px;
+margin-top : 0px;
+padding: 0.5rem calc((100vw - 1000px) / 2);
 display: flex;
 justify-content: center;
-padding: 0.5rem calc((100vw - 1000px) / 2);
-z-index: 10;
+aoign-items: center;
+position: sticky;
 position: -webkit-sticky !important;
-position: sticky !important;
-`;
+top:0;
+z-index:20
+ `;
+
+
+
 
 export const NavbarContainer = styled.div`
 
@@ -36,7 +51,7 @@ export const NavLogo = styled(LinkR)`
 color : #fff;
 justify-self : flex-start;
 cursor: pointer;
-font-size: 1.5rem;
+font-size: 25px;
 display: flex;
 align-items: center;
 margin-left: 24px;
@@ -47,7 +62,7 @@ font-family: 'Alegreya', serif;
   transition: all 0.2s ease-in-out;
   color: #b6d5db;
   border-radius : 50px;
-  font-size: 1.6rem;
+  font-size: 27px;
   text-decoration:none
 
 
