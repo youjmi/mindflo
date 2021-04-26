@@ -1,13 +1,13 @@
 .carousel{
     background-color: blueviolet;
-    height: 500px;
-    color: blueviolet;
+    /* height: 500px; */
+    color: white;
 }
 
 div.carousel-item {
     background-color: blueviolet;
     /* height: 500px; */
-    color: blueviolet;
+    color:white;
 
 
 }
