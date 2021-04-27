@@ -14,6 +14,8 @@ export default {
   getYoga: function() {
     return axios.get(`${baseURL}`);
   },
-  
+  getPosePhoto: function(id) {
+    return axios.get(`${baseURL}/`+ id);
+  },
 };
 
