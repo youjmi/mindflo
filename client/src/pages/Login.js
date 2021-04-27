@@ -150,7 +150,7 @@ const LoginScreen = ({ history }) => {
         <h3 className="login-screen__title mb-5">Login</h3>
         {error && <span className="error-message">{error}</span>}
         <div className="form-group">
-          <label htmlFor="name">Username:</label>
+          <label className="loginLables" htmlFor="name">Username:</label>
           <input
             className="inputBoxes"
             type="text"
@@ -163,7 +163,7 @@ const LoginScreen = ({ history }) => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="password">
+          <label className="loginLables" htmlFor="password">
             Password: {" "}
             {/* <Link to="/forgotpassword" className="login-screen__forgotpassword">
               Forgot Password?

@@ -1,16 +1,21 @@
 button.contactBtn.btn.btn-primary{
-    background-color: #0d2e5b;
+    background-color: #d2807d;
     font-family: "Montserrat", sans-serif;
     margin: 0;
     position: relative;
+    border-radius: 50px;
+    width: 12%;
+    height: 15%;
   }
   
   input#formBasicEmail.form-control {
     border-color: #0d2e5b;
+    font-family: "Montserrat", sans-serif;
   }
   
   input#formBasicSubject.form-control {
     border-color: #0d2e5b;
+    font-family: "Montserrat", sans-serif;
   }
   
   /* textarea#exampleForm\.ControlTextarea1.form-control {
@@ -32,11 +37,13 @@ button.contactBtn.btn.btn-primary{
   div.form-group{
       display: inline-flexbox;
       align-content: inherit;
+      font-family: "Montserrat", sans-serif;
       
   }
 
   div {
       display: inline-flexbox;
+      font-family: "Montserrat", sans-serif;
   }
 
   /* .formGroup {
@@ -46,5 +53,6 @@ button.contactBtn.btn.btn-primary{
   } */
 
   .form {
+    font-family: "Montserrat", sans-serif;
     width: 600px;
   }
