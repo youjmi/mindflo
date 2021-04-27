@@ -46,8 +46,8 @@ const NewPostCard = (props) => {
 
   // When the form is submitted, use the API.saveBook method to save the book data
   // Then reload books from the database
-  function handleFormSubmit(event) {
-    event.preventDefault();
+  function handleFormSubmit() {
+    // event.preventDefault();
     console.log("working");
     // const blogData = new FormData();
     // blogData.append("title", formObject.title);
@@ -143,7 +143,8 @@ const NewPostCard = (props) => {
                 />
               </Form.Group>
 
-              <Button variant="primary" type="submit" onClick={handleFormSubmit} onSubmit={props.onHide} encType='multipart/form-data'>
+              <Button variant="primary" onClick={() => { props.onHide(); handleFormSubmit()}
+              } >
             Submit
         </Button>
 
@@ -152,13 +153,13 @@ const NewPostCard = (props) => {
           </Container>
         </Modal.Body>
         <Modal.Footer>
-          <Button
+          {/* <Button
             onClick={props.onHide}
             // onClick={handleFormSubmit}
             // encType="multipart/form-data"
           >
            Close
-          </Button>
+          </Button> */}
         </Modal.Footer>
       </Modal>
     </>
