@@ -17,5 +17,22 @@ p{
 
 .meditationVideos {
   padding: 5%;
-  height: 1rem;
+  /* height: 1rem; */
+}
+.musicHeader{
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: #2b3942;
+  font-weight: bolder;
+  font-size: 28px;
+  margin-bottom: 2%;
+}
+
+.musicText{
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color:#2b3942;
+  font-size: 15px;
+  margin-bottom: 5%;
+  margin-top: 2%;
 }

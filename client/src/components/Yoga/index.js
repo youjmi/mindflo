@@ -2,17 +2,16 @@ import React, { useEffect, useState } from "react";
 import Jumbotron from "react-bootstrap/Jumbotron";
 // import DeleteBtn from "../components/DeleteBtn";
 // import API from "../../utils/API";
-import { Col, Row, Container, Dropdown} from "react-bootstrap";
+import { Col, Row, Container, Dropdown } from "react-bootstrap";
 // import { List, ListItem } from "../components/List";
 // import { Input, TextArea, FormBtn } from "../components/Form";
 import { Button } from "react-bootstrap";
-import API from "../../utils/yoga"
+import API from "../../utils/yoga";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import "./style.css";
 
-import 'bootstrap/dist/js/bootstrap.js';
-
+import "bootstrap/dist/js/bootstrap.js";
 
 function Yoga() {
    
@@ -30,7 +29,7 @@ function Yoga() {
 
           }, [])
 
-  function listOfAllYogaPoses(){
+  function listOfAllYogaPoses() {
     API.getYoga()
     .then((res) => setPoses(res.data))
     .catch(error => console.log(error))
@@ -129,9 +128,9 @@ console.log(isVideo)
 
 
   // Load all books and store them with setBooks
-//   useEffect(() => {
-//     loadBooks()
-//   }, [])
+  //   useEffect(() => {
+  //     loadBooks()
+  //   }, [])
 
   // Loads all books and sets them to books
 //   function loadBooks() {

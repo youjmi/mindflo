@@ -18,16 +18,11 @@ export default {
   // Saves a book to the database
   saveBlog: function (blogData) {
     console.log(blogData);
-   
+    // blogData.append('file', this.state.selectedFile)
     return axios.post(`${baseURL}/blog`, blogData
-    // , {
-    //   headers: {
-       
-    //     // 'content-type': 'application/json',
-    //     "content-type": "multipart/form-object"
-    //   }
-    // }
-    );
+    
+    )
+    .then(response => console.log(response));
   },
 
   updateBlog: function(id) {

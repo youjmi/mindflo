@@ -93,6 +93,7 @@ a.homeTitle2Button{
     margin-top: 0;
     font-size: 25px;
     padding: 1rem;
+    margin-bottom: 5%;
     
 }
 
@@ -141,7 +142,7 @@ a.homeTitle2Button:hover{
 }
 
 a.homeTitle1Button{
-    margin-left: 4%;
+    margin-left: 60%;
     text-align: right;
     display: grid;
     font-family: "Montserrat", sans-serif;  

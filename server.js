@@ -62,6 +62,8 @@ router.use(function(req, res) {
   res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
 
+app.use(express.static(__dirname));
+
 app.use(routesblog);
 app.use(routesdashboard);
 app.use(routesuser);

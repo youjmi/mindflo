@@ -13,44 +13,64 @@
     padding: 20px;
   } */
 
-  .login-screen {
-    /* width: 100%;
+.login-screen {
+  /* width: 100%;
     height: 100vh; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .login-screen__form {
-    width: 380px;
-    padding: 1.5rem;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-    background: #fff;
-  }
-  
-  .login-screen__title {
-    text-align: center;
-    font-size: 30px;
-    margin-bottom: 1rem;
-  }
-  
-  /* .login-screen__forgotpassword {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-screen__form {
+  width: 380px;
+  padding: 1.5rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  background: #fff;
+}
+
+.login-screen__title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+  color: #2b3942;
+}
+
+/* .login-screen__forgotpassword {
     font-size: 0.7rem;
   }
    */
-  .login-screen__subtext {
-    font-size: 15px;
-    display: block;
-    margin: 0.5rem 0;
-  }
+.login-screen__subtext {
+  font-size: 15px;
+  display: block;
+  margin: 0.5rem 0;
+  font-family: "Montserrat", sans-serif;
+  color: #2b3942;
+  
+}
 
-  .loginaccount{
-    font-size: 20px;
-    display: inline-block;
-    float: right
-  }
+.loginaccount {
+  font-size: 20px;
+  display: inline-block;
+  float: right;
+  font-family: "Montserrat", sans-serif;
+  color: #2b3942;
+}
 
-  .inputBoxes {
-    display: inline-block;
-    float: right
-  }
+.inputBoxes {
+  display: inline-block;
+  float: right;
+  font-family: "Montserrat", sans-serif;
+  color: #2b3942;
+
+}
+
+.btn.btn-primary.loginaccount{
+  background-color: #2b3942;
+  color: white;
+}
+
+.loginLables{
+  font-family: "Montserrat", sans-serif;
+  color: #2b3942;
+}

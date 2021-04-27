@@ -79,7 +79,7 @@ function BlogCard() {
               return (
                 <Card key={blog._id}>
                   <Link href={"/blog/" + blog._id} to="/blog">
-                    <Card.Img variant="top" src={beach} />
+                    <Card.Img variant="top" src={blog.photo} />
                     <Row>
                     <Col>
                     <Button className="likeBtn" onClick={handleLike}><FcLike className="likeIcon"/></Button>
