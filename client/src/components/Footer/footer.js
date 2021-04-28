@@ -16,7 +16,7 @@ const Footer = () => {
         //     <h1>FOOTER</h1>
         // </div>
         
-        <div className="footer">
+        <div className="footer mt-5">
             <Row className ="footerRow container">
                 <Col className="footerCol1 container" size="md-4">
                     <h1 className="footerTitle">Information</h1>
