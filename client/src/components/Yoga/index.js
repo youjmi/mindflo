@@ -38,34 +38,39 @@ function Yoga() {
     // if  
               
           }
-          console.log(allPoses)
+         
 
 
 
  function getValue(event){
-   setPhoto(event.target.value)
+  // setVideo(event.target.label) 
+  // setPhoto(event.target.value)
+
+  setPhoto(event.target.value)
   //  console.log("TESTING")
-  // console.log(event)
-  console.log(event.target)
-  console.log(event.target.getAttribute("text"))
+  console.log(event.target.attributes.innerHTML)
+  console.log(event.target.outerText)
+  console.log(event)
   // console.log([event.target.getAttribute('id')])
 
 //   // const photoPose = event.target.value
-  setVideo(event.target) 
+  setVideo(event.target.id) 
 //   // const valueSelected = event.target.value;
 // .then((res) => setPhoto(res.data))
 // // //  API.getPosePhoto(id)
 //  .then((res)=>setPhoto(res.data))
 //  .catch(error => console.log(error))
 
-console.log(isVideo)
+// console.log(isVideo)
 // console.log (photoPose)
- }  console.log (photoPose)      
+  } 
+  // console.log (photoPose)      
 
-//  function getYoutube(event){
-//    console.log (event)
-//    console.log(event.target.value)
-//  }
+ function getYoutube(event){
+   console.log (event)
+   console.log(event.target.id)
+   setVideo(event.target.id) 
+ }
   // function getPhoto(event){
   //   event.preventDefault();
   //   if (allPoses.english_name && allPoses.img.url){
@@ -163,7 +168,7 @@ const toggle = () =>{setIsOpen (!isOpen)}
             <Dropdown isOpen={isOpen} toggle={toggle}>
               <Dropdown.Toggle caret id="size-dropdown">Yoga Poses</Dropdown.Toggle>
               <Dropdown.Menu>
-                <select onChange={getValue}>{allPoses.map(yoga => (<option id={yoga.english_name} value={yoga.img_url}>{yoga.english_name}</option>))}
+                <select onChange={(e) => getValue(e)}>{allPoses.map(yoga => (<option yogaIMG={yoga.img_url} id={yoga.english_name} value={yoga.img_url}>{yoga.english_name}</option>))}
                 </select>
    </Dropdown.Menu>
 </Dropdown>
@@ -172,7 +177,7 @@ const toggle = () =>{setIsOpen (!isOpen)}
 
 
             <div>
-              <img src={photoPose}></img>
+              <img onChange={getYoutube} src={photoPose}></img>
              </div>
              
             </Jumbotron>
