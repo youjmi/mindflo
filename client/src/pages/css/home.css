@@ -53,6 +53,7 @@ margin-left: 4%;
 text-align: right;
 display: grid;
 font-family: "Montserrat", sans-serif;
+
 /* grid-template-columns: (2, 1fr) */
 
 
@@ -64,9 +65,14 @@ font-family: "Montserrat", sans-serif;
     text-align: left;
     display: grid;
     font-family: "Montserrat", sans-serif;
-   
+  
     /* grid-template-columns: repeat(2, 1fr) */
     
+}
+
+h1.homeTitle1, h1.homeTitle2 {
+    font-size: 40px;
+    font-weight: 900;
 }
 
 .divider{
@@ -83,7 +89,7 @@ a.homeTitle2Button{
     text-align: left;
     display: grid;
     background-color: #2b3942;
-    width: 40%;
+    width: 25%;
     justify-content: center;
     color: white;
     border-radius: 50px;
@@ -142,14 +148,14 @@ a.homeTitle2Button:hover{
 }
 
 a.homeTitle1Button{
-    margin-left: 60%;
+    margin-left: 80%;
     text-align: right;
     display: grid;
     font-family: "Montserrat", sans-serif;  
     background-color: #2b3942;
     border-radius: 50px;
     justify-content: right;
-    width: 40%;
+    width: 25%;
     color: white;
     font-size: 25px;
     padding: 1rem;

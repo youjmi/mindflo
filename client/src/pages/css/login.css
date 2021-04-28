@@ -62,7 +62,8 @@
   float: right;
   font-family: "Montserrat", sans-serif;
   color: #2b3942;
-
+  border-color: #2b3942;
+  border-width: thin;
 }
 
 .btn.btn-primary.loginaccount{

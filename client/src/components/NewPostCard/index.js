@@ -94,7 +94,7 @@ const NewPostCard = (props) => {
       >
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
-            Submit New Blog Post
+            Submit New Journal Entry
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>

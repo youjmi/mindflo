@@ -75,10 +75,10 @@ function Home(props) {
             
           </Col>
           <Col size="sm-8">
-          <h1 className="homeTitle1">Blog</h1>
+          <h1 className="homeTitle1">Journal</h1>
             <h2 className="homeTitle1">Stuff about the blog</h2>
           <div className="button1">
-           <Link className = "homeTitle1Button "to="/blog">View Blog </Link>
+           <Link className = "homeTitle1Button "to="/blog">View Journal</Link>
           </div>
 
             
@@ -105,9 +105,9 @@ function Home(props) {
             </div>
             
           </Col>
-          <Col size="sm-4">
+          {/* <Col size="sm-4">
             <img src={dashboard} className="rightimage" />
-          </Col>
+          </Col> */}
 
         </Row>
       </section>

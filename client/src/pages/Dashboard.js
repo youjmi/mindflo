@@ -82,32 +82,7 @@ function Dashboard() {
       <h1 className ="dashboardTitle"> Track Your Progress</h1>
        <Charts/> 
     <Dropdown/> 
-      <br></br>      
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-
-      <Container>
-        <Yoga/>
-        <h1>Yoga Workouts</h1>
-        <SearchBar 
-        // search={this.state.search}
-        //     handleInputChange={this.handleInputChange}
-            />
-
-          
-        <h6>
-          Lorem ipsum dolor sit amet, veniam salutatus ad vel, ei vix iudicabit
-          dissentiet, fugit percipit nec ad. Minim affert eloquentiam te quo.
-          Causae scribentur in nec. Pri eros senserit ut, dolor rationibus
-          adipiscing ex ius, ne est viris nusquam theophrastus. Vim cu quod
-          vocent consectetuer, ad qui invidunt forensibus. Cu eum falli aliquip,
-          ut aeque constituto incorrupte ius, per in mentitum laboramus
-
-        </h6>
-      </Container>
+ 
     </div>
   );
 }

@@ -143,7 +143,7 @@ function BlogCard(props) {
           </CardColumns>
         </Container>
       ) : (
-        <h3>No Blog Posts Added Yet!</h3>
+        <h3>No Journal Entries Yet!</h3>
       )}
     </div>
   );

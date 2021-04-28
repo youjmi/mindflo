@@ -71,13 +71,17 @@ function EditPost(props) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <Container>
+        <Container
+        key={props._id}
+        obj={props._id}
+        >
         {/* {blogs.map((blog)=> { */}
           <Form 
-          key={blogs._id} href={"/blog/" + blogs._id}
+          key={props._id}
+          obj={props._id}
           >
             
-            <Form.Group controlId="formBasicTitle">
+            <Form.Group controlId="formBasicTitle" >
               <Form.Label>Title</Form.Label>
               <Form.Control
                 type="title"
@@ -118,12 +122,12 @@ function EditPost(props) {
 
             <br />
             <Button
-            obj={props._id}
+            
           onClick={() => {
             props.onHide();
             handleFormSubmit(props._id)
           }}
-          encType="multipart/form-data"
+          
         >
           Submit
           </Button>
