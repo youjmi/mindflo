@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Jumbotron from "react-bootstrap/Jumbotron";
 // import DeleteBtn from "../components/DeleteBtn";
 // import API from "../../utils/API";
-import { Col, Row, Container, Dropdown } from "react-bootstrap";
+import { Col, Row, Container, Dropdown, Carousel } from "react-bootstrap";
 // import { List, ListItem } from "../components/List";
 // import { Input, TextArea, FormBtn } from "../components/Form";
 import { Button } from "react-bootstrap";
@@ -30,7 +30,6 @@ function Yoga() {
       .then((res) => setPoses(res.data))
       .catch((error) => console.log(error));
     // .then(english_name)
-<<<<<<< HEAD
     // if
   }
   console.log(allPoses);
@@ -60,44 +59,6 @@ function Yoga() {
   //    console.log (event)
   //    console.log(event.target.value)
   //  }
-=======
-    // if  
-              
-          }
-         
-
-
-
- function getValue(event){
-  // setVideo(event.target.label) 
-  // setPhoto(event.target.value)
-
-  setPhoto(event.target.value)
-  //  console.log("TESTING")
-  console.log(event.target.attributes.innerHTML)
-  console.log(event.target.outerText)
-  console.log(event)
-  // console.log([event.target.getAttribute('id')])
-
-//   // const photoPose = event.target.value
-  setVideo(event.target.id) 
-//   // const valueSelected = event.target.value;
-// .then((res) => setPhoto(res.data))
-// // //  API.getPosePhoto(id)
-//  .then((res)=>setPhoto(res.data))
-//  .catch(error => console.log(error))
-
-// console.log(isVideo)
-// console.log (photoPose)
-  } 
-  // console.log (photoPose)      
-
- function getYoutube(event){
-   console.log (event)
-   console.log(event.target.id)
-   setVideo(event.target.id) 
- }
->>>>>>> 1d7e3b2b1d78cdf9c03ca73a7bd91c815fb46cf3
   // function getPhoto(event){
   //   event.preventDefault();
   //   if (allPoses.english_name && allPoses.img.url){
@@ -166,6 +127,12 @@ function Yoga() {
     setIsOpen(!isOpen);
   };
 
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
+
   return (
     <Container fluid>
       <Row>
@@ -199,16 +166,44 @@ function Yoga() {
               <img src={photoPose}></img>
             </div>
           </Jumbotron>
-          {/* <select onChange={getValue}>
-  <option value="1">Gabe</option>
-  <option value="2">Frankie</option>
-  <option value="3">Jezzy</option>
-</select> */}
-
-          {/* <Button  onClick={submitButton} >Submit</Button> */}
         </Col>
-        <Col size="md-6 sm-12">
-          <Jumbotron>
+        <Col size="md-4">
+          <Carousel activeIndex={index} onSelect={handleSelect} className="yogaCarousel">
+            <Carousel.Item className="yogaItem">
+              <iframe className="yogaCaro"
+                width="560"
+                height="315"
+                src={"https://www.youtube.com/embed/7ciS93shMNQ"}
+                title="Embedded youtube"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              />
+            </Carousel.Item>
+            <Carousel.Item className="yogaItem">
+              <iframe className="yogaCaro"
+                width="560"
+                height="315"
+                src={"https://www.youtube.com/embed/3j5GwysBCfA"}
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              />
+            </Carousel.Item>
+            <Carousel.Item className="yogaItem">
+              <iframe className="yogaCaro"
+                width="560"
+                height="315"
+                src={"https://www.youtube.com/embed/b1H3xO3x_Js"}
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              />
+            </Carousel.Item>
+          </Carousel>
+          {/* <Jumbotron>
             <div>
               <iframe
                 width="560"
@@ -219,9 +214,9 @@ function Yoga() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
               />
-              {/* <iframe src={`https://www.youtube.com/embed/${video.id.videoId}`} ></iframe> */}
+              
             </div>
-          </Jumbotron>
+          </Jumbotron> */}
         </Col>
       </Row>
     </Container>
