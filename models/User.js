@@ -13,18 +13,18 @@ const userSchema = new Schema({
     "Please provide a valid email",
   ],
 },
-   blog: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "Blog"
-    }
-  ],
-  dashboard: [
-   {
-     type: Schema.Types.ObjectId,
-     ref: "Dashboard"
-   }
- ],
+//    blog: [
+//     {
+//       type: Schema.Types.ObjectId,
+//       ref: "Blog"
+//     }
+//   ],
+//   dashboard: [
+//    {
+//      type: Schema.Types.ObjectId,
+//      ref: "Dashboard"
+//    }
+//  ],
   
   
  password: {
