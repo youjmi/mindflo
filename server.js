@@ -86,7 +86,7 @@ app.use(routesuser);
 
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mindflo",
+mongoose.connect(process.env.MONGODB_URI|| "mongodb://localhost/mindflo",
 
   {
     useNewUrlParser: true,
