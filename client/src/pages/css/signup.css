@@ -66,13 +66,21 @@ p{
   font-family: "Montserrat", sans-serif;
   color: #2b3942;
 }
-.registeraccount{
+/* .registeraccount{
   font-size: 20px;
   display: inline-block;
-    float: right;
-    font-family: "Montserrat", sans-serif;
-    color: #2b3942;
+  float: right;
+  background-color: #2b3942;
+  color: white;
+} */
 
+
+.btn.btn-primary.registeraccount{
+  background-color: #2b3942;
+  color: white;
+  font-size: 20px;
+  display: inline-block;
+  float: right;
 }
 .inputBoxes {
   display: inline-block;

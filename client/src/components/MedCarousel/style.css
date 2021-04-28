@@ -4,7 +4,8 @@
     color: white;
     align-content: center;
     height: 55rem;
-    width: 90rem;
+    width: 100rem;
+    margin: 0 auto;
     font-family: "Montserrat", sans-serif; 
 }
 
@@ -19,6 +20,7 @@ div.carousel-item {
 
 div.ytp-cued-thumbnail-overlay-image {
     align-content: center;
+
 }
 
 div.carousel-caption {
@@ -42,8 +44,10 @@ div.carousel-caption {
   }
 
   iframe {
-    margin: 20px 20px auto 165px;
+    margin: 20px 20px auto 240px;
     text-align: center;
+    /* margin: 0 auto; */
+
   }
   
   /* .video-responsive iframe {
@@ -57,5 +61,7 @@ div.carousel-caption {
 
   ol.carousel-indicators {
       align-items: center;
-      margin-left: 185px;
+      /* margin-left: 185px; */
+      margin: 0 auto;
+
   }
