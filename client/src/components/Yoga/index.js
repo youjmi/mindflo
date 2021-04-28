@@ -148,7 +148,7 @@ function Yoga() {
             </Jumbotron> */}
 
           
-          <Jumbotron className ="yogaJumbo">
+          <Jumbotron className ="yogaJumbo" style={{height:"100%", width: "100%"}}>
             <Dropdown isOpen={isOpen} toggle={toggle} className="yogaToggle">
             <Dropdown.Toggle caret id="size-dropdown">
               Yoga Poses
@@ -172,8 +172,8 @@ function Yoga() {
           <Carousel activeIndex={index} onSelect={handleSelect} className="yogaCarousel">
             <Carousel.Item className="yogaItem">
               <iframe className="yogaCaro"
-                width="560"
-                height="315"
+                width="460"
+                height="215"
                 src={"https://www.youtube.com/embed/7ciS93shMNQ"}
                 title="Embedded youtube"
                 frameborder="0"
@@ -183,8 +183,8 @@ function Yoga() {
             </Carousel.Item>
             <Carousel.Item className="yogaItem">
               <iframe className="yogaCaro"
-                width="560"
-                height="315"
+                width="460"
+                height="215"
                 src={"https://www.youtube.com/embed/3j5GwysBCfA"}
                 title="YouTube video player"
                 frameborder="0"
@@ -194,8 +194,8 @@ function Yoga() {
             </Carousel.Item>
             <Carousel.Item className="yogaItem">
               <iframe className="yogaCaro"
-                width="560"
-                height="315"
+                width="460"
+                height="215"
                 src={"https://www.youtube.com/embed/b1H3xO3x_Js"}
                 title="YouTube video player"
                 frameborder="0"
