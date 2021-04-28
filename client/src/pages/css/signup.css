@@ -22,6 +22,8 @@ p{
   width: 90%;
   height: 40%;
   padding: 20px;
+  font-family: "Montserrat", sans-serif;
+  color: #2b3942;
 }
 
 .register-screen {
@@ -29,6 +31,8 @@ p{
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Montserrat", sans-serif;
+  color: #2b3942;
 }
 
 .register-screen__form {
@@ -36,22 +40,31 @@ p{
   padding: 1.5rem;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   background: #fff;
+  font-family: "Montserrat", sans-serif;
+  color: #2b3942;
 }
 
-.register-screen__title {
+.register-screen__title.mb-5 {
   text-align: center;
   font-size: 30px;
   margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+  color: #2b3942;
+
 }
 
 .register-screen__subtext {
   font-size: 15px;
   display: block;
   margin: 0.5rem 0;
+  font-family: "Montserrat", sans-serif;
+  color: #2b3942;
 
 }
 .form-group {
   font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  color: #2b3942;
 }
 /* .registeraccount{
   font-size: 20px;
@@ -73,3 +86,4 @@ p{
   display: inline-block;
 float: right
 }
+

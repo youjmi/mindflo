@@ -108,9 +108,9 @@ function Home(props) {
             </div>
             
           </Col>
-          <Col size="sm-4">
+          {/* <Col size="sm-4">
             <img src={dashboard} className="rightimage" />
-          </Col>
+          </Col> */}
 
         </Row>
       </section>

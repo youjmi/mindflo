@@ -8,6 +8,7 @@ import { Container } from "react-bootstrap";
 //import PlayerBtn from "../components/PlayerBtn";
 import MusicPlayer from "../components/MusicPlayer";
 import MedCarousel from "../components/MedCarousel";
+import Yoga from "../components/Yoga"
 import "./css/meditation.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -30,6 +31,11 @@ function Meditation() {
         <Container>
           <MusicPlayer />
         </Container>
+      </section>
+
+
+      <section className="yogaSection">
+        <Yoga />
       </section>
     </div>
   );

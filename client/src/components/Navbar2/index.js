@@ -50,7 +50,7 @@ const Navigation = ({ toggle }) => {
                 <NavLinks to="dashboard" smooth={true} duration={500}>Dashboard</NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="blog" smooth={true} duration={500}>Blog</NavLinks>
+                <NavLinks to="blog" smooth={true} duration={500}>Journal</NavLinks>
               </NavItem>
               {/* <NavItem>
               <NavLinks to ="signup"smooth ={true} duration ={500}>Sign Up</NavLinks>

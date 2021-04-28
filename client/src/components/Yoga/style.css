@@ -1,5 +1,35 @@
 .dropdown-menu {
     max-height: 300px;
     overflow-y: auto;
+    font-family: "Montserrat", sans-serif;  
+    background-color: #45535c;
+    
   }
-  
+
+button#size-dropdown.dropdown-menu.dropdown-toggle.btn.btn-primary {
+  font-family: "Montserrat", sans-serif;  
+  background-color: #45535c;
+}
+
+.dropdown-toggle.btn.btn-primary {
+  font-family: "Montserrat", sans-serif;  
+  background-color: #45535c;
+
+}
+
+.btn .btn-primary{
+  font-family: "Montserrat", sans-serif;  
+  background-color: #45535c;
+}
+
+.dropdown-toggle {
+  font-family: "Montserrat", sans-serif;  
+  background-color: #45535c;
+  margin-left: 40%;
+  width: 30%;
+  height: 40%;
+  font-size: 15px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
