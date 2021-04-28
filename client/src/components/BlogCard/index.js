@@ -143,7 +143,7 @@ function BlogCard(props) {
           </CardColumns>
         </Container>
       ) : (
-        <h3>No Journal Entries Yet!</h3>
+        <h3 style ={{textAlign: "center", fontSize: "20px"}}>No Journal Entries Yet!</h3>
       )}
     </div>
   );

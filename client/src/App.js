@@ -52,6 +52,7 @@ const toggle = () =>{setIsOpen (!isOpen)}
         <PrivateRoute exact path="/meditation" component={Meditation} />
         <PrivateRoute exact path="/dashboard" component={Dashboard} />
         <PrivateRoute exact path="/blog" component={Blog} />
+        <PrivateRoute exact path ="/logout" component ={PrivateScreen}/>
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/login" component={Login} />
         </Switch>
