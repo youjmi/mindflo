@@ -30,37 +30,6 @@ function Yoga() {
       .then((res) => setPoses(res.data))
       .catch((error) => console.log(error));
     // .then(english_name)
-<<<<<<< HEAD
-    // if
-  }
-  console.log(allPoses);
-
-  function getValue(event) {
-    setPhoto(event.target.value);
-    //  console.log("TESTING")
-    // console.log(event)
-    console.log(event.target);
-    console.log(event.target.getAttribute("text"));
-    // console.log([event.target.getAttribute('id')])
-
-    //   // const photoPose = event.target.value
-    setVideo(event.target);
-    //   // const valueSelected = event.target.value;
-    // .then((res) => setPhoto(res.data))
-    // // //  API.getPosePhoto(id)
-    //  .then((res)=>setPhoto(res.data))
-    //  .catch(error => console.log(error))
-
-    console.log(isVideo);
-    // console.log (photoPose)
-  }
-  console.log(photoPose);
-
-  //  function getYoutube(event){
-  //    console.log (event)
-  //    console.log(event.target.value)
-  //  }
-=======
     // if  
               
           }
@@ -97,7 +66,6 @@ function Yoga() {
    console.log(event.target.id)
    setVideo(event.target.id) 
  }
->>>>>>> 1d7e3b2b1d78cdf9c03ca73a7bd91c815fb46cf3
   // function getPhoto(event){
   //   event.preventDefault();
   //   if (allPoses.english_name && allPoses.img.url){
