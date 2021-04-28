@@ -38,7 +38,7 @@ function Home(props) {
           <Col size="sm-8">
         
           <h1 className="homeTitle1">About Us</h1>
-            <h2 className="homeTitle1">Welcome to mindFlō, a self-care service tracker that allows you to track the progress in focusing on your self-care. We’re here for you to make sure you take of your MBP-Mind,Body,Pamper. 
+            <h2 className="homeTitle1 mt-5">Welcome to mindFlō, a self-care service tracker that allows you to track the progress in focusing on your self-care. We’re here for you to make sure you take of your MBP-Mind,Body,Pamper. 
                                      {/* <p>Mind (zen out with a meditation session)</p>
                                     <p>Body (workout or try your yoga practice)</p>
                                   <p>Pamper (vibe out with a facial, bath bomb, or anything that makes you feel good)</p> */}
@@ -58,9 +58,9 @@ function Home(props) {
         
           <Col size="sm-8">
           <h1 className="homeTitle2">Inspo</h1>
-            <h2 className="homeTitle2">We’ve provided you a couple videos, music, and photos to find inspiration in you Mind, Body, & Pamper journey</h2>    
+            <h2 className="homeTitle2 mt-5">We’ve provided you a couple videos, music, and photos to find inspiration in you Mind, Body, & Pamper journey</h2>    
             <div className="button2">       
-            <Link className = "homeTitle2Button "to="/meditation">Learn More</Link>
+            <Link className = "homeTitle2Button mt-5" to="/meditation">Learn More</Link>
           </div> 
           </Col>
           <Col size="sm-4">
@@ -83,9 +83,9 @@ function Home(props) {
           </Col>
           <Col size="sm-8">
           <h1 className="homeTitle1">Journal</h1>
-            <h2 className="homeTitle1">Sometimes the best way to track your progress to write out your thoughts. Take the time to document your journey. </h2>
+            <h2 className="homeTitle1 mt-5">Sometimes the best way to track your progress to write out your thoughts. Take the time to document your journey. </h2>
           <div className="button1">
-           <Link className = "homeTitle1Button "to="/blog">View Journal</Link>
+           <Link className = "homeTitle1Button mt-5 "to="/blog">View Journal</Link>
           </div>
 
             
@@ -103,15 +103,17 @@ function Home(props) {
 
           <Col size="sm-8" className ="colHome">
           <h1 className="homeTitle2">Dashboard</h1>
-            <h2 className="homeTitle2">Our tracker keeps all your efforts catagorized. Add new events and visually see your efforts.</h2>
+            <h2 className="homeTitle2 mt-5">Our tracker keeps all your efforts catagorized. Add new events and visually see your efforts.</h2>
 
-            <ReactApexChart  style ={{}}/> {/*How to isolate only 1 graph*/}
+
+            <div className="button2">
+            <Link to="/dashboard" id= "progressButton" className= "homeTitle2Button mt-5 mb-5">See Progress </Link>
+            </div>
+            <ReactApexChart/> {/*How to isolate only 1 graph*/}
 
         
 
-          <div className="button2">
-            <Link to="/dashboard" className= "homeTitle2Button">See Progress </Link>
-            </div>
+          
             
           </Col>
           {/* <Col size="sm-4">

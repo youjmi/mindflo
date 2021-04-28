@@ -147,7 +147,9 @@ function Yoga() {
              
             </Jumbotron> */}
 
-          <Dropdown isOpen={isOpen} toggle={toggle} className="yogaToggle">
+          
+          <Jumbotron className ="yogaJumbo">
+            <Dropdown isOpen={isOpen} toggle={toggle} className="yogaToggle">
             <Dropdown.Toggle caret id="size-dropdown">
               Yoga Poses
             </Dropdown.Toggle>
@@ -161,9 +163,8 @@ function Yoga() {
               </select>
             </Dropdown.Menu>
           </Dropdown>
-          <Jumbotron>
             <div>
-              <img src={photoPose}></img>
+              <img className="yogaPics" src={photoPose}></img>
             </div>
           </Jumbotron>
         </Col>

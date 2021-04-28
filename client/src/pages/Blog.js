@@ -26,10 +26,10 @@ function Blogs() {
   return (
     <>
       <Container>
-      <h1 className="blogTitle">Mindflo Personal Journal</h1>
+      <h1 className="blogTitle mb-5">Mindflo Personal Journal</h1>
       <h2 className="blogDescription">It's time to write your own journey and inspire yourself along the way!</h2>
-      <Button className="newPostBtn"  onClick={() => setModalShow(true)}>
-      <MdCreate/> New Entry
+      <Button className="newPostBtn mb-5"  onClick={() => setModalShow(true)}>
+      <MdCreate /> New Entry
        </Button>
        </Container>
       <NewPost show={modalShow} onHide={() => setModalShow(false)} />

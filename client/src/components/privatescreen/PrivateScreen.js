@@ -23,7 +23,7 @@ const PrivateScreen = () => {
             setPrivateData(data.data);
           } catch (error) {
             localStorage.removeItem("authToken");
-            setError("You are not authorized please login");
+            setError("You are not authorized. Please login");
           }
         };
     
@@ -42,7 +42,7 @@ const PrivateScreen = () => {
 // }
 
 return error ? (
-  <span className="error-message">{error}</span>
+  <span className="error-message" style ={{fontSize: "70px", marginLeft:"17%"}} >{error}</span>
 ) : (
   <Home/>
   

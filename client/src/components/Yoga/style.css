@@ -33,3 +33,30 @@ button#size-dropdown.dropdown-menu.dropdown-toggle.btn.btn-primary {
   margin-bottom: 5%;
 }
 
+.carousel-inner{
+  background-color: #45535c;
+    /* height: 500px; */
+    color: white;
+    align-content: center;
+    height: 40rem;
+    width: 110rem;
+    margin: 0 auto;
+    font-family: "Montserrat", sans-serif; 
+}
+
+.yogaPics{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.yogaCaro {
+
+  margin: 20px 20px auto 260px;
+  text-align: center;
+}
+/* 
+.yogaJumbo {
+
+} */

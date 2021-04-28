@@ -67,7 +67,7 @@ font-family: "Montserrat", sans-serif;
 
 .about, .blog,.homeTitle2   {
     margin-top: 2%;
-    margin-right: 4%;
+    margin-right:4%;
     text-align: left;
     display: grid;
     font-family: "Montserrat", sans-serif;
@@ -150,26 +150,26 @@ a.homeTitle2Button:hover{
     font-family: "Montserrat", sans-serif;
     color: #b6d5db;
     border-radius : 50px;
-    font-size: 18px;
+    font-size: 27px;
+    text-decoration: none;
 }
 
 a.homeTitle1Button{
-    margin-left: 80%;
+    margin-left: 66%;
     text-align: right;
     display: grid;
-    font-family: "Montserrat", sans-serif;  
     background-color: #2b3942;
-    border-radius: 50px;
-    justify-content: right;
-    width: 30%;
-    color: white;
-    font-size: 20px;
-    padding: 1rem;
+    width: 35%;
     justify-content: center;
-
+    color: white;
+    border-radius: 50px;
     text-decoration: none;
-
-
+    
+    font-family: "Montserrat", sans-serif;    
+    margin-top: 0;
+    font-size: 25px;
+    padding: 1rem;
+    margin-bottom: 5%;
 }
 
 a.homeTitle1Button:hover{
@@ -177,7 +177,9 @@ a.homeTitle1Button:hover{
     font-family: "Montserrat", sans-serif;
     color: #b6d5db;
     border-radius : 50px;
-    font-size: 18px;
+    font-size: 27px;
+    text-decoration: none;
+
 } 
 
 button.btn.btn-primary.a {
@@ -199,3 +201,15 @@ img.arrowDivider {
   width: 50%;
   }
 
+#progressButton {
+text-align: center;    
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin: auto
+}
+
+/* #homeCharts{
+
+    margin-bottom: 200px;
+} */
