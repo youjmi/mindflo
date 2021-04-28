@@ -53,11 +53,21 @@ p{
 .form-group {
   font-size: 20px;
 }
-.registeraccount{
+/* .registeraccount{
   font-size: 20px;
   display: inline-block;
-    float: right
+  float: right;
+  background-color: #2b3942;
+  color: white;
+} */
 
+
+.btn.btn-primary.registeraccount{
+  background-color: #2b3942;
+  color: white;
+  font-size: 20px;
+  display: inline-block;
+  float: right;
 }
 .inputBoxes {
   display: inline-block;

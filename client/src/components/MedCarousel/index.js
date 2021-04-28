@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { Carousel, Card } from "react-bootstrap";
-// import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import beach from "./beachwave1.png";
 import Iframe1 from "./iframe1";
 import Iframe2 from "./iframe2";
