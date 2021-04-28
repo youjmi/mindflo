@@ -20,6 +20,7 @@ import meditate from "./images/meditationimg.png"
 import blog from "./images/blogimg2.png"
 import dashboard from "./images/dashboadimg.png"
 import ReactApexChart from "../components/Charts";
+import arrow from "./images/dividerarrow.png"
 
 function Home(props) {
   return (
@@ -47,7 +48,9 @@ function Home(props) {
    
         </Row>
       </section>
-      <div className ="divider"></div>
+      {/* <div className ="divider" src={aarow}></div> */}
+
+      <div><img className="arrowDivider" src={arrow}/></div>
       
       <section id="meditation" className="meditation">
       
@@ -66,7 +69,8 @@ function Home(props) {
         </Row>
       </section>
       
-      <div className ="divider"></div>
+      {/* <div className ="divider"></div> */}
+      <div><img className="arrowDivider" src={arrow}/></div>
 
       <section id="blog" className="blog">
       
@@ -88,7 +92,9 @@ function Home(props) {
           </Col>
         </Row>
       </section>
-      <div className ="divider"></div>
+      {/* <div className ="divider"></div> */}
+
+      <div><img className="arrowDivider" src={arrow}/></div>
 
       <section id="dashboard" className="dashboard">
       
