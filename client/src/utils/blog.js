@@ -26,6 +26,6 @@ export default {
   },
 
   updateBlog: function(id,blogData) {
-    return axios.put("/blog" + id, blogData );
+    return axios.put("/blog/" + id, blogData );
   }
 };
