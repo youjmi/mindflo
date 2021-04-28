@@ -43,7 +43,7 @@ const toggle = () =>{setIsOpen (!isOpen)}
       <Sidebar isOpen = {isOpen} toggle = {toggle} /> {/*toggle = {toggle}*/}
       <Navigation toggle = {toggle} /> 
       <Switch>
-      <PrivateRoute exact path ="/" component = {PrivateScreen} /> 
+      <PrivateRoute exact path ="/#" component = {PrivateScreen} /> 
       {/* <PrivateRoute exact path ="/home" component = {PrivateScreen} /> 
       <PrivateRoute exact path ="/meditation" component = {PrivateScreen} /> 
       <PrivateRoute exact path ="/dashboard" component = {PrivateScreen} /> 
