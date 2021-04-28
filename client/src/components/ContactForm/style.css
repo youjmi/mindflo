@@ -38,6 +38,7 @@ button.contactBtn.btn.btn-primary{
       display: inline-flexbox;
       align-content: inherit;
       font-family: "Montserrat", sans-serif;
+      color: white;
       
   }
 
@@ -54,5 +55,7 @@ button.contactBtn.btn.btn-primary{
 
   .form {
     font-family: "Montserrat", sans-serif;
-    width: 600px;
+    width: 450px;
+    color: white
+
   }

@@ -18,18 +18,17 @@
 
 
 
+.main-footer{
 
-.footerCol1{
-   float:left;
-   background-color : #2b3942;
-   /* margin-right: 10%;
-   margin-left: 10%; */
-   font-family: "Montserrat", sans-serif;
-   /* display: inline; */
-   float:right;
-   margin-top: 55.5px
-
+    background-color: #2b3942;
+        color: white;
+        padding-top: 3em;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+      
 }
+
 
 .footerContact{
     justify-content: center ;
@@ -48,3 +47,34 @@
 button.contactBtn.btn.btn-primary{
     background-color: #d2807d;
 }
+
+.footerCol1, .footerCol2 {
+    /* float:left;
+    background-color : #2b3942; */
+    /* margin-right: 10%;
+    margin-left: 10%; */
+    /* font-family: "Montserrat", sans-serif; */
+    /* display: inline; */
+    /* float:right;
+     */
+
+
+
+ }
+
+ .list-unstyled{
+
+    font-size: 20px;
+    
+    text-align: center;
+    
+ }
+
+ .footTitle{
+font-size: 30px;
+ }
+
+ .footCol{
+    text-align: center;
+ }
+
