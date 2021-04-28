@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Form, InputGroup, FormControl,  } from "react-bootstrap"
+import { Form, InputGroup, FormControl, Button  } from "react-bootstrap"
 import API from "../../utils/dashboard"
 import "./style.css";
 
@@ -194,9 +194,9 @@ const Dropdown = () => {
                             value={isMood}
                         />
                     </InputGroup>
-                    <button className="" style={{fontSize:12}}  onClick={submitDashboard}  > {/*onClick={this.onButtonClick}*/}
+                    <Button className="" style={{fontSize:12}}  onClick={submitDashboard}  > {/*onClick={this.onButtonClick}*/}
                    Submit
-                   </button>
+                   </Button>
                 </div>
                 : <> </>}
             { isSelected == "pamper" ?

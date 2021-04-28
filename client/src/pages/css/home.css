@@ -59,6 +59,7 @@ margin-left: 4%;
 text-align: right;
 display: grid;
 font-family: "Montserrat", sans-serif;
+margin-top: 50px;
 
 /* grid-template-columns: (2, 1fr) */
 
@@ -71,7 +72,8 @@ font-family: "Montserrat", sans-serif;
     text-align: left;
     display: grid;
     font-family: "Montserrat", sans-serif;
-  
+    margin-top: 50px;
+
     /* grid-template-columns: repeat(2, 1fr) */
     
 }
@@ -100,6 +102,7 @@ a.homeTitle2Button{
     color: white;
     border-radius: 50px;
     text-decoration: none;
+    width: 30%;
     
     font-family: "Montserrat", sans-serif;    
     margin-top: 0;
@@ -150,6 +153,7 @@ a.homeTitle2Button:hover{
     font-family: "Montserrat", sans-serif;
     color: #b6d5db;
     border-radius : 50px;
+    width: 30%;
     font-size: 27px;
     text-decoration: none;
 }

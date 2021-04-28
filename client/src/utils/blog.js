@@ -25,7 +25,7 @@ export default {
     .then(response => console.log(response));
   },
 
-  updateBlog: function(id) {
-    return axios.put(`${baseURL}/blog/` + id);
+  updateBlog: function(id,blogData) {
+    return axios.put(`${baseURL}/blog/` + id, blogData );
   }
 };

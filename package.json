@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "selfcare tracking app",
   "main": "server.js",
+  "engines": {
+    "node": "14.15.4"
+  },
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
@@ -48,6 +51,7 @@
     "passport-local": "^1.0.0",
     "popper.js": "^1.16.1",
     "react-icons": "^4.2.0",
+    "react-social-icons": "^5.1.1",
     "styled-components": "^5.2.3",
     "uuid": "^8.3.2"
   }

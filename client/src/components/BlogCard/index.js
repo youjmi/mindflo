@@ -125,7 +125,7 @@ function BlogCard(props) {
                           title={blog.title}
                           photo={blog.photo}
                           post={blog.post}
-                          obj={blog._id}
+                          _id={blog._id} 
                           onHide={() => setModalShow(false)}
                           
                         />

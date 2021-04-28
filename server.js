@@ -86,7 +86,7 @@ app.use(routesuser);
 
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mindflo",
+mongoose.connect(process.env.MONGODB_URI|| "mongodb://localhost/mindflo",
 
   {
     useNewUrlParser: true,
@@ -108,3 +108,4 @@ process.on("unhandledRejection", (err, promise) => {
   console.log(`Logged Error: ${err.message}`);
   server.close(() => process.exit(1));
 });
+

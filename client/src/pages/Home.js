@@ -57,7 +57,7 @@ function Home(props) {
         <Row>
         
           <Col size="sm-8">
-          <h1 className="homeTitle2">Inspo</h1>
+          <h1 className="homeTitle2">Inspō</h1>
             <h2 className="homeTitle2 mt-5">We’ve provided you a couple videos, music, and photos to find inspiration in you Mind, Body, & Pamper journey</h2>    
             <div className="button2">       
             <Link className = "homeTitle2Button mt-5" to="/meditation">Learn More</Link>

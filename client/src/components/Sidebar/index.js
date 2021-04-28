@@ -30,22 +30,27 @@ const Sidebar = ({ isOpen, toggle }) => {
                 <SidebarLogo to="/" style={{ marginBottom: 70, marginTop: 100, marginLeft: 37 }} ><span onClick={toggle}> mindflō </span></SidebarLogo>
             </SidebarItem>
 
-            { pathname === "/login"|| pathname ==="/home" || pathname === "/dashboard" || pathname === "/blog" || pathname === "/meditation" || pathname === "/signup" ? <>  </> :
+            { pathname === "/login"|| pathname ==="/home" || pathname ==="/about" || pathname === "/dashboard" || pathname === "/blog" || pathname === "/meditation" || pathname === "/signup" ? <>  </> :
                 <SidebarWrapper style={{ display: isOpen ? "block" : "none" }}>
                     <SidebarMenu>
-                        <SidebarItem>
-                            <SidebarLink to="meditation" smooth={true} duration={500} >
-                                <span onClick={toggle}>Meditation</span>
+                    <SidebarItem>
+                            <SidebarLink to="about" smooth={true} duration={500} >
+                                <span onClick={toggle}>About Us</span>
                             </SidebarLink>
                         </SidebarItem>
                         <SidebarItem>
-                            <SidebarLink to="dashboard" smooth={true} duration={500} >
-                                <span onClick={toggle}> Dashboard</span>
+                            <SidebarLink to="meditation" smooth={true} duration={500} >
+                                <span onClick={toggle}>Inspō</span>
                             </SidebarLink>
                         </SidebarItem>
                         <SidebarItem>
                             <SidebarLink to="blog" smooth={true} duration={500} >
                                 <span onClick={toggle}>  Blog</span>
+                            </SidebarLink>
+                        </SidebarItem>
+                        <SidebarItem>
+                            <SidebarLink to="dashboard" smooth={true} duration={500} >
+                                <span onClick={toggle}> Dashboard</span>
                             </SidebarLink>
                         </SidebarItem>
                         <SidebarItem>

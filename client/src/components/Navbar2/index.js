@@ -42,24 +42,27 @@ const Navigation = ({ toggle }) => {
 
           {pathname === "/login" || pathname === "/dashboard" || pathname === "/blog" || pathname === "/meditation" || pathname === "/signup" ? <>  </> :
             <>
-            <NavMenu> 
+            <NavMenu>  
               <NavItem>
-                <NavLinks to="meditation" smooth={true} duration={500} >Meditation</NavLinks>
+                <NavLinks to="about" smooth={true} duration={500} >About Us</NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="dashboard" smooth={true} duration={500}>Dashboard</NavLinks>
+                <NavLinks to="meditation" smooth={true} duration={500} >Inspō</NavLinks>
               </NavItem>
               <NavItem>
                 <NavLinks to="blog" smooth={true} duration={500}>Journal</NavLinks>
               </NavItem>
+              <NavItem>
+                <NavLinks to="dashboard" smooth={true} duration={500}>Dashboard</NavLinks>
+              </NavItem>
               {/* <NavItem>
               <NavLinks to ="signup"smooth ={true} duration ={500}>Sign Up</NavLinks>
             </NavItem> */}
-              <NavItem>
+              <NavItem >
                 <NavLinks to="footer" smooth={true} duration={500}>Contact Us</NavLinks>
               </NavItem>
             </NavMenu>
-                   <NavBtn>
+                   <NavBtn >
                    <NavBtnLink onClick={logoutHandler}>Log Out</NavBtnLink>
                  </NavBtn>
                  </>

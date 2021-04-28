@@ -42,7 +42,7 @@ const PrivateScreen = () => {
 // }
 
 return error ? (
-  <span className="error-message" style ={{fontSize: "70px", marginLeft:"17%"}} >{error}</span>
+  <span className="error-message" style ={{fontSize: "50px", marginLeft:"17%"}} >{error}</span>
 ) : (
   <Home/>
   

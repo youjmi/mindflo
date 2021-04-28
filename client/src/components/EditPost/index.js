@@ -44,13 +44,13 @@ function EditPost(props) {
     // event.preventDefault();
     console.log("working");
 
-    API.updateBlog(id)
+    API.updateBlog(id,update)
       .then((res) => {
         loadBlogs()
         console.log(res)
       })
       .catch((err) => console.log(err))
-
+      window.location.reload()
 
 
   }

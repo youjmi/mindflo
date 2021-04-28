@@ -4,8 +4,27 @@ button.contactBtn.btn.btn-primary{
     margin: 0;
     position: relative;
     border-radius: 50px;
-    width: 12%;
+    width: 15%;
     height: 15%;
+    border: 3px solid white;    
+    font-size: 13px;
+
+    
+
+  }
+
+  .contactBtn:hover{
+    /* background-color: white; 
+    border-radius: 50%;
+    border: 3px solid white; */
+    transition-duration: 0.4s;
+    transform: scale(1.1); 
+    transition: all 0.2s ease-in-out;
+    /* background-color: #b6d5db; */
+    border-radius : 50px;
+    text-decoration:none;
+    font-size: 15px;
+    
   }
   
   input#formBasicEmail.form-control {
