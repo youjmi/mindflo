@@ -69,11 +69,11 @@ function BlogCard(props) {
       
     }
   };
-  function updateBlog(id) {
-    API.updateBlog(id)
-      .then((res) => loadBlogs())
-      .catch((err) => console.log(err));
-  }
+  // function updateBlog(id) {
+  //   API.updateBlog(id)
+  //     .then((res) => loadBlogs())
+  //     .catch((err) => console.log(err));
+  // }
 
   function getOneBlog(id) {
     API.getBlogs(id)

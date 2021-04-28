@@ -1,14 +1,17 @@
-img {
+/* img {
     max-width: 500px;
     max-height: 500px;
     overflow:auto
-}
+} */
 
 .rightimage{
     margin-right: 1%;
     font-family: "Montserrat", sans-serif;
     /* display: inline; */
     float: right;
+    max-width: 500px;
+    max-height: 500px;
+    overflow:auto
     
 }
 
@@ -17,6 +20,9 @@ img {
     font-family: "Montserrat", sans-serif;
     /* display: inline; */
     float:left;
+    max-width: 500px;
+    max-height: 500px;
+    overflow:auto
 }
 
 
@@ -180,4 +186,16 @@ button.btn.btn-primary.a {
     position: relative;
     display: grid;
 }
+
+img.arrowDivider {
+    /* width: 1200px;
+    height: 150px;
+    align-content: center;
+    align-items: center;
+    display: block; */
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  }
 

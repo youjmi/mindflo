@@ -125,7 +125,7 @@ function EditPost(props) {
             
           onClick={() => {
             props.onHide();
-            handleFormSubmit(props._id)
+            handleFormSubmit()
           }}
           
         >
