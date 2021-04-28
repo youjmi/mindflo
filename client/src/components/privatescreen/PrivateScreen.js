@@ -23,7 +23,7 @@ const PrivateScreen = () => {
             setPrivateData(data.data);
           } catch (error) {
             localStorage.removeItem("authToken");
-            setError("You are not authorized please login");
+            setError("You are not authorized. Please login");
           }
         };
     

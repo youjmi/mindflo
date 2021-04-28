@@ -81,6 +81,9 @@ const NewPostCard = (props) => {
       // .then(() => loadBlogs())
       .catch((err) => console.log(err));
     // }
+
+    window.location.reload()
+
   }
 
   return (

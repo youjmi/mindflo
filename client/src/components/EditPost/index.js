@@ -18,17 +18,17 @@ function EditPost(props) {
 
 
   useEffect(() => {
-      loadBlogs()
+    loadBlogs()
 
-    }, [])
+  }, [])
 
-    function loadBlogs() {
-      API.getBlogs()
-        .then(res =>
-          setBlogs(res.data)
-        )
-        .catch(err => console.log(err));
-    };
+  function loadBlogs() {
+    API.getBlogs()
+      .then(res =>
+        setBlogs(res.data)
+      )
+      .catch(err => console.log(err));
+  };
 
   function handleInputChange(event) {
     const { name, value } = event.target;
@@ -40,15 +40,19 @@ function EditPost(props) {
   // When the form is submitted, use the API.saveBook method to save the book data
   // Then reload books from the database
   function handleFormSubmit(id) {
+
     // event.preventDefault();
     console.log("working");
-    
+
     API.updateBlog(id)
-    .then((res) => {loadBlogs()
-    console.log(res)
-    })
-    .catch((err) => console.log(err))
-    
+      .then((res) => {
+        loadBlogs()
+        console.log(res)
+      })
+      .catch((err) => console.log(err))
+
+
+
   }
 
 
@@ -56,8 +60,9 @@ function EditPost(props) {
 
 
 
-
   return (
+
+
     <Modal
       {...props}
       size="lg"
@@ -72,15 +77,15 @@ function EditPost(props) {
       </Modal.Header>
       <Modal.Body>
         <Container
-        key={props._id}
-        obj={props._id}
-        >
-        {/* {blogs.map((blog)=> { */}
-          <Form 
           key={props._id}
           obj={props._id}
+        >
+          {/* {blogs.map((blog)=> { */}
+          <Form
+            key={props._id}
+            obj={props._id}
           >
-            
+
             <Form.Group controlId="formBasicTitle" >
               <Form.Label>Title</Form.Label>
               <Form.Control
@@ -88,8 +93,8 @@ function EditPost(props) {
                 placeholder="title"
                 onChange={handleInputChange}
                 name="title"
-                defaultValue ={props.title}
-                // value={blog.title}
+                defaultValue={props.title}
+              // value={blog.title}
               />
             </Form.Group>
 
@@ -115,28 +120,29 @@ function EditPost(props) {
                 onChange={handleInputChange}
                 name="post"
                 defaultValue={props.post}
-                // placeholder={blog.post}
+              // placeholder={blog.post}
               />
             </Form.Group>
 
 
             <br />
             <Button
-            
-          onClick={() => {
-            props.onHide();
-            handleFormSubmit(props._id)
-          }}
-          
-        >
-          Submit
+
+              onClick={() => {
+                props.onHide();
+                handleFormSubmit(props._id);
+
+              }}
+
+            >
+              Submit
           </Button>
           </Form>
- {/* })}          */}
+          {/* })}          */}
         </Container>
       </Modal.Body>
       <Modal.Footer>
-        
+
       </Modal.Footer>
     </Modal>
   );

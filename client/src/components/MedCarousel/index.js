@@ -19,9 +19,10 @@ const MeditationPlayer = (props) => {
 
   return (
     <div>
-      <Carousel activeIndex={index} onSelect={handleSelect}>
-        <Carousel.Item>
+      <Carousel className ="carousel1" activeIndex={index} onSelect={handleSelect}>   
+        <Carousel.Item >
         <iframe 
+        className ="iframeMed"
             width="560"
             height="315"
             src={"https://www.youtube.com/embed/1nPCTXAxBVo"}
@@ -43,6 +44,8 @@ const MeditationPlayer = (props) => {
         </Carousel.Item>
         <Carousel.Item>
         <iframe 
+                className ="iframeMed"
+
             width="560"
             height="315"
             src={"https://www.youtube.com/embed/l-fhlzZRcqk"}
@@ -68,6 +71,8 @@ const MeditationPlayer = (props) => {
         </Carousel.Item>
         <Carousel.Item>
         <iframe 
+                className ="iframeMed"
+
             width="560"
             height="315"
             src={"https://www.youtube.com/embed/G1TD2uVdotM"}

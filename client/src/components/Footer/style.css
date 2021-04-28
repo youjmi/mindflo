@@ -22,11 +22,12 @@
 .footerCol1{
    float:left;
    background-color : #2b3942;
-   margin-right: 4%;
-   margin-left: 10%;
+   /* margin-right: 10%;
+   margin-left: 10%; */
    font-family: "Montserrat", sans-serif;
    /* display: inline; */
-   float:right
+   float:right;
+   margin-top: 55.5px
 
 }
 

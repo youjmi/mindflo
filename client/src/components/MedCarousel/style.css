@@ -1,4 +1,4 @@
-.carousel-inner{
+.carousel1 .carousel-inner{
     background-color: #45535c;
     /* height: 500px; */
     color: white;
@@ -43,7 +43,7 @@ div.carousel-caption {
     height: 0;
   }
 
-  iframe {
+  .iframeMed {
     margin: 20px 20px auto 240px;
     text-align: center;
     /* margin: 0 auto; */

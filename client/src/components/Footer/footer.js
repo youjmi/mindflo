@@ -18,12 +18,12 @@ const Footer = () => {
         
         <div className="footer">
             <Row className ="footerRow container">
-                <Col className="footerCol1" size="md-4">
+                <Col className="footerCol1 container" size="md-4">
                     <h1 className="footerTitle">Information</h1>
                     <Link className="footerLink"> About Us</Link>
                 </Col>
 
-                <Col className="footerCol2 container" size="md-8">
+                <Col className="footerCol2 container" size="md-4">
                     <div className="footerContact">
                     <Link className = "homeTitle" to="contact"></Link>
                     <h1 className="footerTitle">Contact Us Here</h1>
