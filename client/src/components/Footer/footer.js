@@ -6,88 +6,91 @@ import Row from "../Row"
 import Col from "../Col"
 import "./style.css"
 import Contact from "../ContactForm"
+import { SocialIcon } from "react-social-icons"
+
+
+
 const Footer = () => {
 
 
 
 
     return (
-        // <div className="footer" style={{textAlign: "center"}}>
-        //     <h1>FOOTER</h1>
-        // </div>
-        
-        // <div className="footer mt-5">
-        //     <Row className ="footerRow container">
+        <>
 
-        //         <Col className="footerCol1 container" size="md-8">
-        //             <h1 className="footerTitle">Information</h1>
-        //             <Link className="footerLink"> About Us</Link>
-        //         </Col>
+            <div className="main-footer footer" >
+                <div className="container">
+                    <div className="row">
+                        {/* Column1 */}
+                        <div className="col mt-3">
+                            <h1 className=" footTitle footCol mb-5">Contact Us Here</h1>
+                            <Contact />
+                            <br></br>
+                        </div>
+                        {/* Column2 */}
+                        <div className="col footCol mt-3">
+                            <h1 className=" footTitle" > creators </h1>
+                            <br></br>
+                            <ui className="list-unstyled">
+                                <br></br>
 
-        //         <Col className="footerCol2 container" size="md-4">
-        //             <div className="footerContact">
-        //             <Link className = "homeTitle" to="contact"></Link>
-        //             <h1 className="footerTitle">Contact Us Here</h1>
-        //             <div>
-        //             <Contact/>
-        //             </div>
-        //             </div>
-        //         </Col>
-        //     </Row>
-        // </div>
-        
-        <div className="main-footer">
-        <div className="container">
-          <div className="row">
-            {/* Column1 */}
-            <div className="col mt-5">
-              <h1 className=" footTitle mb-5">Contact Us Here</h1>
-               <Contact/>
-            </div>
-            {/* Column2 */}
-            <div className="col footCol mt-5">
-              <h1 className=" footTitle" >Get to know us</h1>
-              <br></br>
-              <ui className="list-unstyled">
-              <br></br>
+                                <li>Jeezy</li>
+                                <div className="divider">
+                                    <SocialIcon target="_blank" className="iconSpace footicon" style={{ height: 35, width: 35 }} url="https://www.linkedin.com/in/young-ji-kim-a764b384/" />
+                                    <SocialIcon className="iconSpace footicon1" target="_blank" bgColor="white" style={{ height: 35, width: 35 }} url="https://github.com/youjmi" />
+                                    <SocialIcon className="footicon" target="_blank" style={{ height: 35, width: 35 }} url="https://youjmi.github.io/react_portfolio/" network="sharethis" label="Jeezy portfolio" />
+                                </div>
 
-                <li>DANK MEMES</li>
-                <br></br>
+                                <li>Rachel</li>
+                                <div className="divider">
+                                    <SocialIcon target="_blank" className="iconSpace footicon" style={{ height: 35, width: 35 }} url="https://www.linkedin.com/in/rachel-wanke-038757b/" />
+                                    <SocialIcon className="iconSpace footicon1" target="_blank" bgColor="white" style={{ height: 35, width: 35 }} url="https://github.com/rwanke14" />
+                                    <SocialIcon className="footicon" target="_blank" style={{ height: 35, width: 35 }} url="https://rwanke14.github.io/reactportfolio/" network="sharethis" label="Rachel portfolio" />
+                                </div>
 
-                <li>OTHER STUFF</li>
-                <br></br>
+                                <li>Frankie</li>
+                                <div className="divider">
+                                    <SocialIcon target="_blank" className="iconSpace footicon" style={{ height: 35, width: 35 }} url="https://www.linkedin.com/in/franciscorosado1/" />
+                                    <SocialIcon className="iconSpace footicon1" target="_blank" bgColor="white" style={{ height: 35, width: 35 }} url="https://github.com/Franciscorosado09/" />
+                                    <SocialIcon className="footicon" target="_blank" style={{ height: 35, width: 35 }} url="https://franciscorosado09.github.io/FERPortfolio/" network="sharethis" label="Frankie portfolio" />
+                                </div>
+                            </ui>
+                        </div>
+                        {/* Column3 */}
+                        <div className="col footCol mt-3">
+                            <h1 className=" footTitle">infōmation</h1>
+                            <br></br>
+                            <ui className="list-unstyled">
+                                <br></br>
+                                <li><a className="footLinks" href="https://www.hopkinsmedicine.org/health/wellness-and-prevention/9-benefits-of-yoga" target="_blank">Mind</a>
+                                </li>
+                                <br></br>
+                                <br></br>
+                                <li> <a className="footLinks" href="https://www.healthline.com/nutrition/12-benefits-of-meditation" target="_blank">Body</a>
+                                </li>                            
+                                <br></br>
+                                <br></br>
+                                <li>     <a className="footLinks" href="https://livehealthonline.com/blog/categories/health-management/health-benefits-taking-time-yourself/#:~:text=Spending%20time%20alone%20can%20also%20heighten%20your%20emotional%20intelligence.&text=You%20have%20more%20time%20to,feel%20the%20way%20you%20do." target="_blank">Pamper</a>
+                                </li>                            
+                                <br></br>
+                                <br></br>
 
-                <li>GUD STUFF</li>
-                <br></br>
-
-              </ui>
-            </div>
-            {/* Column3 */}
-            <div className="col footCol mt-5">
-              <h1  className=" footTitle">infoo</h1>
-              <br></br>
-              <ui className="list-unstyled">
-                  <br></br>
-                <li>DANK MEMES</li>
-                <br></br>
-                <li>OTHER STUFF</li>
-                <br></br>
-                <li>GUD STUFF</li>
-                <br></br>
-
-                <Link className = "homeTitle" to="contact">LIINK</Link>
-              </ui>
-            </div>
-          </div>
-          <hr />
-          <div className="row footCol">
-            <p className="col-sm">
-              &copy;{new Date().getFullYear()} mindflō | All rights reserved |
+                            </ui>
+                        </div>
+                    </div>
+                    <hr className="footDivider" />
+                    <div className="row footCol">
+                        <p className="col-sm">
+                            &copy;{new Date().getFullYear()} mindflō | All rights reserved |
               Terms Of Service | Privacy
             </p>
-          </div>
-        </div>
-      </div>
+                    </div>
+                </div>
+            </div>
+
+        </>
+
+
 
 
 

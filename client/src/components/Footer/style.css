@@ -10,9 +10,9 @@
     justify-content: center;   */
     background-color: #2b3942;
     color: white;
-    margin-top:auto;
-    padding-bottom: 10px;
-    display: block;
+    margin-top: 100px;
+    /* padding-bottom: 10px;
+    display: block; */
     
 }
 
@@ -71,10 +71,77 @@ button.contactBtn.btn.btn-primary{
  }
 
  .footTitle{
-font-size: 30px;
+font-size: 40px;
  }
 
  .footCol{
     text-align: center;
  }
 
+hr{
+
+    height: 1px;
+    background-color: #ccc;
+    border: none;
+}
+
+  
+.iconSpace,.footicon{
+    margin-left: 5px;
+    }
+    
+    .footicon:hover{
+    
+      background-color: white; 
+      border-radius: 50%;
+      border: 3px solid white;
+      transition-duration: 0.4s;
+      transform: scale(1.2);
+    }
+    
+    .footicon1:hover{
+    
+      background-color: black; 
+      border-radius: 50%;
+      border: 3px solid white;
+      transition-duration: 0.4s;
+      transform: scale(1.2);
+    }
+
+    .divider{
+
+margin: 15px 0 15px  0;        
+/* display:inline-block; */
+    }
+
+
+  a.footLinks{
+    color : #fff;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight:bold;
+    text-decoration: none;
+  
+    
+  }
+  a.footLinks:hover {
+    /* transition: all 0.2s ease-in-out;
+    color: #b6d5db;
+    text-decoration:none;
+    font-size: 26px;
+    transition-duration: 0.4s;
+    transform: scale(1.2);
+   */
+
+   transition-duration: 0.4s;
+   transform: scale(1.1); 
+   transition: all 0.2s ease-in-out;
+   color: #b6d5db;
+
+   /* background-color: #b6d5db; */
+   /* border-radius : 50px; */
+   text-decoration:none;
+   font-size: 27px;
+   /* font-size: 15px; */
+  
+  }

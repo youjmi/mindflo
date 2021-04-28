@@ -36,7 +36,7 @@ z-index:20
 export const NavbarContainer = styled.div`
 
 display: flex;
-justify-content: space-between;
+justify-content: space-between; 
 z-index: 1;
 width : 100%;
 padding : 0 24px;
@@ -123,6 +123,7 @@ cursor: pointer;
 
 export const NavItem = styled.li
   `
+
 height: 20px;
 `
 
@@ -137,6 +138,7 @@ color: #fff;
     height: 100%
     cursor: pointer;
     font-family: "Montserrat", sans-serif;
+    
     $:active {
       border-bottom: 3px solid #01bf71
     }
