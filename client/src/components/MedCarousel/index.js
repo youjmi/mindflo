@@ -32,8 +32,8 @@ const MeditationPlayer = (props) => {
             title="Embedded youtube"
             />
           <Carousel.Caption>
-            <h3>Earth Journey Meditation for Deep Relaxation</h3>
-            <h3>Guided by: Caroline McCready Meditation</h3>
+            <h3 className ="medTitle" >Earth Journey Meditation for Deep Relaxation</h3>
+            <h3 className ="medTitle">Guided by: Caroline McCready Meditation</h3>
             <p className="textMed">
               This is an extended guided meditation aimed at helping you relax
               by using your breath and connecting with the natural world. This
@@ -56,11 +56,11 @@ const MeditationPlayer = (props) => {
             />
 
           <Carousel.Caption>
-            <h3>
+            <h3 className ="medTitle">
               Guided Visualization for Renewal, Transformation & Empowerment -
               Journey to the Pyramid
             </h3>
-            <h3>Guided by: Rising Higher Meditation</h3>
+            <h3 className ="medTitle">Guided by: Rising Higher Meditation</h3>
             <p className="textMed">
               A New Beginning for a New Year. Take the journey to the Pyramids
               and find Renewal, Transformation, and Empowerment. Guided
@@ -83,10 +83,10 @@ const MeditationPlayer = (props) => {
             />
 
           <Carousel.Caption>
-            <h3>
+            <h3 className ="medTitle">
               Short Guided Meditation: Release All Negative Energy & Worries
-            </h3>
-            <h3>Guided by: Jason Stephenson</h3>
+            </h3 >
+            <h3 className ="medTitle">Guided by: Jason Stephenson</h3>
             <p className="textMed">
               This video is a short guided meditation to help release any
               negative energies and anxieties from your day. It's great for when

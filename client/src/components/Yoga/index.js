@@ -136,7 +136,7 @@ function Yoga() {
   return (
     <Container fluid>
       <Row>
-        <Col size="md-6">
+        <Col size="md-4">
           {/* <Jumbotron>
             
 
@@ -168,7 +168,7 @@ function Yoga() {
             </div>
           </Jumbotron>
         </Col>
-        <Col size="md-4">
+        <Col size="md-8">
           <Carousel activeIndex={index} onSelect={handleSelect} className="yogaCarousel">
             <Carousel.Item className="yogaItem">
               <iframe className="yogaCaro"

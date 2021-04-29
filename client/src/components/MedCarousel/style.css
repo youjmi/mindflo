@@ -65,3 +65,42 @@ div.carousel-caption {
       margin: 0 auto;
 
   }
+
+  @media screen and (max-width : 768px){
+
+    .carousel1 .carousel-inner{
+        background-color: #45535c;
+        /* height: 500px; */
+        color: white;
+        align-content: center;
+        height: 25rem;
+        width: 50rem;
+        margin: 0 auto;
+        font-family: "Montserrat", sans-serif; 
+    }    
+    .textMed {
+        font-family: "Montserrat", sans-serif; 
+        font-size: 8px;
+        margin-top: 2%;
+    }
+
+    .iframeMed {
+        margin: 10px 10px auto 120px;
+        text-align: center;
+        /* margin: 0 auto; */
+    
+      }
+      iframe{
+
+        width:260px;
+            height:115px
+      }
+
+   .medTitle{
+       font-size:10px
+   }
+   .meditationVideos{
+       padding: 20px 0 20px 0 !important;
+   }
+
+  }

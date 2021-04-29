@@ -67,4 +67,38 @@ button#size-dropdown.dropdown-menu.dropdown-toggle.btn.btn-primary {
 
 }
 
+@media screen and (max-width : 768px){
+ 
 
+  .yogaPics{
+    margin-top: 40%;
+  }
+
+  .yogaCaro {
+
+    margin: 140px 10px auto 118px;
+    text-align: center;
+  
+  }
+
+
+
+  }
+
+  @media screen and (max-width : 414px){
+ 
+
+    .yogaPics{
+      margin-top: 40%;
+    }
+  
+    .yogaCaro {
+  
+      margin: 140px 10px auto 70px;
+      text-align: center;
+    
+    }
+  
+    
+  
+    }

@@ -132,9 +132,9 @@ function BlogCard(props) {
                       </Col>
                     </Row>
                     <Card.Body>
-                      <Card.Text>{moment(blog.day).format("l")}</Card.Text>
-                      <Card.Title>{blog.title}</Card.Title>
-                      <Card.Text>{blog.post}</Card.Text>
+                      <Card.Text className="cardDate" >{moment(blog.day).format("l")}</Card.Text>
+                      <Card.Title className="cardTitle" >{blog.title}</Card.Title>
+                      <Card.Text className="cardText">{blog.post}</Card.Text>
                     </Card.Body>
                   </Link>
                 </Card>
