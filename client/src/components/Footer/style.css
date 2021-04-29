@@ -145,3 +145,22 @@ margin: 15px 0 15px  0;
    /* font-size: 15px; */
   
   }
+
+  @media screen and (max-width : 768px){
+    .footEmail{
+
+        display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+  }}
+
+
+  @media screen and (max-width : 414px){
+  .footEmail{
+
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  }}

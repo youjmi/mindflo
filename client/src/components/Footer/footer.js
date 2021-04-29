@@ -22,7 +22,7 @@ const Footer = () => {
                 <div className="container">
                     <div className="row">
                         {/* Column1 */}
-                        <div className="col mt-3">
+                        <div className="col footEmail mt-3">
                             <h1 className=" footTitle footCol mb-5">Contact Us Here</h1>
                             <Contact />
                             <br></br>

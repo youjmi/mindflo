@@ -1,6 +1,6 @@
 section.hero {
   /* background-image: url(./portartbackground.png); */
-  width: auto;
+  width: 100%;
   height: 38rem;
   background-size: cover;
   background-repeat: no-repeat;
@@ -15,4 +15,35 @@ section.hero {
 .mindfloLogo { 
   margin: 0 auto;
   display: inline-flexbox;
+}
+@media screen and (max-width : 768px){
+  .mindfloLogo { 
+    margin: 0 auto;
+    display: inline-flexbox;
+    height: 360px;
+  }
+  section.hero {
+    /* background-image: url(./portartbackground.png); */
+    width: 100%;
+    height: 28rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width : 414px){
+  .mindfloLogo { 
+    margin: 0 auto;
+    display: inline-flexbox;
+    height: 260px;
+  }
+  section.hero {
+    /* background-image: url(./portartbackground.png); */
+    width: 100%;
+    height: 18rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+  }
 }

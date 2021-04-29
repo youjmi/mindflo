@@ -13,12 +13,31 @@
     margin-top: 5px;
     margin-bottom: 5px;
     border: solid #2b3942;
+    width: auto;
+
 }
 
 .Chart1{
 
     margin-top: 5px;
-    margin-top: 5px;
     margin-bottom: 5px;
     border: solid #2b3942;
+    width: auto;
+
 }
+@media screen and (max-width : 768px){
+
+.apexcharts-title-text{
+
+    font-size: 14px;
+}
+
+}
+
+@media screen and (max-width : 414px){
+
+    .apexcharts-title-text{
+    
+        font-size: 14px;
+    }
+    }

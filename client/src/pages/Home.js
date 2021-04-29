@@ -109,7 +109,7 @@ function Home(props) {
             <div className="button2">
             <Link to="/dashboard" id= "progressButton" className= "homeTitle2Button mt-5 mb-5">See Progress </Link>
             </div>
-            <ReactApexChart/> {/*How to isolate only 1 graph*/}
+            <ReactApexChart className="apexHome"/> {/*How to isolate only 1 graph*/}
 
         
 

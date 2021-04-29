@@ -136,7 +136,7 @@ const NewPostCard = (props) => {
                 </Form.Group> */}
 
               <Form.Group controlId="blogText">
-                <Form.Label className="newTitle">Blog Text:</Form.Label>
+                <Form.Label className="newTitle">Journal Text:</Form.Label>
                 <Form.Control
                   as="textarea"
                   rows={10}

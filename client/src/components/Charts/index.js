@@ -109,6 +109,7 @@ function Charts() {
         //     },
         // },
         title: {
+            className:"chartTitle1",
             text: 'MBP Minutes',
             align: 'center',
             style: {

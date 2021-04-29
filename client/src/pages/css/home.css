@@ -330,6 +330,10 @@ display: block;
             text-decoration: none;
         
         } 
+        .apexHome{
+            height: 100px;
+            width: 100px;
+        }
 
 }
 
@@ -446,8 +450,7 @@ display: block;
         
         } 
 
-    
-  
-    
-  
+
+   
+      
     }
