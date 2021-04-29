@@ -13,7 +13,12 @@ p{
 .dashboardTitle {
 
   text-align: center;
-  margin-top: 40px;
+  /* margin-top: 40px; */
   margin-bottom: 40px;
   font-size: 40px;
+}
+
+.dashboardBody{
+  padding-top: 40px;
+  background-color: #cfdff0;
 }

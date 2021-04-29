@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { Carousel, Card } from "react-bootstrap";
+import { Carousel, Card, } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import beach from "./beachwave1.png";
 import Iframe1 from "./iframe1";
@@ -18,9 +18,9 @@ const MeditationPlayer = (props) => {
   };
 
   return (
-    <div>
+    <div className="medCaroBody">
       <Carousel className ="carousel1" activeIndex={index} onSelect={handleSelect}>   
-        <Carousel.Item >
+        <Carousel.Item  >
         <iframe 
         className ="iframeMed"
             width="560"

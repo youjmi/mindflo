@@ -60,7 +60,7 @@ function Home(props) {
           <h1 className="homeTitle2">Inspō</h1>
             <h2 className="homeTitle2 mt-5">We’ve provided you a couple videos, music, and photos to find inspiration in you Mind, Body, & Pamper journey</h2>    
             <div className="button2">       
-            <Link className = "homeTitle2Button mt-5" to="/meditation">Learn More</Link>
+            <Link className = "homeTitle2Button mt-5" to="/meditation" onClick={() => window.scrollTo({top: 0, left: 0, behavior: 'smooth' })}>Learn More</Link>
           </div> 
           </Col>
           <Col size="sm-4">
@@ -85,7 +85,7 @@ function Home(props) {
           <h1 className="homeTitle1">Journal</h1>
             <h2 className="homeTitle1 mt-5">Sometimes the best way to track your progress to write out your thoughts. Take the time to document your journey. </h2>
           <div className="button1">
-           <Link className = "homeTitle1Button mt-5 "to="/blog">View Journal</Link>
+           <Link className = "homeTitle1Button mt-5" to="/blog" onClick={() => window.scrollTo({top: 0, left: 0, behavior: 'smooth' })} >View Journal</Link>
           </div>
 
             
@@ -107,9 +107,9 @@ function Home(props) {
 
 
             <div className="button2">
-            <Link to="/dashboard" id= "progressButton" className= "homeTitle2Button mt-5 mb-5">See Progress </Link>
+            <Link to="/dashboard" onClick={() => window.scrollTo({top: 0, left: 0, behavior: 'smooth' })} id= "progressButton" className= "homeTitle2Button mt-5 mb-5">See Progress </Link>
             </div>
-            <ReactApexChart className="apexHome"/> {/*How to isolate only 1 graph*/}
+            <ReactApexChart className="apexHome Chart1"/> {/*How to isolate only 1 graph*/}
 
         
 

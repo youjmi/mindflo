@@ -15,7 +15,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 //MEDITATION page info..//
 function Meditation() {
   return (
-    <div>
+    <div className= "meditationBody">
 
       <section className="meditationVideos">
       <h2 className="musicHeader">Guided Meditation Practices</h2>

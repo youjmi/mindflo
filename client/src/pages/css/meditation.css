@@ -16,8 +16,9 @@ p{
 }
 
 .meditationVideos {
-  padding: 5%;
+  /* padding: 5%; */
   /* height: 1rem; */
+  padding-top: 2%;
 }
 .musicHeader{
   text-align: center;

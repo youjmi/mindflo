@@ -89,12 +89,16 @@ button.contactBtn.btn.btn-primary{
   }
 
   @media screen and (max-width : 414px){
-.contactBody{
 
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+.form-control{
+ width: 60%;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+}
+.form-label{
+
   
 }
+
   }

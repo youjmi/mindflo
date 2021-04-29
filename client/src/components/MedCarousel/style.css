@@ -1,3 +1,4 @@
+
 .carousel1 .carousel-inner{
     background-color: #45535c;
     /* height: 500px; */
@@ -44,7 +45,7 @@ div.carousel-caption {
   }
 
   .iframeMed {
-    margin: 20px 20px auto 240px;
+    margin: 20px 20px auto 30px;
     text-align: center;
     /* margin: 0 auto; */
 
@@ -65,6 +66,26 @@ div.carousel-caption {
       margin: 0 auto;
 
   }
+.carousel1{
+    display: flexbox;
+  background-color: #45535c;;/*2b394*/
+  padding: 50px;
+  
+  border-radius: 16px;
+  width: fit-content;
+  align-self: center;
+
+  margin: auto;
+  /* width: 50%; */
+ color: white;
+ font-family: "Montserrat", sans-serif; 
+ text-align: center;
+  /* box-shadow: inset -6px -6px; */
+
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2);  /*jeezy added this feature. Rachel can remove if u want*/
+  
+}
+  
 
   @media screen and (max-width : 768px){
 
@@ -85,7 +106,7 @@ div.carousel-caption {
     }
 
     .iframeMed {
-        margin: 10px 10px auto 120px;
+        margin: 10px 10px auto 10px;
         text-align: center;
         /* margin: 0 auto; */
     
@@ -104,3 +125,43 @@ div.carousel-caption {
    }
 
   }
+
+
+@media screen and (max-width : 414px){
+
+    .carousel1.carousel-inner{
+        background-color: #45535c;
+          /* height: 500px; */
+          color: white;
+          align-content: center;
+
+          /* width: 110rem; */
+          margin: 0 auto;
+          font-family: "Montserrat", sans-serif; 
+          
+      }
+      
+    .textMed {
+       display: none;
+    }
+
+    .iframeMed {
+        margin: 10px 10px auto 10px;
+        text-align: center;
+        /* margin: 0 auto; */
+    
+      }
+
+   .medTitle{
+display: none;   
+}
+   .meditationVideos{
+       padding: 20px 0 20px 0 !important;
+   }
+
+.carousel-inner{
+    width: 210px !important;
+    height: 150px !important;
+}
+
+}

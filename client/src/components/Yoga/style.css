@@ -48,6 +48,7 @@ button#size-dropdown.dropdown-menu.dropdown-toggle.btn.btn-primary {
     color: white;
     align-content: center;
     height:50rem;
+    width: 70rem;
     /* width: 110rem; */
     margin: 0 auto;
     font-family: "Montserrat", sans-serif; 
@@ -58,12 +59,55 @@ button#size-dropdown.dropdown-menu.dropdown-toggle.btn.btn-primary {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+  
+}
+
+.yogaJumbo{
+  display: flexbox;
+  background-color: white;;/*2b394*/
+  padding: 50px;
+  
+  /* border-radius: px; */
+  width: fit-content;
+  align-self: center;
+
+  margin: auto;
+  /* width: 50%; */
+ color: white;
+ font-family: "Montserrat", sans-serif; 
+ text-align: center;
+  /* box-shadow: inset -6px -6px; */
+
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2);  /*jeezy added this feature. Rachel can remove if u want*/
+  
+}
+
+.yogaCarousel{
+  display: flexbox;
+  background-color: #45535c;;/*2b394*/
+  padding: 50px;
+  
+  border-radius: 16px;
+  width: fit-content;
+  align-self: center;
+
+  margin: auto;
+  /* width: 50%; */
+ color: white;
+ font-family: "Montserrat", sans-serif; 
+ text-align: center;
+  /* box-shadow: inset -6px -6px; */
+
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2);  /*jeezy added this feature. Rachel can remove if u want*/
+  
+
 }
 
 .yogaCaro {
 
-  margin: 140px 10px auto 118px;
+  margin: 140px 10px auto 40px;
   text-align: center;
+  
 
 }
 
@@ -76,11 +120,22 @@ button#size-dropdown.dropdown-menu.dropdown-toggle.btn.btn-primary {
 
   .yogaCaro {
 
-    margin: 140px 10px auto 118px;
+    margin: 35px 10px auto 28px;
     text-align: center;
   
+  
   }
-
+  .carousel-inner{
+    background-color: #45535c;
+      /* height: 500px; */
+      color: white;
+      align-content: center;
+      height: 20rem;
+      width: 35rem;
+      /* width: 110rem; */
+      margin: 0 auto;
+      font-family: "Montserrat", sans-serif; 
+  }
 
 
   }
@@ -89,16 +144,32 @@ button#size-dropdown.dropdown-menu.dropdown-toggle.btn.btn-primary {
  
 
     .yogaPics{
-      margin-top: 40%;
+      margin-top: 0;
     }
   
     .yogaCaro {
   
-      margin: 140px 10px auto 70px;
+      margin: 10px 10px auto 10px;
       text-align: center;
     
     }
-  
+    .carousel-inner{
+      background-color: #45535c;
+        /* height: 500px; */
+        color: white;
+        align-content: center;
+        height: 10rem;
+        width: 25rem;
+        /* width: 110rem; */
+        margin: 0 auto;
+        font-family: "Montserrat", sans-serif; 
+    }
     
+    .yogaCarousel{
+
+      margin-top: 20px;
+    }
+  
+  
   
     }

@@ -77,9 +77,9 @@ import Yoga from "../components/Yoga"
 
 function Dashboard() {
   return (
-    <div>
-      <h1 className ="dashboardTitle">DASHBOARD SECTION:</h1>
-      <h1 className ="dashboardTitle"> Track Your Progress</h1>
+    <div className ="dashboardBody">
+      <h1 className ="dashboardTitle">Dashboard</h1>
+      <h1 className ="dashboardTitle"> Lets Track Your Progress</h1>
        <Charts/> 
     <Dropdown/> 
  

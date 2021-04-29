@@ -18,12 +18,12 @@ export const Navdiv = styled.nav`
 // position: sticky !important;
 
 background: #2b3942;
-height: 50px;
+// height: 50px;
 margin-top : 0px;
-padding: 0.5rem calc((100vw - 1000px) / 2);
+padding: 1.5rem calc((100vw - 1000px) / 3);
 display: flex;
 justify-content: center;
-aoign-items: center;
+align-items: center;
 position: sticky;
 position: -webkit-sticky !important;
 top:0;
@@ -39,7 +39,7 @@ display: flex;
 justify-content: space-between; 
 z-index: 1;
 width : 100%;
-padding : 0 24px;
+padding : 0 0px;
 max-width: 1100px;
 color: #2b3942;
 
@@ -51,7 +51,7 @@ export const NavLogo = styled(LinkR)`
 color : #fff;
 justify-self : flex-start;
 cursor: pointer;
-font-size: 25px;
+font-size: 35px;
 display: flex;
 align-items: center;
 margin-left: 24px;
@@ -62,7 +62,7 @@ font-family: 'Alegreya', serif;
   transition: all 0.2s ease-in-out;
   color: #b6d5db;
   border-radius : 50px;
-  font-size: 27px;
+  font-size: 36px;
   text-decoration:none
 
 
@@ -123,18 +123,18 @@ cursor: pointer;
 
 export const NavItem = styled.li
   `
-
+margin-left;
 height: 20px;
 `
 
 export const NavLinks = styled(LinkS)`
 
-color: #fff;
-    font-size: 16px;
+    color: #fff;
+    font-size: 20px;
     display: flex;
     align-items: center;
     text-decoration: none ;
-    padding :0 1rem;
+    padding :0 2rem;
     height: 100%
     cursor: pointer;
     font-family: "Montserrat", sans-serif;
@@ -146,7 +146,7 @@ color: #fff;
       transition: all 0.2s ease-in-out;
       color: #b6d5db;
       border-radius : 50px;
-      font-size: 18px;
+      font-size: 22px;
       text-decoration:none
 
     
