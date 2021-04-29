@@ -48,3 +48,20 @@ html,body{
   height: 100%;
   min-height: 100%;
 }
+
+
+
+@media screen and (max-width : 768px){
+
+  body,html{
+      height: 100%;
+      min-height: 100%;
+
+      
+  }
+  body{
+
+    background-color: #edf5f0;
+  }
+  
+  }
