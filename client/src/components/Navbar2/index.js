@@ -36,7 +36,7 @@ const Navigation = ({ toggle }) => {
     <>
       <Navdiv >
         <NavbarContainer >
-          <NavLogo to="/">mindflō</NavLogo>
+          <NavLogo to="/" onClick={() => window.scrollTo({top: 0, left: 0, behavior: 'smooth' })} >mindflō</NavLogo>
           <Bars onClick={toggle} />
 
 
