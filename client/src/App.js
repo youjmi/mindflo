@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch  } from "react-router-dom";
+import { HashRouter, Route, Switch  } from "react-router-dom";
 import React, { useState, useEffect } from 'react'
 import './App.css';
 import Home from "./pages/Home"
@@ -37,7 +37,7 @@ const toggle = () =>{setIsOpen (!isOpen)}
 
   return (
     <div>
-      <BrowserRouter>
+      <HashRouter>
       {/* <Wrapper> */}
       <Hero />
       <Sidebar isOpen = {isOpen} toggle = {toggle} /> {/*toggle = {toggle}*/}
@@ -58,7 +58,7 @@ const toggle = () =>{setIsOpen (!isOpen)}
         </Switch>
       {/* </Wrapper> */}
       <Footer/>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
