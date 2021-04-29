@@ -4,25 +4,63 @@
     overflow:auto
 } */
 
+/* Home ReactApexChart#linechart, #linechart2{
+    display: none;
+}
+div.Chart1{
+display: none;} */
+
+.meditationBody{
+
+    background-color: #cfacab;
+    padding-bottom: 15%;
+}
+
 .rightimage{
-    margin-right: 1%;
+    margin-right: 5%;
     font-family: "Montserrat", sans-serif;
     /* display: inline; */
     float: right;
     max-width: 500px;
     max-height: 500px;
-    overflow:auto
+    overflow:auto;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    /* box-shadow: 0 6px 20px rgba(2, 90, 255, 0.17); */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    background: white;
+    padding: 10px 10px 10px 10px;
+    border: solid #638194 10px
     
 }
 
 .leftimage {
-    margin-left: 2%;
+    margin-left: 5%;
     font-family: "Montserrat", sans-serif;
     /* display: inline; */
     float:left;
     max-width: 500px;
     max-height: 500px;
-    overflow:auto
+    overflow:auto;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    /* box-shadow: 0 6px 20px rgba(2, 90, 255, 0.17); */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    background: white;
+    padding: 10px 10px 10px 10px;
+    border: solid #638194 10px
 }
 
 
@@ -108,7 +146,7 @@ a.homeTitle2Button{
     margin-top: 0;
     font-size: 25px;
     padding: 1rem;
-    margin-bottom: 5%;
+    margin-bottom: 7%;
     
 }
 
@@ -213,6 +251,11 @@ display: block;
   margin-left: auto;
   margin-right: auto;
   margin: auto
+}
+
+#dashboard{
+/* padding-top: 1%; */
+padding-bottom: 5%;
 }
 
 /* #homeCharts{
@@ -321,6 +364,136 @@ display: block;
         
             
         }
-
+        a.homeTitle1Button:hover{
+            transition: all 0.2s ease-in-out;
+            font-family: "Montserrat", sans-serif;
+            color: #b6d5db;
+            border-radius : 50px;
+            font-size: 16px;
+            text-decoration: none;
+        
+        } 
+        .apexHome{
+            height: 100px;
+            width: 100px;
+        }
 
 }
+
+
+@media screen and (max-width : 414px){
+ 
+    .rightimage{
+        margin-right: 1%;
+        font-family: "Montserrat", sans-serif;
+        /* display: inline; */
+        float: right;
+        max-width: 200px;
+        max-height: 200px;
+        overflow:auto
+        
+    }
+    .leftimage {
+        margin-left: 2%;
+        font-family: "Montserrat", sans-serif;
+        /* display: inline; */
+        float:left;
+        max-width: 200px;
+        max-height: 200px;
+        overflow:auto
+    }
+    p{
+        font-family: "Montserrat", sans-serif;
+        font-size: medium;
+    }
+
+
+    .meditation ,.dashboard, .homeTitle1 {
+        margin-left: 4%;
+        text-align: right;
+        display: grid;
+        font-family: "Montserrat", sans-serif;
+        margin-top: 30px;
+        
+        /* grid-template-columns: (2, 1fr) */
+        
+        
+        }
+
+        .about, .blog,.homeTitle2   {
+            margin-top: 2%;
+            margin-right:4%;
+            text-align: left;
+            display: grid;
+            font-family: "Montserrat", sans-serif;
+            margin-top: 30px;
+        
+            /* grid-template-columns: repeat(2, 1fr) */
+            
+        }
+
+        h1.homeTitle1, h1.homeTitle2 {
+            font-size: 30px;
+            font-weight: 450;
+        }
+        a.homeTitle2Button{
+            margin-right: 4%;
+            text-align: left;
+            display: grid;
+            background-color: #2b3942;
+            justify-content: center;
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            width: 70%;
+            
+            font-family: "Montserrat", sans-serif;    
+            margin-top: 0;
+            font-size: 10px;
+            padding: 1rem;
+            margin-bottom: 5%;
+            
+        }
+        a.homeTitle2Button:hover{
+            transition: all 0.2s ease-in-out;
+            font-family: "Montserrat", sans-serif;
+            color: #b6d5db;
+            border-radius : 50px;
+            width: 70%;
+            font-size: 11px;
+            text-decoration: none;
+        }
+        
+        a.homeTitle1Button{
+            margin-left: 26%;
+            text-align: right;
+            display: grid;
+            background-color: #2b3942;
+            width: 70%;
+            justify-content: center;
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            
+            font-family: "Montserrat", sans-serif;    
+            margin-top: 0;
+            font-size: 10px;
+            padding: 1rem;
+            margin-bottom: 5%;
+        
+            
+        }
+        a.homeTitle1Button:hover{
+            transition: all 0.2s ease-in-out;
+            font-family: "Montserrat", sans-serif;
+            color: #b6d5db;
+            border-radius : 50px;
+            font-size: 11px;
+            text-decoration: none;
+        
+        } 
+
+
+   
+      
+    }

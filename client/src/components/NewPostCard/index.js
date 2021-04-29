@@ -104,10 +104,10 @@ const NewPostCard = (props) => {
           <Container>
             <Form>
               <Form.Group controlId="formBasicTitle">
-                <Form.Label>Title</Form.Label>
+                <Form.Label className="newTitle" >Title</Form.Label>
                 <Form.Control
                   type="title"
-                  placeholder="enter title"
+                  placeholder="Enter title"
                   onChange={handleInputChange}
                   name="title"
                   value={formObject.title}
@@ -115,10 +115,10 @@ const NewPostCard = (props) => {
               </Form.Group>
 
               <Form.Group controlId="formBasicImage">
-                <Form.Label>Image:</Form.Label>
+                <Form.Label className="newTitle">Image:</Form.Label>
                 <Form.Control
                   type="photo"
-                  placeholder="Upload"
+                  placeholder="Image URL"
                   onChange={handleInputChange}
                   // accept=".png, .jpg, .jpeg"
                   name="photo"
@@ -136,7 +136,7 @@ const NewPostCard = (props) => {
                 </Form.Group> */}
 
               <Form.Group controlId="blogText">
-                <Form.Label>Blog Text:</Form.Label>
+                <Form.Label className="newTitle">Journal Text:</Form.Label>
                 <Form.Control
                   as="textarea"
                   rows={10}
@@ -146,7 +146,7 @@ const NewPostCard = (props) => {
                 />
               </Form.Group>
 
-              <Button variant="primary" onClick={() => { props.onHide(); handleFormSubmit()}
+              <Button className="newpostBtn" variant="primary" onClick={() => { props.onHide(); handleFormSubmit()}
               } >
             Submit
         </Button>

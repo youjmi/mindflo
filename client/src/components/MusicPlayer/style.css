@@ -15,8 +15,6 @@
   /* box-shadow: inset -6px -6px; */
 
   box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2);  /*jeezy added this feature. Rachel can remove if u want*/
-
-
   
 }
 
@@ -113,4 +111,97 @@ button.skipBtn.btn.btn-primary:hover, button.fastBtn.btn.btn-primary:hover, butt
 
 .backwardIcon:hover{
   color: #d2807d;
+}
+
+@media screen and (max-width : 768px){
+ 
+  .c-player {
+    display: flexbox;
+    background-color: #45535c;;/*2b394*/
+    padding: 50px;
+    
+    border-radius: 16px;
+    width: 60%;
+    align-self: center;
+  
+    margin: auto;
+    /* width: 50%; */
+   color: white;
+   font-family: "Montserrat", sans-serif; 
+   text-align: center;
+    /* box-shadow: inset -6px -6px; */
+  
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2);  /*jeezy added this feature. Rachel can remove if u want*/
+    
+  }
+
+  .musicImg {
+  width: 180px;
+  height: auto;
+  margin-bottom: 5%;
+  border-radius: 30px;
+}
+.startStop{
+  width: 2rem;
+  height: auto;
+   color: white;
+   padding: auto;
+ }
+
+ .backwardIcon{
+  width: 2rem;
+  height: 2rem;
+  color: white;
+  padding: auto;
+}
+}
+
+
+@media screen and (max-width : 414px){
+ 
+  .c-player {
+    display: flexbox;
+    background-color: #45535c;;/*2b394*/
+    padding: 50px;
+    
+    border-radius: 16px;
+    width: 70%;
+    align-self: center;
+  
+    margin: auto;
+    /* width: 50%; */
+   color: white;
+   font-family: "Montserrat", sans-serif; 
+   text-align: center;
+    /* box-shadow: inset -6px -6px; */
+  
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2);  /*jeezy added this feature. Rachel can remove if u want*/
+    
+  }
+
+  .musicImg {
+  width: 150px;
+  height: auto;
+  margin-bottom: 5%;
+  border-radius: 20px;
+  align-content: center;
+
+}
+.startStop{
+  width: 1.5rem;
+  height: auto;
+   color: white;
+   padding: auto;
+     align-content: center;
+
+ }
+
+ .backwardIcon{
+  width: 1.5rem;
+  height: 1.5rem;
+  color: white;
+  padding: auto;
+  align-content: center;
+
+}
 }

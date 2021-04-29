@@ -22,8 +22,8 @@ const Footer = () => {
                 <div className="container">
                     <div className="row">
                         {/* Column1 */}
-                        <div className="col mt-3">
-                            <h1 className=" footTitle footCol mb-5">Contact Us Here</h1>
+                        <div className="col footEmail mt-3">
+                            <h1 className=" footTitle footCol mb-5">contact</h1>
                             <Contact />
                             <br></br>
                         </div>
@@ -58,7 +58,7 @@ const Footer = () => {
                         </div>
                         {/* Column3 */}
                         <div className="col footCol mt-3">
-                            <h1 className=" footTitle">infōmation</h1>
+                            <h1 className=" footTitle">infōrmation</h1>
                             <br></br>
                             <ui className="list-unstyled">
                                 <br></br>

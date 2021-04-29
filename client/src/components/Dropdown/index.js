@@ -99,9 +99,9 @@ const Dropdown = () => {
 
     return (
         <div>
-            <div className="container mt-5">
+            <div className="container dashBox mt-5">
                 <Form.Control
-                style={{fontSize:16}} 
+                style={{fontSize:25}} 
 
                     as="select"
                     custom
@@ -114,10 +114,10 @@ const Dropdown = () => {
                 </Form.Control>
             </div>
             { isSelected == "mind" ?
-                <div className="container mt-3 mindBOX">
+                <div className="container mt-3 mbpBox">
                     <InputGroup className="mb-3">
                         <FormControl
-                        style={{fontSize:16}} 
+                        style={{fontSize:18}} 
 
                             placeholder="Mind Session Name"
                             aria-label="Session Name"
@@ -129,7 +129,7 @@ const Dropdown = () => {
                     </InputGroup>
                     <InputGroup className="mb-3">
                         <FormControl
-                        style={{fontSize:16}} 
+                        style={{fontSize:18}} 
 
                             placeholder="How many minutes?"
                             aria-label="minutes"
@@ -141,7 +141,7 @@ const Dropdown = () => {
                     </InputGroup>
                     <InputGroup className="mb-3">
                         <FormControl
-                        style={{fontSize:16}} 
+                        style={{fontSize:18}} 
 
                             placeholder="Rate your Mood from 1-10"
                             aria-label="affirmations"
@@ -152,16 +152,16 @@ const Dropdown = () => {
                             value={isMood}
                         />
                     </InputGroup>
-                    <button className="" style={{fontSize:12}}  onClick={submitDashboard}  > {/*onClick={this.onButtonClick}*/}
+                    <Button className="" style={{fontSize:15,backgroundColor: "#2b3942"  }}  onClick={submitDashboard}  > {/*onClick={this.onButtonClick}*/}
                  Submit
-                 </button>
+                 </Button>
                 </div>
                 : <> </>}
             { isSelected == "body" ?
-                <div className="container mt-3 mindBOX">
+                <div className="container mt-3 mbpBox">
                     <InputGroup className="mb-3">
                         <FormControl
-                        style={{fontSize:16}} 
+                        style={{fontSize:18}} 
                             placeholder="Body Session Name"
                             aria-label="Session Name"
                             aria-describedby="basic-addon2"
@@ -172,7 +172,7 @@ const Dropdown = () => {
                     </InputGroup>
                     <InputGroup className="mb-3">
                         <FormControl
-                        style={{fontSize:16}} 
+                        style={{fontSize:18}} 
 
                             placeholder="How many minutes?"
                             aria-label="minutes"
@@ -184,7 +184,7 @@ const Dropdown = () => {
                     </InputGroup>
                     <InputGroup className="mb-3">
                         <FormControl
-                        style={{fontSize:16}} 
+                        style={{fontSize:18}} 
 
                             placeholder="Rate your Mood from 1-10"
                             aria-label="affirmations"
@@ -194,16 +194,16 @@ const Dropdown = () => {
                             value={isMood}
                         />
                     </InputGroup>
-                    <Button className="" style={{fontSize:12}}  onClick={submitDashboard}  > {/*onClick={this.onButtonClick}*/}
+                    <Button className="" style={{fontSize:15,backgroundColor: "#2b3942"  }}  onClick={submitDashboard}  > {/*onClick={this.onButtonClick}*/}
                    Submit
                    </Button>
                 </div>
                 : <> </>}
             { isSelected == "pamper" ?
-                <div className="container mt-3 pamperBOX">
+                <div className="container mt-3 mbpBox">
                     <InputGroup className="mb-3">
                         <FormControl
-                        style={{fontSize:16}} 
+                        style={{fontSize:18}} 
 
                             placeholder="Pamper Session Name"
                             aria-label="Session Name"
@@ -215,7 +215,7 @@ const Dropdown = () => {
                     </InputGroup>
                     <InputGroup className="mb-3">
                         <FormControl
-                        style={{fontSize:16}} 
+                        style={{fontSize:18}} 
 
                             placeholder="How many minutes?"
                             aria-label="minutes"
@@ -227,7 +227,7 @@ const Dropdown = () => {
                     </InputGroup>
                     <InputGroup className="mb-3">
                         <FormControl
-                        style={{fontSize:16}} 
+                        style={{fontSize:18}} 
 
                             placeholder="Rate your Mood from 1-10"
                             aria-label="affirmations"
@@ -237,9 +237,9 @@ const Dropdown = () => {
                             value={isMood}
                         />
                     </InputGroup>
-                    <button className="" style={{fontSize:12}}  onClick={submitDashboard}  > {/*onClick={this.onButtonClick}*/}
+                    <Button  style={{fontSize:15, backgroundColor: "#2b3942"   }}  onClick={submitDashboard}  > {/*onClick={this.onButtonClick}*/}
                       Submit
-                      </button>
+                      </Button>
                 </div>
                 : <> </>}
         </div>

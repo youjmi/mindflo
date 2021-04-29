@@ -27,7 +27,7 @@ const Sidebar = ({ isOpen, toggle }) => {
                 <CloseIcon />
             </Icon>
             <SidebarItem>
-                <SidebarLogo to="/" style={{ marginBottom: 70, marginTop: 100, marginLeft: 37 }} ><span onClick={toggle}> mindflō </span></SidebarLogo>
+                <SidebarLogo to="/" onClick={() => window.scrollTo({top: 0, left: 0, behavior: 'smooth' })} style={{ marginBottom: 70, marginTop: 100, marginLeft: 37 }} ><span onClick={toggle}> mindflō </span></SidebarLogo>
             </SidebarItem>
 
             { pathname === "/login"|| pathname ==="/home" || pathname ==="/about" || pathname === "/dashboard" || pathname === "/blog" || pathname === "/meditation" || pathname === "/signup" ? <>  </> :

@@ -109,6 +109,7 @@ function Charts() {
         //     },
         // },
         title: {
+            className:"chartTitle1",
             text: 'MBP Minutes',
             align: 'center',
             style: {
@@ -178,7 +179,7 @@ function Charts() {
                     </div> */}
                     <div className="col">
                         <ReactApexChart 
-                        className="donutchart" options={donutoptions} series={donutseries} type="donut" height={300} />
+                        className="donutchart"  id ="donutChart"options={donutoptions} series={donutseries} type="donut" height={300} />
                     </div>
                 </div>
             </div>

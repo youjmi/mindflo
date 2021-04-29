@@ -74,3 +74,16 @@
     opacity: 50%;
   }
 
+  .cardText{
+color: #2b3942;
+font-family: "Montserrat", sans-serif;    
+font-size: larger;
+
+  }
+
+  .cardTitle, .cardDate{
+    font-size:1.25rem;
+    color: #2b3942;
+font-family: "Montserrat", sans-serif;    
+  }
+

@@ -35,7 +35,7 @@ function ContactForm() {
 
 
 
-    <Form onSubmit={handleSubmit} className="form">
+    <Form  className="contactBody" onSubmit={handleSubmit} className="form">
       <Form.Group controlId="formBasicEmail" className="formGroup">
         <Form.Label>Name:</Form.Label>
         <br/>

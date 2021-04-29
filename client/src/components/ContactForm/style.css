@@ -76,5 +76,29 @@ button.contactBtn.btn.btn-primary{
     font-family: "Montserrat", sans-serif;
     width: 450px;
     color: white
+    
+
+  }
+  .contactBody{
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+  }
+
+  @media screen and (max-width : 414px){
+
+.form-control{
+ width: 60%;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+}
+.form-label{
+
+  
+}
 
   }
