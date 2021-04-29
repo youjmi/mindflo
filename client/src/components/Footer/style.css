@@ -154,7 +154,16 @@ margin: 15px 0 15px  0;
       margin-right: auto;
       width: 50%;
   }}
+  .main-footer{
 
+    background-color: #2b3942;
+        color: white;
+        padding-top: 3em;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+      
+}
 
   @media screen and (max-width : 414px){
   .footEmail{
@@ -163,4 +172,16 @@ margin: 15px 0 15px  0;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  }}
+  
+  }
+  .main-footer{
+
+    background-color: #2b3942;
+        color: white;
+        padding-top: 3em;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+      
+}
+}

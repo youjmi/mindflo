@@ -24,7 +24,7 @@ function Blogs() {
   const [modalShow, setModalShow] = useState(false);
 
   return (
-    <>
+    <div className ="blogBody">
       <Container>
       <h1 className="blogTitle mb-5">Mindflo Personal Journal</h1>
       <h2 className="blogDescription">It's time to write your own journey and inspire yourself along the way!</h2>
@@ -34,7 +34,7 @@ function Blogs() {
        </Container>
       <NewPost show={modalShow} onHide={() => setModalShow(false)} />
       <BlogCard />
-    </>
+    </div>
   );
 }
 
