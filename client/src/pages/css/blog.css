@@ -21,7 +21,11 @@
     transform: translateY(-50%);
     
   }
+  .blogBody {
+    margin-bottom: 10%;
 
+
+  }
  
 /* p{
     font-family: "Montserrat", sans-serif;
