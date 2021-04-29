@@ -6,6 +6,7 @@
   * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
+  * [Screenshots](#screenshots)
   * [Contribution](#contribution)
   * [License](#license)
 
@@ -77,6 +78,27 @@ Node server.js
 
 npm start
 ```
+## Screenshots
+
+![login](./images/Screenshots/login.png)
+![about](./images/Screenshots/about.png)
+![music](./images/Screenshots/music.png)
+![yoga](./images/Screenshots/yoga.png)
+![dashboard](./images/Screenshots/dashboard.png)
+![input](./images/Screenshots/input.png)
+![journal](./images/Screenshots/journal.png)
+
+
+Flow Chart
+
+![flow](./images/Screenshots/flow.png)
+
+
+ERD Chart
+
+![erd](./images/Screenshots/erd.png)
+
+
 
 
 ## Contribution
