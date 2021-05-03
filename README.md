@@ -91,7 +91,7 @@ npm start
 
 Flow Chart
 
-![flow](./images/Screenshots/flow.png)
+![flow](./images/Screenshots/flow.jpg)
 
 
 ERD Chart
